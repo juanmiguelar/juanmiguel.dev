@@ -42,13 +42,13 @@ interface Metric {
 const metrics: Metric[] = [
   { 
     value: '8+', 
-    label: 'Years Experience',
+    label: '8+ Years Experience',
     icon: 'mdi-calendar-clock',
     color: 'primary'
   },
   { 
     value: '70%', 
-    label: 'Performance Boost',
+    label: '70% Performance Boost',
     icon: 'mdi-trending-up',
     color: 'success'
   },
