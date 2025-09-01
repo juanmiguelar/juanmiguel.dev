@@ -1,46 +1,415 @@
 <template>
-  <section id="projects" class="section">
+  <section id="experience" class="experience-section">
     <v-container>
-      <h2 class="text-h4 text-center mb-8">Projects</h2>
-      <v-row>
-        <v-col cols="12" md="4" v-for="project in projects" :key="project.title">
-          <v-card>
-            <v-img :src="project.img" height="200" :alt="project.title" />
-            <v-card-title>{{ project.title }}</v-card-title>
-            <v-card-text>{{ project.desc }}</v-card-text>
-            <v-card-actions>
-              <v-btn :href="project.github" target="_blank" aria-label="GitHub">GitHub</v-btn>
-              <v-btn :href="project.demo" target="_blank" aria-label="Demo">Demo</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
+      <div class="text-center mb-12">
+        <h2 class="text-h3 font-weight-bold mb-4">My Experience</h2>
+        <p class="text-h6 text-medium-emphasis mx-auto" style="max-width: 700px">
+          From enterprise-scale systems to custom solutions - delivering value across different contexts
+        </p>
+      </div>
+
+      <!-- Experience Toggle -->
+      <v-tabs v-model="activeTab" centered class="mb-10">
+        <v-tab value="corporate">
+          <v-icon start>mdi-office-building</v-icon>
+          Corporate Experience
+        </v-tab>
+        <v-tab value="independent">
+          <v-icon start>mdi-account-star</v-icon>
+          Independent Projects
+        </v-tab>
+      </v-tabs>
+
+      <!-- Corporate Experience -->
+      <v-window v-model="activeTab">
+        <v-window-item value="corporate">
+          <div class="corporate-section">
+            <div class="text-center mb-8">
+              <v-chip color="primary" variant="outlined" size="large" class="mb-4">
+                <v-icon start>mdi-shield-check</v-icon>
+                Enterprise-Proven Track Record
+              </v-chip>
+              <h3 class="text-h5 mb-2">Trusted by Industry Leaders</h3>
+              <p class="text-body-1 text-medium-emphasis">
+                8+ years building mission-critical systems for Fortune 500 companies
+              </p>
+            </div>
+
+            <v-row>
+              <v-col 
+                cols="12" 
+                md="6" 
+                lg="4"
+                v-for="project in corporateProjects" 
+                :key="project.id"
+              >
+                <v-card class="corporate-card h-100" elevation="3">
+                  <div class="company-header">
+                    <v-img 
+                      :src="project.companyLogo" 
+                      height="60" 
+                      :alt="project.company"
+                      contain
+                      class="company-logo"
+                    />
+                    <v-chip 
+                      :color="project.statusColor" 
+                      variant="flat" 
+                      size="small"
+                    >
+                      {{ project.status }}
+                    </v-chip>
+                  </div>
+
+                  <v-card-title class="text-h6">{{ project.title }}</v-card-title>
+                  <v-card-subtitle>{{ project.company }} • {{ project.period }}</v-card-subtitle>
+
+                  <v-card-text>
+                    <p class="text-body-2 mb-3">{{ project.description }}</p>
+                    
+                    <!-- Key Impact -->
+                    <div class="impact-metric mb-3">
+                      <v-icon color="success" class="me-2">mdi-trending-up</v-icon>
+                      <span class="text-success font-weight-medium">
+                        {{ project.impact }}
+                      </span>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="tech-stack">
+                      <v-chip
+                        v-for="tech in project.technologies" 
+                        :key="tech"
+                        size="small"
+                        variant="outlined"
+                        class="me-1 mb-1"
+                      >
+                        {{ tech }}
+                      </v-chip>
+                    </div>
+                  </v-card-text>
+
+                  <v-card-actions>
+                    <v-btn variant="text" size="small" disabled>
+                      <v-icon start>mdi-lock</v-icon>
+                      Enterprise NDA
+                    </v-btn>
+                    <v-spacer />
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+            </v-row>
+          </div>
+        </v-window-item>
+
+        <!-- Independent Experience -->
+        <v-window-item value="independent">
+          <div class="independent-section">
+            <div class="text-center mb-8">
+              <v-chip color="success" variant="outlined" size="large" class="mb-4">
+                <v-icon start>mdi-rocket-launch</v-icon>
+                Full-Stack Independence
+              </v-chip>
+              <h3 class="text-h5 mb-2">End-to-End Project Delivery</h3>
+              <p class="text-body-1 text-medium-emphasis">
+                Custom solutions with complete ownership - from concept to deployment
+              </p>
+            </div>
+
+            <v-row>
+              <v-col 
+                cols="12" 
+                md="6" 
+                lg="4"
+                v-for="project in independentProjects" 
+                :key="project.id"
+              >
+                <v-card class="independent-card h-100" elevation="2" hover>
+                  <v-img 
+                    :src="project.screenshot" 
+                    height="200" 
+                    :alt="project.title"
+                    cover
+                  >
+                    <div class="project-overlay">
+                      <v-btn
+                        v-if="project.liveDemo"
+                        :href="project.liveDemo"
+                        target="_blank"
+                        color="white"
+                        variant="elevated"
+                        size="small"
+                        class="demo-btn"
+                      >
+                        <v-icon start>mdi-eye</v-icon>
+                        Live Demo
+                      </v-btn>
+                    </div>
+                  </v-img>
+
+                  <v-card-title class="text-h6">{{ project.title }}</v-card-title>
+                  <v-card-subtitle>{{ project.category }} • {{ project.timeline }}</v-card-subtitle>
+
+                  <v-card-text>
+                    <p class="text-body-2 mb-3">{{ project.description }}</p>
+                    
+                    <!-- Key Features -->
+                    <div class="features-list mb-3">
+                      <v-chip
+                        v-for="feature in project.keyFeatures" 
+                        :key="feature"
+                        size="small"
+                        color="success"
+                        variant="outlined"
+                        class="me-1 mb-1"
+                      >
+                        <v-icon start size="14">mdi-check</v-icon>
+                        {{ feature }}
+                      </v-chip>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="tech-stack">
+                      <v-chip
+                        v-for="tech in project.technologies" 
+                        :key="tech"
+                        size="small"
+                        variant="flat"
+                        class="me-1 mb-1"
+                      >
+                        {{ tech }}
+                      </v-chip>
+                    </div>
+                  </v-card-text>
+
+                  <v-card-actions>
+                    <v-btn
+                      v-if="project.github"
+                      :href="project.github"
+                      target="_blank"
+                      variant="text"
+                      color="primary"
+                    >
+                      <v-icon start>mdi-github</v-icon>
+                      Code
+                    </v-btn>
+                    
+                    <v-btn
+                      v-if="project.liveDemo"
+                      :href="project.liveDemo"
+                      target="_blank"
+                      variant="text"
+                      color="success"
+                    >
+                      <v-icon start>mdi-open-in-new</v-icon>
+                      Demo
+                    </v-btn>
+
+                    <v-spacer />
+                    
+                    <v-btn 
+                      variant="text" 
+                      color="primary"
+                      size="small"
+                      @click="openIndependentCaseStudy(project.id)"
+                    >
+                      Case Study
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+            </v-row>
+          </div>
+        </v-window-item>
+      </v-window>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-12">
+        <v-divider class="mb-8" />
+        <h3 class="text-h5 mb-4">Ready for Your Project?</h3>
+        <p class="text-body-1 text-medium-emphasis mb-6">
+          Whether you need enterprise-scale systems or custom solutions, I bring the right experience
+        </p>
+        <v-btn 
+          size="x-large" 
+          color="primary" 
+          variant="elevated"
+          href="#contact"
+          class="px-8"
+        >
+          <v-icon start>mdi-message</v-icon>
+          Let's discuss your needs
+        </v-btn>
+      </div>
     </v-container>
   </section>
 </template>
+
 <script setup lang="ts">
-interface Project { title: string; desc: string; img: string; github: string; demo: string }
-const projects: Project[] = [
+import { ref } from 'vue'
+
+const activeTab = ref('corporate')
+
+// Corporate projects (based on real experience)
+const corporateProjects = [
   {
-    title: 'Analytics Dashboard',
-    desc: 'Vue + Go analytics platform.',
-    img: 'https://placehold.co/600x400',
-    github: 'https://github.com/username/project-name',
-    demo: 'https://project-demo.com'
+    id: 'nbc-bff',
+    title: 'NBCUniversal Streaming Platform BFF',
+    company: 'NBC (via GorillaLogic)',
+    period: '2024 - Present',
+    description: 'High-performance Backend-for-Frontend using Go and GraphQL, handling millions of daily requests for NBC\'s streaming infrastructure.',
+    impact: 'Optimized API performance for millions of users',
+    technologies: ['Go', 'GraphQL', 'Microservices', 'Cloud'],
+    companyLogo: 'https://placehold.co/150x60/000000/FFFFFF?text=NBC',
+    status: 'Active',
+    statusColor: 'success'
   },
   {
-    title: 'E-commerce API',
-    desc: 'Scalable backend for shops.',
-    img: 'https://placehold.co/600x400',
-    github: 'https://github.com/username/project-name',
-    demo: 'https://project-demo.com'
+    id: 'windriver-microservices',
+    title: 'Cloud Microservices Architecture',
+    company: 'Wind River',
+    period: '2022 - 2024',
+    description: 'Restructured monolithic services into 6 specialized microservices with concurrent processing, improving system efficiency and maintainability.',
+    impact: '70% performance boost, 30% bug reduction',
+    technologies: ['Go', 'Microservices', 'Docker', 'Kubernetes'],
+    companyLogo: 'https://placehold.co/150x60/1976D2/FFFFFF?text=Wind+River',
+    status: 'Completed',
+    statusColor: 'info'
   },
   {
-    title: 'Real-time Chat',
-    desc: 'WebSocket based chat app.',
-    img: 'https://placehold.co/600x400',
-    github: 'https://github.com/username/project-name',
-    demo: 'https://project-demo.com'
+    id: 'kyndryl-apis',
+    title: 'Multi-Cloud API Gateway',
+    company: 'Kyndryl',
+    period: '2021 - 2022',
+    description: 'Developed scalable APIs for cloud resource discovery and management. Led Go training for 80+ professionals across global teams.',
+    impact: 'Trained 80+ developers, established Go standards',
+    technologies: ['Go', 'Cloud APIs', 'DevOps', 'Training'],
+    companyLogo: 'https://placehold.co/150x60/4CAF50/FFFFFF?text=Kyndryl',
+    status: 'Completed',
+    statusColor: 'info'
   }
 ]
+
+// Independent projects (you can add real ones here)
+const independentProjects = [
+  {
+    id: 'task-management',
+    title: 'Smart Task Management App',
+    category: 'Full-Stack',
+    timeline: '3 weeks',
+    description: 'Modern task management application with real-time collaboration, built with Vue.js frontend and Go backend.',
+    keyFeatures: ['Real-time sync', 'Team collaboration', 'Mobile responsive'],
+    technologies: ['Vue.js', 'Go', 'WebSockets', 'PostgreSQL'],
+    screenshot: 'https://placehold.co/400x300/673AB7/FFFFFF?text=Task+Manager',
+    github: 'https://github.com/juanmiguelarias/task-manager',
+    liveDemo: 'https://task-manager-demo.com'
+  },
+  {
+    id: 'ecommerce-api',
+    title: 'E-commerce REST API',
+    category: 'Backend',
+    timeline: '2 weeks',
+    description: 'Scalable e-commerce API with payment integration, inventory management, and order processing.',
+    keyFeatures: ['Payment gateway', 'Inventory tracking', 'Order management'],
+    technologies: ['Go', 'PostgreSQL', 'Redis', 'Docker'],
+    screenshot: 'https://placehold.co/400x300/FF5722/FFFFFF?text=E-commerce+API',
+    github: 'https://github.com/juanmiguelarias/ecommerce-api',
+    liveDemo: 'https://api-docs-demo.com'
+  },
+  {
+    id: 'portfolio-website',
+    title: 'Developer Portfolio Template',
+    category: 'Frontend',
+    timeline: '1 week',
+    description: 'Modern, responsive portfolio template built with Nuxt.js and Vuetify, optimized for SEO and performance.',
+    keyFeatures: ['SEO optimized', 'Dark mode', 'Mobile first'],
+    technologies: ['Nuxt.js', 'Vuetify', 'TypeScript', 'SCSS'],
+    screenshot: 'https://placehold.co/400x300/9C27B0/FFFFFF?text=Portfolio+Template',
+    github: 'https://github.com/juanmiguelarias/portfolio-template',
+    liveDemo: 'https://portfolio-template-demo.com'
+  }
+]
+
+const openCorporateCaseStudy = (projectId: string) => {
+  console.log(`Opening corporate case study for: ${projectId}`)
+}
+
+const openIndependentCaseStudy = (projectId: string) => {
+  console.log(`Opening independent case study for: ${projectId}`)
+}
 </script>
+
+<style scoped lang="scss">
+.experience-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.02) 0%, rgba(156, 39, 176, 0.02) 100%);
+
+  .corporate-card, .independent-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  .corporate-card {
+    border-top: 4px solid rgb(var(--v-theme-primary));
+    
+    .company-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 16px 0;
+      
+      .company-logo {
+        max-width: 120px;
+      }
+    }
+
+    .impact-metric {
+      background: rgba(76, 175, 80, 0.1);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border-left: 3px solid rgb(76, 175, 80);
+    }
+  }
+
+  .independent-card {
+    border-top: 4px solid rgb(var(--v-theme-success));
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover .project-overlay {
+      opacity: 1;
+    }
+  }
+
+  .tech-stack, .features-list {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 60px 0;
+    
+    .corporate-card, .independent-card {
+      margin-bottom: 24px;
+    }
+  }
+}
+</style>
