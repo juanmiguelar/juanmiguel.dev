@@ -3,7 +3,7 @@
     <v-container>
       <h2 class="text-h4 text-center mb-8">Recomendations</h2>
       <v-row>
-        <v-col cols="12" md="6" v-for="t in recomendations" :key="t.name">
+        <v-col cols="12" sm="6" v-for="t in recomendations" :key="t.name">
           <v-card class="pa-4 mb-4">
             <v-row>
               <v-col cols="3">

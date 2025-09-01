@@ -3,11 +3,12 @@
     <v-container>
       <h2 class="text-h4 text-center mb-8">Professional Experience</h2>
       <v-row justify="center">
-        <v-col 
-          cols="6" 
-          md="3" 
-          v-for="metric in metrics" 
-          :key="metric.label" 
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+          v-for="metric in metrics"
+          :key="metric.label"
           class="text-center"
         >
           <div class="metric-card">
