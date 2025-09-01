@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app density="comfortable">
     <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" aria-label="Toggle navigation" />
-    <v-toolbar-title>Juan Miguel Arias</v-toolbar-title>
+    <v-toolbar-title>Juan Miguel Arias Mejias</v-toolbar-title>
     <v-spacer />
     <div class="d-none d-md-flex">
       <v-btn v-for="link in links" :key="link.href" :href="link.href" variant="text" class="mx-1" aria-label="Go to section">{{ link.label }}</v-btn>
@@ -24,7 +24,7 @@ const links = [
   { label: 'Home', href: '#hero' },
   { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Recomendations', href: '#recomendations' },
   { label: 'Contact', href: '#contact' }
 ]
 const theme = useTheme()

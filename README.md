@@ -1,6 +1,6 @@
-# Juan Miguel Arias Portfolio
+# Juan Miguel Arias Mejias Portfolio
 
-This is a Nuxt 3 + Vuetify portfolio site for **Juan Miguel Arias**, full-stack developer specializing in Go and Vue.js.
+This is a Nuxt 3 + Vuetify portfolio site for **Juan Miguel Arias Mejias**, full-stack developer specializing in Go and Vue.js.
 
 ## Setup
 
@@ -30,7 +30,7 @@ npm run preview
 
 ## Components
 - `NavigationBar` – top navigation with dark/light mode toggle.
-- `HeroSection`, `ServicesSection`, `ProjectsSection`, `MetricsSection`, `TestimonialsSection`, `TechStackSection`, `ContactForm` – main page sections.
+- `HeroSection`, `ServicesSection`, `ProjectsSection`, `MetricsSection`, `RecomendationsSection`, `TechStackSection`, `ContactForm` – main page sections.
 - `AppFooter` – footer with links.
 
 ## Responsive Design

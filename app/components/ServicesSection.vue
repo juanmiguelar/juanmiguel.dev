@@ -17,8 +17,8 @@
 <script setup lang="ts">
 interface Service { title: string; desc: string; icon: string }
 const services: Service[] = [
-  { title: 'Web Development', desc: 'Responsive websites and SPAs.', icon: 'mdi-laptop-code' },
-  { title: 'API Design', desc: 'Scalable REST and GraphQL APIs.', icon: 'mdi-api' },
-  { title: 'Consulting', desc: 'Technical guidance for teams.', icon: 'mdi-account-tie' }
+  { title: 'Web Development', desc: 'Responsive websites', icon: 'mdi-laptop' },
+  { title: 'API Design', desc: 'Scalable REST', icon: 'mdi-api' },
+  { title: 'Ads', desc: 'Meta Ads', icon: 'mdi-advertisements' },
 ]
 </script>

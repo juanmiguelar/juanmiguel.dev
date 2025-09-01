@@ -14,9 +14,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Juan Miguel Arias - Full-stack Developer',
+      title: 'Juan Miguel Arias Mejias - Full-stack Developer',
       meta: [
-        { name: 'description', content: 'Portfolio of Juan Miguel Arias, full-stack developer specializing in Go and Vue.js.' }
+        { name: 'description', content: 'Portfolio of Juan Miguel Arias Mejias, full-stack developer specializing in Go and Vue.js.' }
       ]
     }
   }

@@ -1,9 +1,9 @@
 <template>
-  <section id="testimonials" class="section">
+  <section id="recomendations" class="section">
     <v-container>
-      <h2 class="text-h4 text-center mb-8">Testimonials</h2>
+      <h2 class="text-h4 text-center mb-8">Recomendations</h2>
       <v-row>
-        <v-col cols="12" md="6" v-for="t in testimonials" :key="t.name">
+        <v-col cols="12" md="6" v-for="t in recomendations" :key="t.name">
           <v-card class="pa-4 mb-4">
             <v-row>
               <v-col cols="3">
@@ -24,7 +24,7 @@
 </template>
 <script setup lang="ts">
 interface Testimonial { name: string; quote: string; avatar: string }
-const testimonials: Testimonial[] = [
+const recomendations: Testimonial[] = [
   { name: 'Alice Johnson', quote: 'Juan delivered exactly what we needed on time.', avatar: 'https://placehold.co/100x100' },
   { name: 'Bob Smith', quote: 'Professional and highly skilled developer.', avatar: 'https://placehold.co/100x100' }
 ]
