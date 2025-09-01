@@ -35,7 +35,7 @@
           </v-btn>
           
           <v-btn
-            href="https://github.com/juanmiguelarias"
+            href="https://github.com/juanmiguelar"
             target="_blank"
             variant="outlined"
             size="large"
