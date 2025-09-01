@@ -7,21 +7,14 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/main.scss', '@mdi/font/css/materialdesignicons.min.css'],
   build: { transpile: ['vuetify'] },
   typescript: { strict: true },
-  site: { url: 'https://juanmiguel.dev' },
+  
   modules: [
     '@nuxtjs/seo',
     '@nuxt/image',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
-  seo: {
-    site: {
-      url: 'https://juanmiguel.dev',
-      name: 'Juan Miguel - Portfolio',
-      description: 'Full-stack developer portfolio',
-      defaultLocale: 'en'
-    }
-  },
+  
   image: {
     quality: 80,
     formats: ['webp', 'avif'],
@@ -34,22 +27,26 @@ export default defineNuxtConfig({
       xxl: 1536
     }
   },
+  
   robots: {
     UserAgent: '*',
     Allow: '/',
     Sitemap: 'https://juanmiguel.dev/sitemap.xml'
   },
+  
   sitemap: {
     hostname: 'https://juanmiguel.dev',
     gzip: true,
     exclude: ['/admin/**']
   },
+  
   vite: {
     ssr: { noExternal: ['vuetify'] },
     plugins: [
       vuetify({ autoImport: true })
     ]
   },
+  
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
@@ -71,6 +68,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+  
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -78,6 +76,7 @@ export default defineNuxtConfig({
     },
     compressPublicAssets: true
   },
+  
   experimental: {
     payloadExtraction: false,
     renderJsonPayloads: true
