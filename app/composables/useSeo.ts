@@ -28,7 +28,7 @@ export function useSeo() {
         { name: 'twitter:image', content: image },
         { name: 'twitter:creator', content: '@juan' }
       ],
-      script: opts.schema ? [{ type: 'application/ld+json', children: JSON.stringify(opts.schema) }] : []
+      script: opts.schema ? [{ type: 'application/ld+json', innerHTML: JSON.stringify(opts.schema) }] : []
     })
   }
   return { setSeo }

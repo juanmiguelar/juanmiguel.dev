@@ -7,21 +7,14 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/main.scss', '@mdi/font/css/materialdesignicons.min.css'],
   build: { transpile: ['vuetify'] },
   typescript: { strict: true },
-  site: { url: 'https://juanmiguel.dev' },
+  
   modules: [
     '@nuxtjs/seo',
     '@nuxt/image',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
-  seo: {
-    site: {
-      url: 'https://juanmiguel.dev',
-      name: 'Juan Miguel - Portfolio',
-      description: 'Full-stack developer portfolio',
-      defaultLocale: 'en'
-    }
-  },
+  
   image: {
     quality: 80,
     formats: ['webp', 'avif'],
@@ -34,22 +27,25 @@ export default defineNuxtConfig({
       xxl: 1536
     }
   },
+  
   robots: {
-    UserAgent: '*',
-    Allow: '/',
-    Sitemap: 'https://juanmiguel.dev/sitemap.xml'
+    sitemap: 'https://juanmiguel.dev/sitemap.xml'
   },
+  
   sitemap: {
-    hostname: 'https://juanmiguel.dev',
-    gzip: true,
-    exclude: ['/admin/**']
+    urls: async () => {
+      const staticRoutes = ['/']
+      return staticRoutes
+    }
   },
+  
   vite: {
     ssr: { noExternal: ['vuetify'] },
     plugins: [
       vuetify({ autoImport: true })
     ]
   },
+  
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
@@ -57,14 +53,21 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Portfolio of Juan Miguel Arias Mejias, full-stack developer specializing in Go and Vue.js.' }
+        { name: 'description', content: 'Portfolio of Juan Miguel Arias Mejias, full-stack developer specializing in Go and Vue.js.' },
+        { name: 'msapplication-TileColor', content: '#da532c' },
+        { name: 'theme-color', content: '#ffffff' }
       ],
       link: [
         { rel: 'canonical', href: 'https://juanmiguel.dev' },
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/favicon/site.webmanifest' }
       ]
     }
   },
+  
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -72,6 +75,7 @@ export default defineNuxtConfig({
     },
     compressPublicAssets: true
   },
+  
   experimental: {
     payloadExtraction: false,
     renderJsonPayloads: true
