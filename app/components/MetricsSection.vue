@@ -52,8 +52,8 @@ const metrics: Metric[] = [
     color: 'success'
   },
   { 
-    value: '80+', 
-    label: 'Developers Trained',
+    value: '10+', 
+    label: 'Technical workshops',
     icon: 'mdi-account-group',
     color: 'warning'
   }

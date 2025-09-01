@@ -4,7 +4,7 @@
       <div class="text-center">
         <h2 class="text-h3 font-weight-bold mb-4">Let's work together</h2>
         <p class="text-h6 text-medium-emphasis mb-8 mx-auto" style="max-width: 600px">
-          Ready to bring your ideas to life? I'm currently available for new projects and would love to discuss how we can collaborate.
+          Ready to bring your ideas to life? I'm currently available for small website projects and would love to discuss how we can collaborate.
         </p>
         
         <!-- Main CTA Button -->
