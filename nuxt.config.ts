@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
-
+  
   runtimeConfig: {
     public: {
       siteUrl
@@ -51,7 +51,10 @@ export default defineNuxtConfig({
     ssr: { noExternal: ['vuetify'] },
     plugins: [
       vuetify({ autoImport: true })
-    ]
+    ], 
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true
+    }
   },
   
   app: {
