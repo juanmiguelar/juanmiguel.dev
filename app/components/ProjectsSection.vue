@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="experience-section">
+  <section id="projects" class="experience-section">
     <v-container>
       <div class="text-center mb-12">
         <h2 class="text-h3 font-weight-bold mb-4">My Experience</h2>

@@ -1,11 +1,49 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/styles/main.scss', '@mdi/font/css/materialdesignicons.min.css'],
   build: { transpile: ['vuetify'] },
   typescript: { strict: true },
+  site: { url: 'https://juanmiguel.dev' },
+  modules: [
+    '@nuxtjs/seo',
+    '@nuxt/image',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
+  ],
+  seo: {
+    site: {
+      url: 'https://juanmiguel.dev',
+      name: 'Juan Miguel - Portfolio',
+      description: 'Full-stack developer portfolio',
+      defaultLocale: 'en'
+    }
+  },
+  image: {
+    quality: 80,
+    formats: ['webp', 'avif'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536
+    }
+  },
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Sitemap: 'https://juanmiguel.dev/sitemap.xml'
+  },
+  sitemap: {
+    hostname: 'https://juanmiguel.dev',
+    gzip: true,
+    exclude: ['/admin/**']
+  },
   vite: {
     ssr: { noExternal: ['vuetify'] },
     plugins: [
@@ -14,10 +52,28 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: { lang: 'en' },
       title: 'Juan Miguel Arias Mejias - Full-stack Developer',
       meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Portfolio of Juan Miguel Arias Mejias, full-stack developer specializing in Go and Vue.js.' }
+      ],
+      link: [
+        { rel: 'canonical', href: 'https://juanmiguel.dev' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
       ]
     }
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/sitemap.xml', '/']
+    },
+    compressPublicAssets: true
+  },
+  experimental: {
+    payloadExtraction: false,
+    renderJsonPayloads: true
   }
 })
