@@ -29,15 +29,14 @@ export default defineNuxtConfig({
   },
   
   robots: {
-    UserAgent: '*',
-    Allow: '/',
-    Sitemap: 'https://juanmiguel.dev/sitemap.xml'
+    sitemap: 'https://juanmiguel.dev/sitemap.xml'
   },
   
   sitemap: {
-    hostname: 'https://juanmiguel.dev',
-    gzip: true,
-    exclude: ['/admin/**']
+    urls: async () => {
+      const staticRoutes = ['/']
+      return staticRoutes
+    }
   },
   
   vite: {
