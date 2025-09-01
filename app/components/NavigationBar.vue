@@ -5,7 +5,6 @@
     <v-spacer />
     <div class="d-none d-md-flex">
       <v-btn v-for="link in links" :key="link.href" :href="link.href" variant="text" class="mx-1" aria-label="Go to section">{{ link.label }}</v-btn>
-      <v-btn icon="mdi-theme-light-dark" @click="toggleTheme" aria-label="Toggle theme" />
     </div>
   </v-app-bar>
   <v-navigation-drawer v-model="drawer" temporary class="d-md-none">

@@ -290,7 +290,7 @@ const independentProjects = [
     category: 'Full-Stack',
     timeline: '1 week',
     description: `A clean, responsive site that presents Malcolm Ugalde—an MBA(c) in Finance and investment advisor with over five years of experience—offering tailored, 1:1 financial guidance. The site explains how to begin investing confidently even with limited funds, highlights personalized mentorship programs, and features real client testimonials that reinforce trust and effectiveness`,
-    keyFeatures: ['Mobile responsive'],
+    keyFeatures: ['Mobile responsive', 'SEO optimized'],
     technologies: ['Nuxt', 'Versel', 'Codex', 'Vuetify'],
     screenshot: '/img/malcolmweb.png',
     github: 'https://github.com/juanmiguelar/malcolmugalde.web',
@@ -304,7 +304,7 @@ const independentProjects = [
     description: `
     A vibrant, mobile-first platform built with Nuxt 3 and Vuetify, crafted to connect Costa Rican art enthusiasts with accessible watercolor and acrylic workshops. Users can explore creative themes like Pokémon, Studio Ghibli, Botánica, and Colibríes—regardless of their skill level—from beginner-friendly to intermediate, and book their first workshop via WhatsApp. The site also features a gallery spotlighting student artwork and warmly introduces Gioconda Cerdas, a passionate instructor who has guided over 300 budding artists for more than eight years
     `,
-    keyFeatures: ['blog', 'Mobile responsive'],
+    keyFeatures: ['blog', 'Mobile responsive', 'SEO optimized'],
     technologies: ['Nuxt', 'Strapi', 'Codex', 'Vuetify', 'Claude'],
     screenshot: '/img/soygiocoweb.png',
     github: 'https://github.com/juanmiguelar/SoyGioco.art',
@@ -315,8 +315,8 @@ const independentProjects = [
     title: 'Developer Portfolio Template',
     category: 'Frontend',
     timeline: '1 week',
-    description: `A polished portfolio built with Nuxt 3, TypeScript, and Vuetify—showcasing professional strengths in Go and Vue.js. This mobile-first, responsive site includes a hero section, services, project highlights, performance metrics, tech stack, recommendations, and a contact form. It also offers dark/light mode toggling and a smooth deployment setup for both Netlify and Vercel. A clean, functional representation of developer identity and experience.`,
-    keyFeatures: ['SEO optimized', 'Dark mode', 'Mobile first'],
+    description: `A polished portfolio built with Nuxt 3, TypeScript, and Vuetify—showcasing professional strengths in Go and Vue.js. This mobile-first, responsive site includes a hero section, services, project highlights, performance metrics, tech stack, recommendations, and a contact form. A clean, functional representation of developer identity and experience.`,
+    keyFeatures: ['SEO optimized', 'Mobile first'],
     technologies: ['Nuxt.js', 'Vuetify', 'TypeScript', 'SCSS'],
     screenshot: '/img/juanmiguelweb.png',
     github: 'https://github.com/juanmiguelar/juanmiguel.dev',
