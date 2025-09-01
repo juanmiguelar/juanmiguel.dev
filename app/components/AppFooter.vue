@@ -3,11 +3,12 @@
     <v-container>
       <v-row>
         <v-col class="text-center">
-          <div>&copy; {{ new Date().getFullYear() }} Juan Miguel Arias Mejias</div>
+          <div>&copy; {{ currentYear }} Juan Miguel Arias Mejias</div>
         </v-col>
       </v-row>
     </v-container>
   </v-footer>
 </template>
 <script setup lang="ts">
+const currentYear = new Date().getFullYear()
 </script>
