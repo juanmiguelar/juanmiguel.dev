@@ -207,14 +207,6 @@
 
                     <v-spacer />
                     
-                    <v-btn 
-                      variant="text" 
-                      color="primary"
-                      size="small"
-                      @click="openIndependentCaseStudy(project.id)"
-                    >
-                      Case Study
-                    </v-btn>
                   </v-card-actions>
                 </v-card>
               </v-col>
@@ -293,28 +285,30 @@ const corporateProjects = [
 // Independent projects (you can add real ones here)
 const independentProjects = [
   {
-    id: 'task-management',
-    title: 'Smart Task Management App',
+    id: 'malcolm',
+    title: 'Malcolm Ugalde Website',
     category: 'Full-Stack',
-    timeline: '3 weeks',
-    description: 'Modern task management application with real-time collaboration, built with Vue.js frontend and Go backend.',
-    keyFeatures: ['Real-time sync', 'Team collaboration', 'Mobile responsive'],
-    technologies: ['Vue.js', 'Go', 'WebSockets', 'PostgreSQL'],
-    screenshot: 'https://placehold.co/400x300/673AB7/FFFFFF?text=Task+Manager',
-    github: 'https://github.com/juanmiguelarias/task-manager',
-    liveDemo: 'https://task-manager-demo.com'
+    timeline: '1 week',
+    description: `A clean, responsive site that presents Malcolm Ugalde—an MBA(c) in Finance and investment advisor with over five years of experience—offering tailored, 1:1 financial guidance. The site explains how to begin investing confidently even with limited funds, highlights personalized mentorship programs, and features real client testimonials that reinforce trust and effectiveness`,
+    keyFeatures: ['Mobile responsive'],
+    technologies: ['Nuxt', 'Versel', 'Codex', 'Vuetify'],
+    screenshot: '/img/malcolmweb.png',
+    github: 'https://github.com/juanmiguelar/malcolmugalde.web',
+    liveDemo: 'https://malcolmugalde.netlify.app/'
   },
   {
-    id: 'ecommerce-api',
-    title: 'E-commerce REST API',
-    category: 'Backend',
-    timeline: '2 weeks',
-    description: 'Scalable e-commerce API with payment integration, inventory management, and order processing.',
-    keyFeatures: ['Payment gateway', 'Inventory tracking', 'Order management'],
-    technologies: ['Go', 'PostgreSQL', 'Redis', 'Docker'],
-    screenshot: 'https://placehold.co/400x300/FF5722/FFFFFF?text=E-commerce+API',
-    github: 'https://github.com/juanmiguelarias/ecommerce-api',
-    liveDemo: 'https://api-docs-demo.com'
+    id: 'soygioco',
+    title: 'SoyGioco Website',
+    category: 'Full-Stack',
+    timeline: '4 weeks',
+    description: `
+    A vibrant, mobile-first platform built with Nuxt 3 and Vuetify, crafted to connect Costa Rican art enthusiasts with accessible watercolor and acrylic workshops. Users can explore creative themes like Pokémon, Studio Ghibli, Botánica, and Colibríes—regardless of their skill level—from beginner-friendly to intermediate, and book their first workshop via WhatsApp. The site also features a gallery spotlighting student artwork and warmly introduces Gioconda Cerdas, a passionate instructor who has guided over 300 budding artists for more than eight years
+    `,
+    keyFeatures: ['blog', 'Mobile responsive'],
+    technologies: ['Nuxt', 'Strapi', 'Codex', 'Vuetify', 'Claude'],
+    screenshot: '/img/soygiocoweb.png',
+    github: 'https://github.com/juanmiguelar/SoyGioco.art',
+    liveDemo: 'https://soygiocoart.netlify.app/'
   },
   {
     id: 'portfolio-website',
