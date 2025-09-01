@@ -315,12 +315,12 @@ const independentProjects = [
     title: 'Developer Portfolio Template',
     category: 'Frontend',
     timeline: '1 week',
-    description: 'Modern, responsive portfolio template built with Nuxt.js and Vuetify, optimized for SEO and performance.',
+    description: `A polished portfolio built with Nuxt 3, TypeScript, and Vuetify—showcasing professional strengths in Go and Vue.js. This mobile-first, responsive site includes a hero section, services, project highlights, performance metrics, tech stack, recommendations, and a contact form. It also offers dark/light mode toggling and a smooth deployment setup for both Netlify and Vercel. A clean, functional representation of developer identity and experience.`,
     keyFeatures: ['SEO optimized', 'Dark mode', 'Mobile first'],
     technologies: ['Nuxt.js', 'Vuetify', 'TypeScript', 'SCSS'],
-    screenshot: 'https://placehold.co/400x300/9C27B0/FFFFFF?text=Portfolio+Template',
-    github: 'https://github.com/juanmiguelarias/portfolio-template',
-    liveDemo: 'https://portfolio-template-demo.com'
+    screenshot: '/img/juanmiguelweb.png',
+    github: 'https://github.com/juanmiguelar/juanmiguel.dev',
+    liveDemo: 'https://juanmigueldev.netlify.app/'
   }
 ]
 
