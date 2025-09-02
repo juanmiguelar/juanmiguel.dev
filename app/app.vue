@@ -5,6 +5,7 @@
 </template>
 <script setup lang="ts">
 useHead({
+  title: "Juan Miguel - Full-Stack Developer Portfolio",
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' },
@@ -14,7 +15,8 @@ useHead({
   ],
   meta: [
     { name: 'msapplication-TileColor', content: '#da532c' },
-    { name: 'theme-color', content: '#ffffff' }
+    { name: 'theme-color', content: '#ffffff' },
+    { name: 'description', content: 'Experienced developer specializing in Vue, Nuxt, and Golang.' }
   ]
 })
 </script>
