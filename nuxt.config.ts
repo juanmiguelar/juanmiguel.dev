@@ -2,7 +2,7 @@
 import vuetify from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/styles/main.scss', '@mdi/font/css/materialdesignicons.min.css'],
@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
+
+  site : {
+    url: 'juanmiguel.dev'
+  },
   
   image: {
     quality: 80,
