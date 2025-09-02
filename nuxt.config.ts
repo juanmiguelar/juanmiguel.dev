@@ -75,6 +75,10 @@ export default defineNuxtConfig({
       ]
     }
   },
+
+  site : {
+    url: 'juanmiguel.dev'
+  },
   
   nitro: {
     prerender: {

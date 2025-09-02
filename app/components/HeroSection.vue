@@ -8,10 +8,16 @@
           <v-btn color="primary" class="mt-4" href="#contact" aria-label="Contact">Let's work together</v-btn>
         </v-col>
         <v-col cols="12" md="6" class="text-center">
-          <NuxtImg src="/img/juanmiguel.jpeg" alt="Profile image" width="300" height="300" class="mx-auto" />
+          <NuxtImg 
+            src="/img/juanmiguel.jpeg" 
+            alt="Profile image" 
+            width="300" 
+            height="300" 
+            class="mx-auto"
+            preload="false"
+          />
         </v-col>
       </v-row>
     </v-container>
   </section>
 </template>
-<script setup lang="ts"></script>
