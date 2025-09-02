@@ -19,10 +19,12 @@
             >
               <div class="testimonial-header d-flex align-center mb-4">
                 <v-avatar size="72" class="me-4">
-                  <v-img 
-                    :src="testimonial.avatar" 
+                  <NuxtImg
+                    :src="testimonial.avatar"
                     :alt="testimonial.name"
-                    :eager="true"
+                    width="72"
+                    height="72"
+                    loading="eager"
                   />
                 </v-avatar>
                 <div>

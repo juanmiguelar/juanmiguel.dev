@@ -45,16 +45,16 @@
               >
                 <v-card class="corporate-card h-100" elevation="3">
                   <div class="company-header">
-                    <v-img 
-                      :src="project.companyLogo" 
-                      height="60" 
+                    <NuxtImg
+                      :src="project.companyLogo"
+                      height="60"
                       :alt="project.company"
-                      contain
+                      fit="contain"
                       class="company-logo"
                     />
-                    <v-chip 
-                      :color="project.statusColor" 
-                      variant="flat" 
+                    <v-chip
+                      :color="project.statusColor"
+                      variant="flat"
                       size="small"
                     >
                       {{ project.status }}
@@ -125,12 +125,13 @@
                 :key="project.id"
               >
                 <v-card class="independent-card h-100" elevation="2" hover>
-                  <v-img 
-                    :src="project.screenshot" 
-                    height="200" 
-                    :alt="project.title"
-                    cover
-                  >
+                  <div class="project-image-wrapper">
+                    <NuxtImg
+                      :src="project.screenshot"
+                      height="200"
+                      :alt="project.title"
+                      fit="cover"
+                    />
                     <div class="project-overlay">
                       <v-btn
                         v-if="project.liveDemo"
@@ -145,8 +146,8 @@
                         Live Demo
                       </v-btn>
                     </div>
-                  </v-img>
-
+                  </div>
+                
                   <v-card-title class="text-h6">{{ project.title }}</v-card-title>
                   <v-card-subtitle>{{ project.category }} • {{ project.timeline }}</v-card-subtitle>
 
@@ -372,7 +373,9 @@ const openIndependentCaseStudy = (projectId: string) => {
 
   .independent-card {
     border-top: 4px solid rgb(var(--v-theme-success));
-
+    .project-image-wrapper {
+      position: relative;
+    }
     .project-overlay {
       position: absolute;
       top: 0;
