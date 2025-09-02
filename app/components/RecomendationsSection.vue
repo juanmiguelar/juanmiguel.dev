@@ -4,7 +4,7 @@
       <h2 class="text-h4 text-center mb-8">Recommendations</h2>
       
       <!-- SSR Safe version -->
-      <LazyClientOnly>
+      <ClientOnly>
         <v-row>
           <v-col 
             cols="12" 
@@ -66,7 +66,7 @@
             </v-col>
           </v-row>
         </template>
-      </LazyClientOnly>
+      </ClientOnly>
     </v-container>
   </section>
 </template>

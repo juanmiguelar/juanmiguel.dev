@@ -8,10 +8,30 @@
           <v-btn color="primary" class="mt-4" href="#contact" aria-label="Contact">Let's work together</v-btn>
         </v-col>
         <v-col cols="12" md="6" class="text-center">
-          <v-img src="/img/juanmiguel.jpeg" alt="Profile image" width="300" height="300" class="mx-auto" />
+          <ClientOnly>
+            <v-img
+              src="/img/juanmiguel.jpeg"
+              alt="Profile image"
+              width="300"
+              height="300"
+              class="mx-auto"
+            />
+            <template #fallback>
+              <div
+                class="image-placeholder mx-auto"
+                style="width:300px;height:300px;"
+              />
+            </template>
+          </ClientOnly>
         </v-col>
       </v-row>
     </v-container>
   </section>
 </template>
 <script setup lang="ts"></script>
+
+<style scoped>
+.image-placeholder {
+  background-color: #e0e0e0;
+}
+</style>

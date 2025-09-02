@@ -9,21 +9,22 @@
       </div>
 
       <!-- Experience Toggle -->
-      <v-tabs v-model="activeTab" centered class="mb-10">
-        <v-tab value="corporate">
-          <v-icon start>mdi-office-building</v-icon>
-          Corporate Experience
-        </v-tab>
-        <v-tab value="independent">
-          <v-icon start>mdi-account-star</v-icon>
-          Independent Projects
-        </v-tab>
-      </v-tabs>
+      <ClientOnly>
+        <v-tabs v-model="activeTab" centered class="mb-10">
+          <v-tab value="corporate">
+            <v-icon start>mdi-office-building</v-icon>
+            Corporate Experience
+          </v-tab>
+          <v-tab value="independent">
+            <v-icon start>mdi-account-star</v-icon>
+            Independent Projects
+          </v-tab>
+        </v-tabs>
 
-      <!-- Corporate Experience -->
-      <v-window v-model="activeTab">
-        <v-window-item value="corporate">
-          <div class="corporate-section">
+        <!-- Corporate Experience -->
+        <v-window v-model="activeTab">
+          <v-window-item value="corporate">
+            <div class="corporate-section">
             <div class="text-center mb-8">
               <v-chip color="primary" variant="outlined" size="large" class="mb-4">
                 <v-icon start>mdi-shield-check</v-icon>
@@ -214,6 +215,33 @@
           </div>
         </v-window-item>
       </v-window>
+        <template #fallback>
+          <v-tabs class="mb-10">
+            <v-tab v-for="n in 2" :key="`tab-${n}`">
+              <v-skeleton-loader type="text" class="mx-4 mb-2" />
+            </v-tab>
+          </v-tabs>
+          <v-row>
+            <v-col
+              cols="12"
+              md="6"
+              lg="4"
+              v-for="n in 3"
+              :key="`card-${n}`"
+            >
+              <v-card class="h-100" elevation="2">
+                <v-skeleton-loader type="image" height="200" />
+                <v-card-title>
+                  <v-skeleton-loader type="text" />
+                </v-card-title>
+                <v-card-text>
+                  <v-skeleton-loader type="paragraph" />
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </template>
+      </ClientOnly>
 
       <!-- Call to Action -->
       <div class="text-center mt-12">

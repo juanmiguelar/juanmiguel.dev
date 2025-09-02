@@ -4,8 +4,8 @@
     description="Experienced developer specializing in Vue, Nuxt, and Golang"
     :schema="schema"
   />
-  <HeroSection />
   <ServicesSection />
+  <HeroSection />
   <ProjectsSection />
   <MetricsSection />
   <RecomendationsSection />
@@ -22,10 +22,12 @@ import RecomendationsSection from '~/components/RecomendationsSection.vue'
 import TechStackSection from '~/components/TechStackSection.vue'
 import ContactForm from '~/components/ContactForm.vue'
 
+const { public: { siteUrl } } = useRuntimeConfig()
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': ['Person', 'WebSite'],
   name: 'Juan Miguel',
-  url: 'https://juanmiguel.dev'
+  url: siteUrl
 }
 </script>

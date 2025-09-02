@@ -10,5 +10,9 @@
   </v-footer>
 </template>
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
+const currentYear = ref('')
+
+onMounted(() => {
+  currentYear.value = new Date().getFullYear()
+})
 </script>

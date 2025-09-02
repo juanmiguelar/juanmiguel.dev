@@ -4,7 +4,7 @@
       <h2 class="text-h4 text-center mb-8">Tech Stack</h2>
       <v-row class="justify-center">
         <v-col cols="4" sm="2" v-for="tech in techs" :key="tech" class="text-center">
-          <v-img :src="tech" :alt="tech" height="80" />
+          <img :src="tech" :alt="tech" height="80" />
         </v-col>
       </v-row>
     </v-container>

@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -14,6 +16,16 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
+
+  runtimeConfig: {
+    public: {
+      siteUrl
+    }
+  },
+
+  site: {
+    url: siteUrl
+  },
   
   image: {
     quality: 80,
@@ -29,10 +41,11 @@ export default defineNuxtConfig({
   },
   
   robots: {
-    sitemap: 'https://juanmiguel.dev/sitemap.xml'
+    sitemap: `${siteUrl}/sitemap.xml`
   },
   
   sitemap: {
+    siteUrl,
     urls: async () => {
       const staticRoutes = ['/']
       return staticRoutes
@@ -58,7 +71,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#ffffff' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://juanmiguel.dev' },
+        { rel: 'canonical', href: siteUrl },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' },
