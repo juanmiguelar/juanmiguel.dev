@@ -56,7 +56,14 @@ export default defineNuxtConfig({
     ssr: { noExternal: ['vuetify'] },
     plugins: [
       vuetify({ autoImport: true })
-    ]
+    ],
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true,
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false
+    },
+    // Opcional: para ver más detalles en desarrollo
+    logLevel: 'info'
   },
   
   app: {
