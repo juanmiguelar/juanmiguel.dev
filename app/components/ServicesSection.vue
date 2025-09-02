@@ -1,24 +1,23 @@
 <template>
-  <section id="services" class="section">
-    <v-container>
-      <h2 class="text-h4 text-center mb-8">Services</h2>
-      <v-row>
-        <v-col cols="12" md="4" v-for="service in services" :key="service.title">
-          <v-card class="pa-4" elevation="2">
-            <v-icon :icon="service.icon" size="36" class="mb-3" />
-            <h3 class="text-h6 mb-2">{{ service.title }}</h3>
-            <p>{{ service.desc }}</p>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
+  <section id="services" class="py-20">
+    <UContainer>
+      <h2 class="mb-8 text-center text-4xl font-semibold">Services</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <UCard v-for="service in services" :key="service.title" class="p-6 text-center">
+          <UIcon :name="service.icon" class="mb-3 text-4xl" />
+          <h3 class="mb-2 text-xl font-semibold">{{ service.title }}</h3>
+          <p>{{ service.desc }}</p>
+        </UCard>
+      </div>
+    </UContainer>
   </section>
 </template>
+
 <script setup lang="ts">
 interface Service { title: string; desc: string; icon: string }
 const services: Service[] = [
-  { title: 'Web Development', desc: 'Responsive websites', icon: 'mdi-laptop' },
-  { title: 'API Design', desc: 'Scalable REST', icon: 'mdi-api' },
-  { title: 'Ads', desc: 'Meta Ads', icon: 'mdi-advertisements' },
+  { title: 'Web Development', desc: 'Responsive websites', icon: 'i-heroicons-computer-desktop' },
+  { title: 'API Design', desc: 'Scalable REST', icon: 'i-heroicons-code-bracket' },
+  { title: 'Ads', desc: 'Meta Ads', icon: 'i-heroicons-megaphone' }
 ]
 </script>

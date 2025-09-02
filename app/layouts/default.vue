@@ -1,12 +1,13 @@
 <template>
-  <v-app>
+  <div>
     <NavigationBar />
-    <v-main>
+    <main>
       <slot />
-    </v-main>
+    </main>
     <AppFooter />
-  </v-app>
+  </div>
 </template>
+
 <script setup lang="ts">
 import NavigationBar from '~/components/NavigationBar.vue'
 import AppFooter from '~/components/AppFooter.vue'

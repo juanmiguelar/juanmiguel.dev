@@ -1,33 +1,39 @@
 <template>
-  <v-app-bar app density="comfortable">
-    <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" aria-label="Toggle navigation" />
-    <v-toolbar-title>Juan Miguel Arias Mejias</v-toolbar-title>
-    <v-spacer />
-    <div class="d-none d-md-flex">
-      <v-btn v-for="link in links" :key="link.href" :href="link.href" variant="text" class="mx-1" aria-label="Go to section">{{ link.label }}</v-btn>
-    </div>
-  </v-app-bar>
-  <v-navigation-drawer v-model="drawer" temporary class="d-md-none">
-    <v-list>
-      <v-list-item v-for="link in links" :key="link.href" :href="link.href" @click="drawer = false" :title="link.label" />
-      <v-list-item @click="toggleTheme" title="Toggle theme" prepend-icon="mdi-theme-light-dark" />
-    </v-list>
-  </v-navigation-drawer>
+  <header class="bg-white dark:bg-gray-900 shadow">
+    <UContainer class="flex items-center justify-between py-4">
+      <h1 class="text-lg font-bold">Juan Miguel Arias Mejias</h1>
+      <nav class="hidden md:flex items-center gap-2">
+        <UButton v-for="link in links" :key="link.href" :href="link.href" variant="ghost" class="mx-1">{{ link.label }}</UButton>
+        <UButton variant="ghost" class="ml-2" @click="toggleTheme" aria-label="Toggle theme">
+          <UIcon :name="colorMode.preference === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'" />
+        </UButton>
+      </nav>
+      <UButton class="md:hidden" variant="ghost" @click="drawer = true" aria-label="Open navigation">
+        <UIcon name="i-heroicons-bars-3" />
+      </UButton>
+    </UContainer>
+    <USlideover v-model="drawer" side="left">
+      <div class="p-4 space-y-2">
+        <UButton v-for="link in links" :key="link.href" :href="link.href" block variant="ghost" @click="drawer = false">{{ link.label }}</UButton>
+        <UButton block variant="ghost" @click="toggleTheme">
+          <UIcon :name="colorMode.preference === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'" class="mr-2" />
+          Toggle theme
+        </UButton>
+      </div>
+    </USlideover>
+  </header>
 </template>
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useTheme } from 'vuetify'
 
-const drawer = ref(false)
+<script setup lang="ts">
 const links = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Services', href: '#services' },
+  { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Recomendations', href: '#recomendations' },
   { label: 'Contact', href: '#contact' }
 ]
-const theme = useTheme()
+
+const drawer = ref(false)
+const colorMode = useColorMode()
 const toggleTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
 }
 </script>

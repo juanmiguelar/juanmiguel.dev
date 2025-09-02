@@ -1,11 +1,14 @@
 <template>
   <!-- CreativeWork microdata for project cards -->
-  <article itemscope itemtype="https://schema.org/CreativeWork">
-    <img :src="image" :alt="title" itemprop="image" />
-    <h2 itemprop="name">{{ title }}</h2>
-    <p itemprop="description">{{ description }}</p>
+  <UCard class="p-4" itemscope itemtype="https://schema.org/CreativeWork">
+    <template #header>
+      <h3 itemprop="name" class="text-lg font-semibold">{{ title }}</h3>
+    </template>
+
+    <NuxtImg :src="image" :alt="title" itemprop="image" class="mb-2 rounded" />
+    <p itemprop="description" class="mb-2">{{ description }}</p>
     <slot />
-  </article>
+  </UCard>
 </template>
 
 <script setup lang="ts">

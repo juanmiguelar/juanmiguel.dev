@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@nuxt/ui';
+
 html {
   scroll-behavior: smooth;
 }

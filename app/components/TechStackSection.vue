@@ -1,13 +1,11 @@
 <template>
   <section id="tech" class="section">
-    <v-container>
-      <h2 class="text-h4 text-center mb-8">Tech Stack</h2>
-      <v-row class="justify-center">
-        <v-col cols="4" sm="2" v-for="tech in techs" :key="tech" class="text-center">
-          <v-img :src="tech" :alt="tech" height="80" />
-        </v-col>
-      </v-row>
-    </v-container>
+    <UContainer>
+      <h2 class="text-4xl text-center mb-8">Tech Stack</h2>
+      <div class="grid grid-cols-4 sm:grid-cols-6 gap-4 justify-items-center">
+        <NuxtImg v-for="tech in techs" :key="tech" :src="tech" :alt="tech" height="80" />
+      </div>
+    </UContainer>
   </section>
 </template>
 <script setup lang="ts">

@@ -1,20 +1,29 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import vuetify from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
   ssr: false,
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['~/assets/styles/main.scss', '@mdi/font/css/materialdesignicons.min.css'],
-  build: { transpile: ['vuetify'] },
+  siteUrl: 'https://juanmiguel.dev',
+  css: ['~/assets/styles/main.scss'],
   typescript: { strict: true },
-  
+
   modules: [
+    '@nuxt/ui',
+    '@nuxt/icon',
     '@nuxtjs/seo',
     '@nuxt/image',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap'
   ],
+
+  ui: {
+    fonts: false
+  },
+
+  tailwindcss: {
+    config: './tailwind.config.ts'
+  },
   
   image: {
     quality: 80,
@@ -34,6 +43,7 @@ export default defineNuxtConfig({
   },
   
   sitemap: {
+    enabled: false,
     urls: async () => {
       const staticRoutes = ['/']
       return staticRoutes
@@ -41,10 +51,6 @@ export default defineNuxtConfig({
   },
   
   vite: {
-    ssr: { noExternal: ['vuetify'] },
-    plugins: [
-      vuetify({ autoImport: true })
-    ],
     define: {
       __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true,
       __VUE_OPTIONS_API__: true,

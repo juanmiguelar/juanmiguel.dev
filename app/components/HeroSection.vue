@@ -1,17 +1,18 @@
 <template>
-  <section id="hero" class="section">
-    <v-container>
-      <v-row align="center">
-        <v-col cols="12" md="6">
-          <h1 class="text-h3 text-md-h2">Full-stack solutions in Go &amp; Nuxt</h1>
-          <p class="text-body-1">I build performant applications that drive business value.</p>
-          <v-btn color="primary" class="mt-4" href="#contact" aria-label="Contact">Let's work together</v-btn>
-        </v-col>
-        <v-col cols="12" md="6" class="text-center">
-          <v-img src="/img/juanmiguel.jpeg" alt="Profile image" width="300" height="300" class="mx-auto" />
-        </v-col>
-      </v-row>
-    </v-container>
+  <section id="hero" class="py-20">
+    <UContainer>
+      <div class="grid items-center gap-8 md:grid-cols-2">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold">Full-stack solutions in Go &amp; Nuxt</h1>
+          <p class="mt-4 text-lg">I build performant applications that drive business value.</p>
+          <UButton color="primary" class="mt-6" href="#contact" aria-label="Contact">Let's work together</UButton>
+        </div>
+        <div class="text-center">
+          <NuxtImg src="/img/juanmiguel.jpeg" alt="Profile image" width="300" height="300" class="mx-auto rounded-full" />
+        </div>
+      </div>
+    </UContainer>
   </section>
 </template>
+
 <script setup lang="ts"></script>
