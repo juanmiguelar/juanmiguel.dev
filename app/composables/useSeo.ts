@@ -5,11 +5,13 @@ import type { SeoMetaOptions } from '~/types/seo'
  * Centralized composable to manage SEO meta tags and social data.
  */
 export function useSeo() {
+  const { public: { siteUrl } } = useRuntimeConfig()
+
   const setSeo = (opts: SeoMetaOptions) => {
     const title = ensureLength(opts.title, 60)
     const description = ensureLength(opts.description, 160)
     const image = opts.image || '/img/juanmiguelweb.png'
-    const url = opts.url || 'https://juanmiguel.dev'
+    const url = opts.url || siteUrl
     const siteName = opts.siteName || 'Juan Miguel - Portfolio'
 
     useHead({

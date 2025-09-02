@@ -9,21 +9,22 @@
       </div>
 
       <!-- Experience Toggle -->
-      <v-tabs v-model="activeTab" centered class="mb-10">
-        <v-tab value="corporate">
-          <v-icon start>mdi-office-building</v-icon>
-          Corporate Experience
-        </v-tab>
-        <v-tab value="independent">
-          <v-icon start>mdi-account-star</v-icon>
-          Independent Projects
-        </v-tab>
-      </v-tabs>
+      <ClientOnly>
+        <v-tabs v-model="activeTab" centered class="mb-10">
+          <v-tab value="corporate">
+            <v-icon start>mdi-office-building</v-icon>
+            Corporate Experience
+          </v-tab>
+          <v-tab value="independent">
+            <v-icon start>mdi-account-star</v-icon>
+            Independent Projects
+          </v-tab>
+        </v-tabs>
 
-      <!-- Corporate Experience -->
-      <v-window v-model="activeTab">
-        <v-window-item value="corporate">
-          <div class="corporate-section">
+        <!-- Corporate Experience -->
+        <v-window v-model="activeTab">
+          <v-window-item value="corporate">
+            <div class="corporate-section">
             <div class="text-center mb-8">
               <v-chip color="primary" variant="outlined" size="large" class="mb-4">
                 <v-icon start>mdi-shield-check</v-icon>
@@ -214,6 +215,11 @@
           </div>
         </v-window-item>
       </v-window>
+        <template #fallback>
+          <div class="mb-10"></div>
+          <div></div>
+        </template>
+      </ClientOnly>
 
       <!-- Call to Action -->
       <div class="text-center mt-12">
