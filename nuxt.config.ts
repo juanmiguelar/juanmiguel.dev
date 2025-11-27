@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   ],
 
   site : {
-    url: 'juanmiguel.dev'
+    url: 'https://juanmiguel.dev'
   },
   
   image: {
