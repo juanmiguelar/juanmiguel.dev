@@ -5,6 +5,7 @@
   <MetricsSection />
   <RecomendationsSection />
   <TechStackSection />
+  <FaqSection :items="faqItems" />
   <ContactForm />
 </template>
 <script setup lang="ts">
@@ -14,6 +15,7 @@ import ProjectsSection from '~/components/ProjectsSection.vue'
 import MetricsSection from '~/components/MetricsSection.vue'
 import RecomendationsSection from '~/components/RecomendationsSection.vue'
 import TechStackSection from '~/components/TechStackSection.vue'
+import FaqSection from '~/components/FaqSection.vue'
 import ContactForm from '~/components/ContactForm.vue'
 
 const { public: publicRuntime } = useRuntimeConfig()
@@ -21,6 +23,28 @@ const siteUrl = publicRuntime.siteUrl || 'https://juanmiguel.dev'
 const pageTitle = 'Full-stack Go & Nuxt Developer | Juan Miguel Arias Mejias'
 const pageDescription = 'Full-stack developer specializing in Go, Nuxt, and performant APIs. I build fast, secure products end-to-end from backend architecture to polished web experiences.'
 const ogImage = `${siteUrl}/img/juanmiguelweb.png`
+const faqItems = [
+  {
+    question: 'What tech stack do you use?',
+    answer: 'Go for high-performance backend services and APIs; Nuxt/Vue for frontend; Postgres/Mongo for data; deployed on Vercel.'
+  },
+  {
+    question: 'How long does a typical website project take?',
+    answer: 'A marketing/portfolio site takes 1–2 weeks. If we include custom integrations or headless CMS, budget 2–4 weeks depending on scope.'
+  },
+  {
+    question: 'Do you handle both backend and frontend?',
+    answer: 'Yes. I design and build the backend (Go APIs, auth, performance) and the frontend (Nuxt/Vue, UI/UX)'
+  },
+  {
+    question: 'Can you join as a fractional engineer?',
+    answer: 'I offer fractional engagements to ship features, depends on the offer.'
+  },
+  {
+    question: 'Which time zones do you work with?',
+    answer: 'I collaborate mostly with US and LATAM teams and can overlap 4–6 hours with US time zones for standups and reviews.'
+  }
+]
 
 useSeoMeta({
   title: pageTitle,
@@ -133,6 +157,17 @@ useHead({
             reviewRating: { '@type': 'Rating', ratingValue: '5' },
             datePublished: '2024-01-01',
             url: `${siteUrl}#recomendations`
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: faqItems.map((item) => ({
+              '@type': 'Question',
+              name: item.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.answer
+              }
+            }))
           }
         ]
       })
