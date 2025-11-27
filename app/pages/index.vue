@@ -20,8 +20,8 @@ import ContactForm from '~/components/ContactForm.vue'
 
 const { public: publicRuntime } = useRuntimeConfig()
 const siteUrl = publicRuntime.siteUrl || 'https://juanmiguel.dev'
-const pageTitle = 'Full-stack Go & Nuxt Developer | Juan Miguel Arias Mejias'
-const pageDescription = 'Full-stack developer specializing in Go, Nuxt, and performant APIs. I build fast, secure products end-to-end from backend architecture to polished web experiences.'
+const pageTitle = 'Full-stack Go & Nuxt Developer'
+const pageDescription = 'Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams.'
 const ogImage = `${siteUrl}/img/juanmiguelweb.png`
 const faqItems = [
   {

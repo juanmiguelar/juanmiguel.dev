@@ -3,8 +3,8 @@
     <v-container>
       <v-row align="center">
         <v-col cols="12" md="6">
-          <h1 class="text-h3 text-md-h2">Full-stack solutions in Go &amp; Nuxt</h1>
-          <p class="text-body-1">I build performant applications that drive business value.</p>
+          <h1 class="text-h3 text-md-h2">Full-stack Go &amp; Nuxt developer for fast, reliable products</h1>
+          <p class="text-body-1">I design Go backends, Nuxt frontends, and performance-first APIs for teams that need quality shipped quickly.</p>
           <v-btn color="primary" class="mt-4" href="#contact" aria-label="Contact">Let's work together</v-btn>
         </v-col>
         <v-col cols="12" md="6" class="text-center">

@@ -27,8 +27,8 @@ export default defineNuxtConfig({
 
   site: {
     url: siteUrl,
-    name: 'Juan Miguel Arias Mejias - Full-stack Developer',
-    description: 'Portfolio of Juan Miguel Arias Mejias, full-stack developer specializing in Go and Vue.js.',
+    name: 'Juan Miguel Arias Mejias | Full-stack Go & Nuxt Developer',
+    description: 'Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams.',
     defaultLocale: 'en',
     indexable: isProd,
     image: `${siteUrl}/img/juanmiguelweb.png`
@@ -96,12 +96,16 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Juan Miguel Arias Mejias - Full-stack Developer',
-      titleTemplate: '%s | Juan Miguel Arias Mejias',
+      title: 'Juan Miguel Arias Mejias',
+      titleTemplate: (titleChunk) => {
+        const base = 'Juan Miguel Arias Mejias'
+        if (!titleChunk) return base
+        return titleChunk.includes(base) ? titleChunk : `${titleChunk} | ${base}`
+      },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Portfolio of Juan Miguel Arias Mejias, full-stack developer specializing in Go and Vue.js.' },
+        { name: 'description', content: 'Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams.' },
         { name: 'msapplication-TileColor', content: '#da532c' },
         { name: 'theme-color', content: '#ffffff' }
       ],
