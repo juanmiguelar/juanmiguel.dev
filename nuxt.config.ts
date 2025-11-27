@@ -49,10 +49,25 @@ export default defineNuxtConfig({
   },
   
   robots: {
-    sitemap: isProd ? `${siteUrl}/sitemap.xml` : undefined,
-    rules: isProd
-      ? [{ UserAgent: '*', Allow: '/' }]
-      : [{ UserAgent: '*', Disallow: '/' }]
+    sitemap: isProd ? [`${siteUrl}/sitemap.xml`] : [],
+    groups: isProd
+      ? [
+          {
+            userAgent: '*',
+            allow: ['/']
+          }
+        ]
+      : [
+          {
+            userAgent: '*',
+            disallow: ['/']
+          }
+        ],
+    blockAiBots: isProd,
+    blockNonSeoBots: isProd,
+    mergeWithRobotsTxtPath: false,
+    cacheControl: 'max-age=86400, must-revalidate',
+    credits: false
   },
   
   sitemap: {
@@ -104,7 +119,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/sitemap.xml', '/']
+      routes: ['/sitemap.xml', '/robots.txt', '/']
     },
     compressPublicAssets: true
   },
