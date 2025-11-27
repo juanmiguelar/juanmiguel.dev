@@ -19,10 +19,15 @@
             >
               <div class="testimonial-header d-flex align-center mb-4">
                 <v-avatar size="72" class="me-4">
-                  <v-img 
+                  <NuxtImg 
                     :src="testimonial.avatar" 
-                    :alt="testimonial.name"
-                    :eager="true"
+                    :alt="`${testimonial.name} portrait`"
+                    width="72"
+                    height="72"
+                    format="webp"
+                    sizes="72px"
+                    class="avatar-img"
+                    loading="lazy"
                   />
                 </v-avatar>
                 <div>
@@ -166,6 +171,13 @@ onMounted(() => {
 
 .me-4 {
   margin-right: 1rem;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .mb-1 {

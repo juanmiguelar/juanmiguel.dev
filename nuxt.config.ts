@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 
+const siteUrl = 'https://juanmiguel.dev'
+const isProd = process.env.NODE_ENV === 'production'
+
 export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2025-07-15',
@@ -8,6 +11,12 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/main.scss', '@mdi/font/css/materialdesignicons.min.css'],
   build: { transpile: ['vuetify'] },
   typescript: { strict: true },
+
+  runtimeConfig: {
+    public: {
+      siteUrl
+    }
+  },
   
   modules: [
     '@nuxtjs/seo',
@@ -16,13 +25,19 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
 
-  site : {
-    url: 'https://juanmiguel.dev'
+  site: {
+    url: siteUrl,
+    name: 'Juan Miguel Arias Mejias - Full-stack Developer',
+    description: 'Portfolio of Juan Miguel Arias Mejias, full-stack developer specializing in Go and Vue.js.',
+    defaultLocale: 'en',
+    indexable: isProd,
+    image: `${siteUrl}/img/juanmiguelweb.png`
   },
   
   image: {
     quality: 80,
     formats: ['webp', 'avif'],
+    domains: ['placehold.co'],
     screens: {
       xs: 320,
       sm: 640,
@@ -34,10 +49,15 @@ export default defineNuxtConfig({
   },
   
   robots: {
-    sitemap: 'https://juanmiguel.dev/sitemap.xml'
+    sitemap: isProd ? `${siteUrl}/sitemap.xml` : undefined,
+    rules: isProd
+      ? [{ UserAgent: '*', Allow: '/' }]
+      : [{ UserAgent: '*', Disallow: '/' }]
   },
   
   sitemap: {
+    siteUrl,
+    autoLastmod: true,
     urls: async () => {
       const staticRoutes = ['/']
       return staticRoutes
@@ -62,6 +82,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'Juan Miguel Arias Mejias - Full-stack Developer',
+      titleTemplate: '%s | Juan Miguel Arias Mejias',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

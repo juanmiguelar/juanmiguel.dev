@@ -45,12 +45,15 @@
               >
                 <v-card class="corporate-card h-100" elevation="3">
                   <div class="company-header">
-                    <v-img 
+                    <NuxtImg 
                       :src="project.companyLogo" 
-                      height="60" 
-                      :alt="project.company"
-                      contain
+                      :alt="`${project.company} logo`"
+                      width="150"
+                      height="60"
+                      format="webp"
+                      sizes="150px"
                       class="company-logo"
+                      loading="lazy"
                     />
                     <v-chip 
                       :color="project.statusColor" 
@@ -125,12 +128,17 @@
                 :key="project.id"
               >
                 <v-card class="independent-card h-100" elevation="2" hover>
-                  <v-img 
-                    :src="project.screenshot" 
-                    height="200" 
-                    :alt="project.title"
-                    cover
-                  >
+                  <div class="project-media">
+                    <NuxtImg 
+                      :src="project.screenshot" 
+                      :alt="`${project.title} screenshot`"
+                      width="800"
+                      height="450"
+                      format="webp"
+                      sizes="(min-width: 1280px) 400px, (min-width: 960px) 320px, 100vw"
+                      class="project-image"
+                      loading="lazy"
+                    />
                     <div class="project-overlay">
                       <v-btn
                         v-if="project.liveDemo"
@@ -145,7 +153,7 @@
                         Live Demo
                       </v-btn>
                     </div>
-                  </v-img>
+                  </div>
 
                   <v-card-title class="text-h6">{{ project.title }}</v-card-title>
                   <v-card-subtitle>{{ project.category }} • {{ project.timeline }}</v-card-subtitle>
@@ -358,7 +366,9 @@ const openIndependentCaseStudy = (projectId: string) => {
       padding: 16px 16px 0;
       
       .company-logo {
-        max-width: 120px;
+        width: 120px;
+        height: 60px;
+        object-fit: contain;
       }
     }
 
@@ -372,6 +382,18 @@ const openIndependentCaseStudy = (projectId: string) => {
 
   .independent-card {
     border-top: 4px solid rgb(var(--v-theme-success));
+
+    .project-media {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
     .project-overlay {
       position: absolute;
