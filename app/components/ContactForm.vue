@@ -4,7 +4,7 @@
       <div class="text-center">
         <h2 class="text-h3 font-weight-bold mb-4">Let's work together</h2>
         <p class="text-h6 text-medium-emphasis mb-8 mx-auto" style="max-width: 600px">
-          Ready to bring your ideas to life? I'm currently available for small website projects and would love to discuss how we can collaborate.
+          I am currently working full-time and <strong>not available for full-time employment offers</strong>. However, I am open to discussing small website projects or consulting opportunities.
         </p>
         
         <!-- Main CTA Button -->
@@ -50,13 +50,13 @@
         <!-- Availability Status -->
         <div class="availability-status mt-8">
           <v-chip
-            color="success"
+            color="warning"
             variant="flat"
             size="large"
             class="mb-2"
           >
-            <v-icon start>mdi-check-circle</v-icon>
-            Available for new projects
+            <v-icon start>mdi-clock-outline</v-icon>
+            Limited Availability
           </v-chip>
           <p class="text-body-2 text-medium-emphasis">
             I typically respond within 24 hours

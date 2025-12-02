@@ -38,7 +38,7 @@ const faqItems = [
   },
   {
     question: 'Can you join as a fractional engineer?',
-    answer: 'I offer fractional engagements to ship features, depends on the offer.'
+    answer: 'I am currently working full-time, so my availability for fractional roles is limited. However, I am open to discussing specific consulting opportunities.'
   },
   {
     question: 'Which time zones do you work with?',
