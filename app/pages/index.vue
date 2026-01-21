@@ -58,14 +58,16 @@ useSeoMeta({
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
   twitterImage: ogImage,
-  canonical: siteUrl
 })
 
 useHead({
+  link: [
+    { rel: 'canonical', href: siteUrl }
+  ],
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@graph': [
           {
