@@ -14,6 +14,7 @@
           variant="elevated"
           class="mb-8 px-8 py-4"
           style="text-transform: none; font-size: 1.1rem;"
+          @click="trackEmail"
         >
           <v-icon start>mdi-email-outline</v-icon>
           {{ $t('home.contact.cta') }}
@@ -28,6 +29,7 @@
             size="large"
             class="mx-2 mb-2"
             style="text-transform: none;"
+            @click="trackSocial('linkedin')"
           >
             <v-icon start>mdi-linkedin</v-icon>
             LinkedIn
@@ -40,6 +42,7 @@
             size="large"
             class="mx-2 mb-2"
             style="text-transform: none;"
+            @click="trackSocial('github')"
           >
             <v-icon start>mdi-github</v-icon>
             GitHub
@@ -68,6 +71,20 @@
 
 <script setup lang="ts">
 const mailtoLink = 'mailto:juanmiguelar09@gmail.com?subject=Project Inquiry&body=Hi Juan Miguel,%0D%0A%0D%0AI\'d like to discuss a potential project with you.%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards,'
+
+const pixel = usePixel()
+
+const trackEmail = () => {
+  pixel.track('Contact', {
+    type: 'email'
+  })
+}
+
+const trackSocial = (platform: string) => {
+  pixel.trackCustom('SocialClick', {
+    platform: platform
+  })
+}
 </script>
 
 <style scoped lang="scss">

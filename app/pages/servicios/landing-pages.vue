@@ -135,11 +135,11 @@
               </v-row>
 
               <div class="mt-8 text-center">
-                <v-btn block color="primary" size="x-large" height="64" class="text-h6 mb-4" href="https://calendly.com/juanmiguelar09/sesion-personalizada?back=1&month=2026-01" target="_blank">
+                <v-btn block color="primary" size="x-large" height="64" class="text-h6 mb-4" href="https://calendly.com/juanmiguelar09/sesion-personalizada?back=1&month=2026-01" target="_blank" @click="trackSchedule">
                   {{ $t('landing.pricing.cta') }}
                 </v-btn>
 
-                <v-btn block variant="outlined" size="large" height="56" class="text-body-1" href="https://wa.me/50684590688" target="_blank">
+                <v-btn block variant="outlined" size="large" height="56" class="text-body-1" href="https://wa.me/50684590688" target="_blank" @click="trackWhatsapp">
                   <v-icon start icon="mdi-whatsapp" color="success" class="mr-2"></v-icon>
                   {{ $t('landing.pricing.cta_whatsapp') }}
                 </v-btn>
@@ -169,6 +169,22 @@ import { computed } from 'vue'
 import FaqSection from '~/components/FaqSection.vue'
 
 const { t } = useI18n()
+const pixel = usePixel()
+
+const trackSchedule = () => {
+  pixel.track('Schedule', {
+    content_name: 'Consultation Call',
+    value: 0.00,
+    currency: 'USD'
+  })
+}
+
+const trackWhatsapp = () => {
+  pixel.track('Contact', {
+    content_name: 'WhatsApp',
+    type: 'whatsapp'
+  })
+}
 
 useSeoMeta({
   title: computed(() => t('landing.meta.title')),

@@ -148,6 +148,7 @@
                         variant="elevated"
                         size="small"
                         class="demo-btn"
+                        @click="trackProjectAction(project.title, 'live_demo')"
                       >
                         <v-icon start>mdi-eye</v-icon>
                         {{ $t('home.projects.independent.actions.live') }}
@@ -197,6 +198,7 @@
                       target="_blank"
                       variant="text"
                       color="primary"
+                      @click="trackProjectAction(project.title, 'source_code')"
                     >
                       <v-icon start>mdi-github</v-icon>
                       {{ $t('home.projects.independent.actions.code') }}
@@ -208,6 +210,7 @@
                       target="_blank"
                       variant="text"
                       color="success"
+                      @click="trackProjectAction(project.title, 'live_demo')"
                     >
                       <v-icon start>mdi-open-in-new</v-icon>
                       {{ $t('home.projects.independent.actions.demo') }}
@@ -250,6 +253,14 @@ import { ref, computed } from 'vue'
 
 const activeTab = ref('corporate')
 const { t } = useI18n()
+const pixel = usePixel()
+
+const trackProjectAction = (projectTitle: string, actionType: string) => {
+  pixel.track('ViewContent', {
+    content_name: projectTitle,
+    content_category: actionType
+  })
+}
 
 // Corporate projects (based on real experience)
 const corporateProjects = computed(() => [
