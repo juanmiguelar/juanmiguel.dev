@@ -299,10 +299,9 @@ const independentProjects = [
     timeline: '1 week',
     description: `A clean, responsive site that presents Malcolm Ugalde—an MBA(c) in Finance and investment advisor with over five years of experience—offering tailored, 1:1 financial guidance. The site explains how to begin investing confidently even with limited funds, highlights personalized mentorship programs, and features real client testimonials that reinforce trust and effectiveness`,
     keyFeatures: ['Mobile responsive', 'SEO optimized'],
-    technologies: ['Nuxt', 'Versel', 'Codex', 'Vuetify'],
+    technologies: ['React', 'Versel', 'Antigravity'],
     screenshot: '/img/malcolmweb.png',
-    github: 'https://github.com/juanmiguelar/malcolmugalde.web',
-    liveDemo: 'https://malcolmugalde.netlify.app/'
+    liveDemo: 'https://www.malcolmugalde.com/'
   },
   {
     id: 'soygioco',
