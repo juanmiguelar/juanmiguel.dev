@@ -14,7 +14,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl
+      siteUrl,
+      facebookPixelId: '921009970358099'
     }
   },
   
@@ -27,7 +28,7 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    lazy: true,
+
     langDir: 'locales',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
@@ -79,7 +80,7 @@ export default defineNuxtConfig({
             disallow: ['/']
           }
         ],
-    blockAiBots: isProd,
+    blockAiBots: false,
     blockNonSeoBots: isProd,
     mergeWithRobotsTxtPath: false,
     cacheControl: 'max-age=86400, must-revalidate',
@@ -87,7 +88,6 @@ export default defineNuxtConfig({
   },
   
   sitemap: {
-    siteUrl,
     autoLastmod: true,
     urls: async () => {
       const staticRoutes = ['/']
@@ -113,11 +113,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'Juan Miguel Arias Mejias',
-      titleTemplate: (titleChunk) => {
-        const base = 'Juan Miguel Arias Mejias'
-        if (!titleChunk) return base
-        return titleChunk.includes(base) ? titleChunk : `${titleChunk} | ${base}`
-      },
+      titleTemplate: '%s | Juan Miguel Arias Mejias',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

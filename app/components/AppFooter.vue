@@ -1,12 +1,6 @@
 <template>
-  <v-footer app class="pa-6">
-    <v-container>
-      <v-row>
-        <v-col class="text-center">
-          <div>&copy; {{ currentYear }} Juan Miguel Arias Mejias</div>
-        </v-col>
-      </v-row>
-    </v-container>
+  <v-footer app height="40" class="d-flex justify-center pa-0">
+    <div class="text-caption">&copy; {{ currentYear }} Juan Miguel Arias Mejias</div>
   </v-footer>
 </template>
 <script setup lang="ts">
