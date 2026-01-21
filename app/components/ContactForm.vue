@@ -2,9 +2,8 @@
   <section id="contact" class="contact-section">
     <v-container>
       <div class="text-center">
-        <h2 class="text-h3 font-weight-bold mb-4">Let's work together</h2>
-        <p class="text-h6 text-medium-emphasis mb-8 mx-auto" style="max-width: 600px">
-          I am currently working full-time and <strong>not available for full-time employment offers</strong>. However, I am open to discussing small website projects or consulting opportunities.
+        <h2 class="text-h3 font-weight-bold mb-4">{{ $t('home.contact.title') }}</h2>
+        <p class="text-h6 text-medium-emphasis mb-8 mx-auto" style="max-width: 600px" v-html="$t('home.contact.description')">
         </p>
         
         <!-- Main CTA Button -->
@@ -17,7 +16,7 @@
           style="text-transform: none; font-size: 1.1rem;"
         >
           <v-icon start>mdi-email-outline</v-icon>
-          Get in touch
+          {{ $t('home.contact.cta') }}
         </v-btn>
         
         <!-- Alternative Contact Methods -->
@@ -56,10 +55,10 @@
             class="mb-2"
           >
             <v-icon start>mdi-clock-outline</v-icon>
-            Limited Availability
+            {{ $t('home.contact.status.label') }}
           </v-chip>
           <p class="text-body-2 text-medium-emphasis">
-            I typically respond within 24 hours
+            {{ $t('home.contact.status.text') }}
           </p>
         </div>
       </div>
@@ -68,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-const mailtoLink = 'mailto:contact@juanmiguelarias.dev?subject=Project Inquiry&body=Hi Juan Miguel,%0D%0A%0D%0AI\'d like to discuss a potential project with you.%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards,'
+const mailtoLink = 'mailto:juanmiguelar09@gmail.com?subject=Project Inquiry&body=Hi Juan Miguel,%0D%0A%0D%0AI\'d like to discuss a potential project with you.%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards,'
 </script>
 
 <style scoped lang="scss">

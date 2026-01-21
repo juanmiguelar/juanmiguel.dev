@@ -3,31 +3,47 @@
     <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer" aria-label="Toggle navigation" />
     <v-toolbar-title>Juan Miguel Arias Mejias</v-toolbar-title>
     <v-spacer />
-    <div class="d-none d-md-flex">
+    <div class="d-none d-md-flex align-center">
       <v-btn v-for="link in links" :key="link.href" :href="link.href" variant="text" class="mx-1" aria-label="Go to section">{{ link.label }}</v-btn>
+      <v-btn icon @click="toggleTheme" aria-label="Toggle theme">
+        <v-icon>mdi-theme-light-dark</v-icon>
+      </v-btn>
+      <v-btn icon @click="toggleLanguage" aria-label="Switch language">
+        {{ locale === 'en' ? 'ES' : 'EN' }}
+      </v-btn>
     </div>
   </v-app-bar>
   <v-navigation-drawer v-model="drawer" temporary class="d-md-none">
     <v-list>
       <v-list-item v-for="link in links" :key="link.href" :href="link.href" @click="drawer = false" :title="link.label" />
       <v-list-item @click="toggleTheme" title="Toggle theme" prepend-icon="mdi-theme-light-dark" />
+      <v-list-item @click="toggleLanguage" :title="locale === 'en' ? 'Español' : 'English'" prepend-icon="mdi-translate" />
     </v-list>
   </v-navigation-drawer>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useTheme } from 'vuetify'
 
+const { t, locale, setLocale } = useI18n()
+const localePath = useLocalePath()
 const drawer = ref(false)
-const links = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Services', href: '#services' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Recomendations', href: '#recomendations' },
-  { label: 'Contact', href: '#contact' }
-]
+
+const links = computed(() => [
+  { label: t('nav.home'), href: localePath('/') },
+  { label: t('nav.landing_pages'), href: localePath('/servicios/landing-pages') },
+  { label: t('nav.services'), href: localePath('/#services') },
+  { label: t('nav.projects'), href: localePath('/#projects') },
+  { label: t('nav.recommendations'), href: localePath('/#recomendations') },
+  { label: t('nav.contact'), href: localePath('/#contact') }
+])
+
 const theme = useTheme()
 const toggleTheme = () => {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
+
+const toggleLanguage = () => {
+  setLocale(locale.value === 'en' ? 'es' : 'en')
 }
 </script>

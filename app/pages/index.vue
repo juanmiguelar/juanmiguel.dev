@@ -20,31 +20,34 @@ import ContactForm from '~/components/ContactForm.vue'
 
 const { public: publicRuntime } = useRuntimeConfig()
 const siteUrl = publicRuntime.siteUrl || 'https://juanmiguel.dev'
-const pageTitle = 'Full-stack Go & Nuxt Developer'
-const pageDescription = 'Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams.'
+const { t, locale } = useI18n()
+
+const pageTitle = computed(() => t('home.meta.title'))
+const pageDescription = computed(() => t('home.meta.description'))
 const ogImage = `${siteUrl}/img/juanmiguelweb.png`
-const faqItems = [
+
+const faqItems = computed(() => [
   {
-    question: 'What tech stack do you use?',
-    answer: 'Go for high-performance backend services and APIs; Nuxt/Vue for frontend; Postgres/Mongo for data; deployed on Vercel.'
+    question: t('home.faq.items.stack.q'),
+    answer: t('home.faq.items.stack.a')
   },
   {
-    question: 'How long does a typical website project take?',
-    answer: 'A marketing/portfolio site takes 1–2 weeks. If we include custom integrations or headless CMS, budget 2–4 weeks depending on scope.'
+    question: t('home.faq.items.time.q'),
+    answer: t('home.faq.items.time.a')
   },
   {
-    question: 'Do you handle both backend and frontend?',
-    answer: 'Yes. I design and build the backend (Go APIs, auth, performance) and the frontend (Nuxt/Vue, UI/UX)'
+    question: t('home.faq.items.backend.q'),
+    answer: t('home.faq.items.backend.a')
   },
   {
-    question: 'Can you join as a fractional engineer?',
-    answer: 'I am currently working full-time, so my availability for fractional roles is limited. However, I am open to discussing specific consulting opportunities.'
+    question: t('home.faq.items.fractional.q'),
+    answer: t('home.faq.items.fractional.a')
   },
   {
-    question: 'Which time zones do you work with?',
-    answer: 'I collaborate mostly with US and LATAM teams and can overlap 4–6 hours with US time zones for standups and reviews.'
+    question: t('home.faq.items.timezone.q'),
+    answer: t('home.faq.items.timezone.a')
   }
-]
+])
 
 useSeoMeta({
   title: pageTitle,
@@ -75,7 +78,7 @@ useHead({
             '@id': `${siteUrl}#website`,
             url: siteUrl,
             name: 'Juan Miguel Arias Mejias - Full-stack Developer',
-            inLanguage: 'en',
+            inLanguage: locale.value,
             potentialAction: {
               '@type': 'SearchAction',
               target: `${siteUrl}/?q={search_term_string}`,
@@ -110,7 +113,7 @@ useHead({
             serviceType: ['API design', 'Web development', 'Performance optimization'],
             url: siteUrl,
             image: ogImage,
-            description: pageDescription
+            description: pageDescription.value
           },
           {
             '@type': 'Project',
@@ -162,7 +165,7 @@ useHead({
           },
           {
             '@type': 'FAQPage',
-            mainEntity: faqItems.map((item) => ({
+            mainEntity: faqItems.value.map((item) => ({
               '@type': 'Question',
               name: item.question,
               acceptedAnswer: {

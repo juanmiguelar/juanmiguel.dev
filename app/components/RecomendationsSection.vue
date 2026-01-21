@@ -1,7 +1,7 @@
 <template>
   <section id="recomendations" class="section">
     <v-container>
-      <h2 class="text-h4 text-center mb-8">Recommendations</h2>
+      <h2 class="text-h4 text-center mb-8">{{ $t('home.recommendations.title') }}</h2>
       
       <!-- SSR Safe version -->
       <LazyClientOnly>
@@ -32,7 +32,7 @@
                 </v-avatar>
                 <div>
                   <h4 class="testimonial-author mb-1">{{ testimonial.name }}</h4>
-                  <div class="testimonial-role text-medium-emphasis">Colleague</div>
+                  <div class="testimonial-role text-medium-emphasis">{{ $t('home.recommendations.role') }}</div>
                 </div>
               </div>
               <blockquote class="testimonial-quote">
@@ -85,23 +85,20 @@ interface Testimonial {
 
 // Reactive flag para animaciones
 const isLoaded = ref(false)
+const { t } = useI18n()
 
-const recomendations: Testimonial[] = [
+const recomendations = computed<Testimonial[]>(() => [
   { 
     name: 'Lenin Chacon', 
-    quote: `Working with Juan Miguel has been an exceptional experience. His charisma, collaborative spirit, and deep technical expertise made him an invaluable part of our team. He consistently brought clarity and insight to complex challenges, and his ability to connect with others created a positive and motivating environment for everyone around him.
-
-What truly sets Juan Miguel apart is that he contributes not only as a skilled professional but also as a genuinely great person. His presence elevates the team both technically and personally—something that is rare and deeply appreciated. Having him on the team was a tremendous asset, and I would welcome any opportunity to work with him again.`, 
+    quote: t('home.recommendations.items.lenin.quote'), 
     avatar: '/img/lenin.jpeg' 
   },
   { 
     name: 'Kenneth Sanabria', 
-    quote: `Juan is an exceptional team player who consistently showcases his high level of expertise by implementing best practices in code, conducting thorough and effective code reviews, and offering valuable feedback to his teammates. He excels in teamwork and mentorship, always ready to share his knowledge and contribute to the team's success.
-
-His expertise in Golang is a cornerstone for the team, serving as a reference for decision-making. We always appreciate having a colleague like Juan in the workplace.`, 
+    quote: t('home.recommendations.items.kenneth.quote'), 
     avatar: '/img/ken.jpeg' 
   }
-]
+])
 
 // Marcar como loaded después del mount
 onMounted(() => {

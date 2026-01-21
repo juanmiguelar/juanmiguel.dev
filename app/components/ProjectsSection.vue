@@ -2,9 +2,9 @@
   <section id="projects" class="experience-section">
     <v-container>
       <div class="text-center mb-12">
-        <h2 class="text-h3 font-weight-bold mb-4">My Experience</h2>
+        <h2 class="text-h3 font-weight-bold mb-4">{{ $t('home.projects.title') }}</h2>
         <p class="text-h6 text-medium-emphasis mx-auto" style="max-width: 700px">
-          From enterprise-scale systems to custom solutions - delivering value across different contexts
+          {{ $t('home.projects.subtitle') }}
         </p>
       </div>
 
@@ -12,11 +12,11 @@
       <v-tabs v-model="activeTab" centered class="mb-10">
         <v-tab value="corporate">
           <v-icon start>mdi-office-building</v-icon>
-          Corporate Experience
+          {{ $t('home.projects.tabs.corporate') }}
         </v-tab>
         <v-tab value="independent">
           <v-icon start>mdi-account-star</v-icon>
-          Independent Projects
+          {{ $t('home.projects.tabs.independent') }}
         </v-tab>
       </v-tabs>
 
@@ -27,11 +27,11 @@
             <div class="text-center mb-8">
               <v-chip color="primary" variant="outlined" size="large" class="mb-4">
                 <v-icon start>mdi-shield-check</v-icon>
-                Enterprise-Proven Track Record
+                {{ $t('home.projects.corporate.badge') }}
               </v-chip>
-              <h3 class="text-h5 mb-2">Trusted by Industry Leaders</h3>
+              <h3 class="text-h5 mb-2">{{ $t('home.projects.corporate.title') }}</h3>
               <p class="text-body-1 text-medium-emphasis">
-                8+ years building mission-critical systems for Fortune 500 companies
+                {{ $t('home.projects.corporate.subtitle') }}
               </p>
             </div>
 
@@ -95,7 +95,7 @@
                   <v-card-actions>
                     <v-btn variant="text" size="small" disabled>
                       <v-icon start>mdi-lock</v-icon>
-                      Enterprise NDA
+                      {{ $t('home.projects.corporate.cta_nda') }}
                     </v-btn>
                     <v-spacer />
                   </v-card-actions>
@@ -111,11 +111,11 @@
             <div class="text-center mb-8">
               <v-chip color="success" variant="outlined" size="large" class="mb-4">
                 <v-icon start>mdi-rocket-launch</v-icon>
-                Full-Stack Independence
+                {{ $t('home.projects.independent.badge') }}
               </v-chip>
-              <h3 class="text-h5 mb-2">End-to-End Project Delivery</h3>
+              <h3 class="text-h5 mb-2">{{ $t('home.projects.independent.title') }}</h3>
               <p class="text-body-1 text-medium-emphasis">
-                Custom solutions with complete ownership - from concept to deployment
+                {{ $t('home.projects.independent.subtitle') }}
               </p>
             </div>
 
@@ -150,7 +150,7 @@
                         class="demo-btn"
                       >
                         <v-icon start>mdi-eye</v-icon>
-                        Live Demo
+                        {{ $t('home.projects.independent.actions.live') }}
                       </v-btn>
                     </div>
                   </div>
@@ -199,7 +199,7 @@
                       color="primary"
                     >
                       <v-icon start>mdi-github</v-icon>
-                      Code
+                      {{ $t('home.projects.independent.actions.code') }}
                     </v-btn>
                     
                     <v-btn
@@ -210,7 +210,7 @@
                       color="success"
                     >
                       <v-icon start>mdi-open-in-new</v-icon>
-                      Demo
+                      {{ $t('home.projects.independent.actions.demo') }}
                     </v-btn>
 
                     <v-spacer />
@@ -226,9 +226,9 @@
       <!-- Call to Action -->
       <div class="text-center mt-12">
         <v-divider class="mb-8" />
-        <h3 class="text-h5 mb-4">Ready for Your Project?</h3>
+        <h3 class="text-h5 mb-4">{{ $t('home.projects.cta.title') }}</h3>
         <p class="text-body-1 text-medium-emphasis mb-6">
-          Whether you need enterprise-scale systems or custom solutions, I bring the right experience
+          {{ $t('home.projects.cta.subtitle') }}
         </p>
         <v-btn 
           size="x-large" 
@@ -238,7 +238,7 @@
           class="px-8"
         >
           <v-icon start>mdi-message</v-icon>
-          Let's discuss your needs
+          {{ $t('home.projects.cta.btn') }}
         </v-btn>
       </div>
     </v-container>
@@ -246,19 +246,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const activeTab = ref('corporate')
+const { t } = useI18n()
 
 // Corporate projects (based on real experience)
-const corporateProjects = [
+const corporateProjects = computed(() => [
   {
     id: 'nbc-bff',
     title: 'NBCUniversal Streaming Platform BFF',
     company: 'NBC (via GorillaLogic)',
     period: '2024 - Present',
-    description: 'High-performance Backend-for-Frontend using Go and GraphQL, handling millions of daily requests for NBC\'s streaming infrastructure.',
-    impact: 'Optimized API performance for millions of users',
+    description: t('home.projects.companies.nbc.description'),
+    impact: t('home.projects.companies.nbc.impact'),
     technologies: ['Go', 'GraphQL', 'Microservices', 'Cloud'],
     companyLogo: 'https://placehold.co/150x60/000000/FFFFFF?text=NBC',
     status: 'Active',
@@ -269,8 +270,8 @@ const corporateProjects = [
     title: 'Cloud Microservices Architecture',
     company: 'Wind River',
     period: '2022 - 2024',
-    description: 'Restructured monolithic services into 6 specialized microservices with concurrent processing, improving system efficiency and maintainability.',
-    impact: '70% performance boost, 30% bug reduction',
+    description: t('home.projects.companies.windriver.description'),
+    impact: t('home.projects.companies.windriver.impact'),
     technologies: ['Go', 'Microservices', 'Docker', 'Kubernetes'],
     companyLogo: 'https://placehold.co/150x60/1976D2/FFFFFF?text=Wind+River',
     status: 'Completed',
@@ -281,23 +282,23 @@ const corporateProjects = [
     title: 'Multi-Cloud API Gateway',
     company: 'Kyndryl',
     period: '2021 - 2022',
-    description: 'Developed scalable APIs for cloud resource discovery and management. Led Go training for 80+ professionals across global teams.',
-    impact: 'Trained 80+ developers, established Go standards',
+    description: t('home.projects.companies.kyndryl.description'),
+    impact: t('home.projects.companies.kyndryl.impact'),
     technologies: ['Go', 'Cloud APIs', 'DevOps', 'Training'],
     companyLogo: 'https://placehold.co/150x60/4CAF50/FFFFFF?text=Kyndryl',
     status: 'Completed',
     statusColor: 'info'
   }
-]
+])
 
 // Independent projects (you can add real ones here)
-const independentProjects = [
+const independentProjects = computed(() => [
   {
     id: 'malcolm',
     title: 'Malcolm Ugalde Website',
     category: 'Full-Stack',
     timeline: '1 week',
-    description: `A clean, responsive site that presents Malcolm Ugalde—an MBA(c) in Finance and investment advisor with over five years of experience—offering tailored, 1:1 financial guidance. The site explains how to begin investing confidently even with limited funds, highlights personalized mentorship programs, and features real client testimonials that reinforce trust and effectiveness`,
+    description: t('home.projects.companies.malcolm.description'),
     keyFeatures: ['Mobile responsive', 'SEO optimized'],
     technologies: ['React', 'Versel', 'Antigravity'],
     screenshot: '/img/malcolmweb.png',
@@ -308,9 +309,7 @@ const independentProjects = [
     title: 'SoyGioco Website',
     category: 'Full-Stack',
     timeline: '4 weeks',
-    description: `
-    A vibrant, mobile-first platform built with Nuxt 3 and Vuetify, crafted to connect Costa Rican art enthusiasts with accessible watercolor and acrylic workshops. Users can explore creative themes like Pokémon, Studio Ghibli, Botánica, and Colibríes—regardless of their skill level—from beginner-friendly to intermediate, and book their first workshop via WhatsApp. The site also features a gallery spotlighting student artwork and warmly introduces Gioconda Cerdas, a passionate instructor who has guided over 300 budding artists for more than eight years
-    `,
+    description: t('home.projects.companies.soygioco.description'),
     keyFeatures: ['blog', 'Mobile responsive', 'SEO optimized'],
     technologies: ['Nuxt', 'Strapi', 'Codex', 'Vuetify', 'Claude'],
     screenshot: '/img/soygiocoweb.png',
@@ -322,14 +321,14 @@ const independentProjects = [
     title: 'Developer Portfolio Template',
     category: 'Frontend',
     timeline: '1 week',
-    description: `A polished portfolio built with Nuxt 3, TypeScript, and Vuetify—showcasing professional strengths in Go and Vue.js. This mobile-first, responsive site includes a hero section, services, project highlights, performance metrics, tech stack, recommendations, and a contact form. A clean, functional representation of developer identity and experience.`,
+    description: t('home.projects.companies.portfolio.description'),
     keyFeatures: ['SEO optimized', 'Mobile first'],
     technologies: ['Nuxt.js', 'Vuetify', 'TypeScript', 'SCSS'],
     screenshot: '/img/juanmiguelweb.png',
     github: 'https://github.com/juanmiguelar/juanmiguel.dev',
     liveDemo: 'https://juanmigueldev.netlify.app/'
   }
-]
+])
 
 const openCorporateCaseStudy = (projectId: string) => {
   console.log(`Opening corporate case study for: ${projectId}`)

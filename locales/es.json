@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "landing_pages": "Landing Pages",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "recommendations": "Recomendaciones",
+    "contact": "Contacto",
+    "toggle_theme": "Cambiar tema"
+  },
+  "home": {
+    "hero": {
+      "title": "Desarrollador Full-stack Go & Nuxt para productos rápidos y confiables",
+      "subtitle": "Diseño backends en Go, frontends en Nuxt y APIs de alto rendimiento para equipos que necesitan calidad entregada rápidamente.",
+      "cta": "Trabajemos juntos",
+      "alt": "Retrato de Juan Miguel Arias Mejias, desarrollador full-stack"
+    },
+    "services": {
+      "title": "Servicios",
+      "items": {
+        "web": { "title": "Desarrollo Web", "desc": "Sitios web responsivos" },
+        "api": { "title": "Diseño de APIs", "desc": "REST Escalable" },
+        "ads": { "title": "Publicidad", "desc": "Meta Ads" }
+      }
+    },
+    "meta": {
+      "title": "Desarrollador Full-stack Go & Nuxt",
+      "description": "Desarrollador full-stack Go y Nuxt entregando APIs rápidas y web apps pulidas. Diseño arquitecturas, construyo servicios seguros y envío UIs atractivas para equipos SaaS."
+    },
+    "faq": {
+      "items": {
+        "stack": {
+          "q": "¿Qué stack tecnológico usas?",
+          "a": "Go para servicios backend y APIs de alto rendimiento; Nuxt/Vue para frontend; Postgres/Mongo para datos; desplegado en Vercel."
+        },
+        "time": {
+          "q": "¿Cuánto tarda un proyecto web típico?",
+          "a": "Un sitio de marketing/portafolio toma 1–2 semanas. Si incluimos integraciones personalizadas o CMS headless, presupuesta 2–4 semanas dependiendo del alcance."
+        },
+        "backend": {
+          "q": "¿Manejas tanto backend como frontend?",
+          "a": "Sí. Diseño y construyo el backend (APIs Go, auth, rendimiento) y el frontend (Nuxt/Vue, UI/UX)"
+        },
+        "fractional": {
+          "q": "¿Puedes unirte como ingeniero fraccional?",
+          "a": "Actualmente trabajo a tiempo completo, por lo que mi disponibilidad para roles fraccionales es limitada. Sin embargo, estoy abierto a discutir oportunidades de consultoría específicas."
+        },
+        "timezone": {
+          "q": "¿Con qué zonas horarias trabajas?",
+          "a": "Colaboro mayormente con equipos de EE.UU. y LATAM, y puedo solapar 4–6 horas con zonas horarias de EE.UU. para standups y revisiones."
+        }
+      }
+    },
+    "projects": {
+      "title": "Mi Experiencia",
+      "subtitle": "Desde sistemas empresariales hasta soluciones personalizadas - entregando valor en diferentes contextos",
+      "tabs": {
+        "corporate": "Experiencia Corporativa",
+        "independent": "Proyectos Independientes"
+      },
+      "corporate": {
+        "badge": "Trayectoria Empresarial Probada",
+        "title": "Confiado por Líderes de la Industria",
+        "subtitle": "8+ años construyendo sistemas de misión crítica para compañías Fortune 500",
+        "cta_nda": "NDA Empresarial"
+      },
+      "independent": {
+        "badge": "Independencia Full-Stack",
+        "title": "Entrega de Proyectos de Punta a Punta",
+        "subtitle": "Soluciones personalizadas con propiedad completa - desde el concepto hasta el despliegue",
+        "actions": {
+          "demo": "Demo en Vivo",
+          "code": "Código",
+          "live": "Demo"
+        }
+      },
+      "cta": {
+        "title": "¿Listo para tu Proyecto?",
+        "subtitle": "Ya sea que necesites sistemas empresariales o soluciones personalizadas, traigo la experiencia correcta",
+        "btn": "Discutamos tus necesidades"
+      },
+      "companies": {
+        "nbc": {
+          "description": "Backend-for-Frontend de alto rendimiento usando Go y GraphQL, manejando millones de solicitudes diarias para la infraestructura de streaming de NBC.",
+          "impact": "Rendimiento de API optimizado para millones de usuarios"
+        },
+        "windriver": {
+          "description": "Reestructuración de servicios monolíticos en 6 microservicios especializados con procesamiento concurrente, mejorando la eficiencia y mantenibilidad del sistema.",
+          "impact": "70% mejora de rendimiento, 30% reducción de bugs"
+        },
+        "kyndryl": {
+          "description": "Desarrollo de APIs escalables para descubrimiento y gestión de recursos en la nube. Lideré capacitación de Go para más de 80 profesionales en equipos globales.",
+          "impact": "Entrené a 80+ desarrolladores, establecí estándares de Go"
+        },
+        "malcolm": {
+          "description": "Un sitio limpio y responsivo que presenta a Malcolm Ugalde—un MBA(c) en Finanzas y asesor de inversión con más de cinco años de experiencia—ofreciendo orientación financiera 1:1 personalizada."
+        },
+        "soygioco": {
+          "description": "Una plataforma vibrante y móvil, construida con Nuxt 3 y Vuetify, diseñada para conectar entusiastas del arte en Costa Rica con talleres accesibles de acuarela y acrílico."
+        },
+        "portfolio": {
+          "description": "Un portafolio pulido construido con Nuxt 3, TypeScript y Vuetify—mostrando fortalezas profesionales en Go y Vue.js. Este sitio móvil incluye una sección hero, servicios, proyectos destacados, métricas de rendimiento y stack tecnológico."
+        }
+      }
+    },
+    "metrics": {
+      "title": "Experiencia Profesional",
+      "items": {
+        "years": { "label": "8+ Años de Experiencia" },
+        "boost": { "label": "70% Mejora de Rendimiento" },
+        "workshops": { "label": "Talleres Técnicos" }
+      }
+    },
+    "recommendations": {
+      "title": "Recomendaciones",
+      "role": "Colega",
+      "items": {
+        "lenin": { "quote": "Trabajar con Juan Miguel ha sido una experiencia excepcional. Su carisma, espíritu colaborativo y profunda experiencia técnica lo convirtieron en una parte invaluable de nuestro equipo." },
+        "kenneth": { "quote": "Juan es un jugador de equipo excepcional que consistentemente muestra su alto nivel de experiencia implementando mejores prácticas en código y revisiones." }
+      }
+    },
+    "tech": {
+      "title": "Stack Tecnológico"
+    },
+    "contact": {
+      "title": "Trabajemos juntos",
+      "description": "Actualmente trabajo a tiempo completo y <strong>no estoy disponible para ofertas de empleo</strong>. Sin embargo, estoy abierto a discutir pequeños proyectos web u oportunidades de consultoría.",
+      "cta": "Contactar",
+      "status": {
+        "label": "Disponibilidad Limitada",
+        "text": "Típicamente respondo en 24 horas"
+      }
+    }
+  },
+  "landing": {
+    "hero": {
+      "badge": "Exclusivo para Asesores Financieros",
+      "title": "Tu sitio web debería inspirar la misma confianza que tú",
+      "subtitle": "Ayudo a Asesores y Wealth Managers a captar clientes de alto valor con una presencia digital de autoridad.",
+      "subtitle_bold": "Sin plantillas genéricas. Sin complicaciones técnicas.",
+      "cta_primary": "Ver Propuesta",
+      "cta_secondary": "¿Por qué yo?"
+    },
+    "benefits": {
+      "title": "En Finanzas, la Imagen es Confianza",
+      "description": "Un cliente potencial tarda 0.05 segundos en juzgar tu credibilidad por tu web. Si tu sitio se ve antiguo, lento o \"barato\", asumen que tu asesoría también lo es.",
+      "list": {
+        "slow": "Webs lentas pierden prospectos impacientes.",
+        "generic": "Diseños genéricos no diferencian tu marca.",
+        "scheduling": "Falta de un sistema claro de agendamiento."
+      },
+      "card": {
+        "title": "Diseño de \"Alta Confianza\"",
+        "description": "Creo activos digitales sobrios, elegantes y modernos que posicionan tu marca al nivel de grandes firmas, pero con tu toque personal."
+      }
+    },
+    "mockups": {
+      "title": "Diseñado para captar Clientes, no solo Visitas",
+      "card1": {
+        "title": "Agenda Automatizada",
+        "description": "Tus prospectos califican y agendan directo en tu calendario. Despierta con citas, no con emails fríos."
+      },
+      "card2": {
+        "title": "Velocidad Institucional",
+        "description": "Tecnología de punta (Nuxt/Vue) que carga al instante. Transmite solidez y eficiencia tecnológica."
+      }
+    },
+    "pricing": {
+      "badge": "Todo Incluido",
+      "title": "El Launchpad para Asesores",
+      "subtitle": "Tu firma digital, lista en 10 días",
+      "one_time_payment": "Pago único por desarrollo.",
+      "maintenance": "+ $20 USD/mes",
+      "maintenance_note": "(Mantenimiento, Hosting y Soporte)",
+      "features": {
+        "design": "Diseño Institucional Premium",
+        "pages": "Home + Servicios + \"Sobre Mí\"",
+        "integration": "Integración Calendly/WhatsApp",
+        "copy": "Copywriting para Inversionistas",
+        "speed": "Velocidad Instantánea",
+        "hosting": "Hosting Seguro (SSL)",
+        "support": "Soporte Técnico Continuo",
+        "external": "Dominio y herramientas externas no incluidos"
+      },
+      "cta": "Agendar Consultoría Inicial",
+      "cta_whatsapp": "Chat en WhatsApp",
+      "note": "Ideal para Asesores Independientes"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "description": "Respuestas rápidas sobre mi proceso, tiempos y cómo podemos trabajar juntos.",
+      "cta": "Agendar una llamada",
+      "items": {
+        "time": {
+          "q": "¿Cuánto tiempo tarda el desarrollo?",
+          "a": "Típicamente 10 días hábiles para la primera versión y luego iteramos hasta que quedes conforme con el resultado."
+        },
+        "texts": {
+          "q": "¿Necesito tener los textos listos?",
+          "a": "No te preocupes. Incluyo una guía de estructura y copywriting. Trabajamos juntos para extraer tu propuesta de valor y yo le doy forma comercial."
+        },
+        "changes": {
+          "q": "¿Qué pasa si quiero hacer cambios después?",
+          "a": "Si necesitas cambios estructurales, de diseño o nuevas secciones después de la entrega, se cotizarán por separado. El mantenimiento mensual ($20 USD) cubre soporte técnico para que el sitio siempre esté online y seguro, pero no incluye desarrollo de nuevas funcionalidades."
+        },
+        "hosting": {
+          "q": "¿Incluye hosting y dominio?",
+          "a": "El servicio incluye el hosting en servidores de alta velocidad. El dominio (tuempresa.com) y cualquier herramienta de pago de terceros (como Calendly Premium, Email Marketing, etc.) deben ser adquiridos por ti; yo te asesoro en el proceso, pero el pago es tu responsabilidad."
+        }
+      }
+    },
+    "meta": {
+      "title": "Diseño Web para Asesores Financieros | Autoridad y Confianza",
+      "description": "Desarrollo sitios web premium para asesores financieros y wealth managers. Proyecta confianza y capta clientes de alto valor."
+    }
+  }
+}

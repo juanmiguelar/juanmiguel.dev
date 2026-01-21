@@ -2,9 +2,9 @@
   <section id="faq" class="section faq-section">
     <v-container>
       <div class="text-center mb-8">
-        <h2 class="text-h4 text-md-h3 font-weight-bold mb-3">FAQ</h2>
+        <h2 class="text-h4 text-md-h3 font-weight-bold mb-3">{{ title }}</h2>
         <p class="text-body-1 text-medium-emphasis">
-          Quick answers about my process, timelines, and how we can work together.
+          {{ description }}
         </p>
       </div>
 
@@ -24,9 +24,9 @@
       </v-expansion-panels>
 
       <div class="text-center mt-10">
-        <v-btn color="primary" size="large" href="#contact">
+        <v-btn color="primary" size="large" :href="ctaLink">
           <v-icon start>mdi-email</v-icon>
-          Book a call
+          {{ ctaText }}
         </v-btn>
       </div>
     </v-container>
@@ -39,9 +39,18 @@ interface FaqItem {
   answer: string
 }
 
-defineProps<{
+const props = withDefaults(defineProps<{
   items: FaqItem[]
-}>()
+  title?: string
+  description?: string
+  ctaText?: string
+  ctaLink?: string
+}>(), {
+  title: 'FAQ',
+  description: 'Quick answers about my process, timelines, and how we can work together.',
+  ctaText: 'Book a call',
+  ctaLink: '#contact'
+})
 </script>
 
 <style scoped lang="scss">

@@ -1,7 +1,7 @@
 <template>
   <section id="metrics" class="metrics-section">
     <v-container>
-      <h2 class="text-h4 text-center mb-8">Professional Experience</h2>
+      <h2 class="text-h4 text-center mb-8">{{ $t('home.metrics.title') }}</h2>
       
       <ClientOnly>
         <v-row justify="center">
@@ -76,27 +76,28 @@ interface Metric {
 
 // Reactive flag para animaciones
 const isLoaded = ref(false)
+const { t } = useI18n()
 
-const metrics: Metric[] = [
+const metrics = computed<Metric[]>(() => [
   { 
     value: '8+', 
-    label: '8+ Years Experience',
+    label: t('home.metrics.items.years.label'),
     icon: 'mdi-calendar-clock',
     color: 'primary'
   },
   { 
     value: '70%', 
-    label: '70% Performance Boost',
+    label: t('home.metrics.items.boost.label'),
     icon: 'mdi-trending-up',
     color: 'success'
   },
   { 
     value: '10+', 
-    label: 'Technical workshops',
+    label: t('home.metrics.items.workshops.label'),
     icon: 'mdi-account-group',
     color: 'warning'
   }
-]
+])
 
 // Marcar como loaded después del mount
 onMounted(() => {

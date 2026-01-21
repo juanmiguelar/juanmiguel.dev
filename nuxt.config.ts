@@ -22,8 +22,24 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/image',
     '@nuxtjs/robots',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/i18n'
   ],
+
+  i18n: {
+    lazy: true,
+    langDir: 'locales',
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    locales: [
+      { code: 'en', file: 'en.json', name: 'English' },
+      { code: 'es', file: 'es.json', name: 'Español' }
+    ],
+    detectBrowserLanguage: false,
+    compilation: {
+      strictMessage: false
+    }
+  },
 
   site: {
     url: siteUrl,

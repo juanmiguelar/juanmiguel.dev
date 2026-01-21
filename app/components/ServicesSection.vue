@@ -1,7 +1,7 @@
 <template>
   <section id="services" class="section">
     <v-container>
-      <h2 class="text-h4 text-center mb-8">Services</h2>
+      <h2 class="text-h4 text-center mb-8">{{ $t('home.services.title') }}</h2>
       <v-row>
         <v-col cols="12" md="4" v-for="service in services" :key="service.title">
           <v-card class="pa-4" elevation="2">
@@ -15,10 +15,14 @@
   </section>
 </template>
 <script setup lang="ts">
+import { computed } from 'vue'
+
+const { t } = useI18n()
+
 interface Service { title: string; desc: string; icon: string }
-const services: Service[] = [
-  { title: 'Web Development', desc: 'Responsive websites', icon: 'mdi-laptop' },
-  { title: 'API Design', desc: 'Scalable REST', icon: 'mdi-api' },
-  { title: 'Ads', desc: 'Meta Ads', icon: 'mdi-advertisements' },
-]
+const services = computed<Service[]>(() => [
+  { title: t('home.services.items.web.title'), desc: t('home.services.items.web.desc'), icon: 'mdi-laptop' },
+  { title: t('home.services.items.api.title'), desc: t('home.services.items.api.desc'), icon: 'mdi-api' },
+  { title: t('home.services.items.ads.title'), desc: t('home.services.items.ads.desc'), icon: 'mdi-advertisements' },
+])
 </script>

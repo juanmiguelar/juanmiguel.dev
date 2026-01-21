@@ -1,7 +1,7 @@
 <template>
   <section id="tech" class="section">
     <v-container>
-      <h2 class="text-h4 text-center mb-8">Tech Stack</h2>
+      <h2 class="text-h4 text-center mb-8">{{ $t('home.tech.title') }}</h2>
       <v-row class="justify-center">
         <v-col cols="4" sm="2" v-for="tech in techs" :key="tech.src" class="text-center">
           <NuxtImg 

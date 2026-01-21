@@ -11,15 +11,18 @@
   },
   "dependencies": {
     "@mdi/font": "^7.3.67",
+    "@nuxt/image": "latest",
+    "@nuxtjs/robots": "latest",
+    "@nuxtjs/seo": "latest",
+    "@nuxtjs/sitemap": "latest",
     "nuxt": "^4.0.3",
     "sass": "^1.77.8",
     "vite-plugin-vuetify": "^2.0.3",
     "vue": "^3.5.20",
     "vue-router": "^4.5.1",
-    "vuetify": "^3.7.3",
-    "@nuxtjs/seo": "latest",
-    "@nuxt/image": "latest",
-    "@nuxtjs/robots": "latest",
-    "@nuxtjs/sitemap": "latest"
+    "vuetify": "^3.7.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^10.2.1"
   }
 }

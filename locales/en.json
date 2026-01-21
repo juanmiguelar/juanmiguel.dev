@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "home": "Home",
+    "landing_pages": "Landing Pages",
+    "services": "Services",
+    "projects": "Projects",
+    "recommendations": "Recommendations",
+    "contact": "Contact",
+    "toggle_theme": "Toggle theme"
+  },
+  "home": {
+    "hero": {
+      "title": "Full-stack Go & Nuxt developer for fast, reliable products",
+      "subtitle": "I design Go backends, Nuxt frontends, and performance-first APIs for teams that need quality shipped quickly.",
+      "cta": "Let's work together",
+      "alt": "Portrait of Juan Miguel Arias Mejias, full-stack developer"
+    },
+    "services": {
+      "title": "Services",
+      "items": {
+        "web": { "title": "Web Development", "desc": "Responsive websites" },
+        "api": { "title": "API Design", "desc": "Scalable REST" },
+        "ads": { "title": "Ads", "desc": "Meta Ads" }
+      }
+    },
+    "meta": {
+      "title": "Full-stack Go & Nuxt Developer",
+      "description": "Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams."
+    },
+    "faq": {
+      "items": {
+        "stack": {
+          "q": "What tech stack do you use?",
+          "a": "Go for high-performance backend services and APIs; Nuxt/Vue for frontend; Postgres/Mongo for data; deployed on Vercel."
+        },
+        "time": {
+          "q": "How long does a typical website project take?",
+          "a": "A marketing/portfolio site takes 1–2 weeks. If we include custom integrations or headless CMS, budget 2–4 weeks depending on scope."
+        },
+        "backend": {
+          "q": "Do you handle both backend and frontend?",
+          "a": "Yes. I design and build the backend (Go APIs, auth, performance) and the frontend (Nuxt/Vue, UI/UX)"
+        },
+        "fractional": {
+          "q": "Can you join as a fractional engineer?",
+          "a": "I am currently working full-time, so my availability for fractional roles is limited. However, I am open to discussing specific consulting opportunities."
+        },
+        "timezone": {
+          "q": "Which time zones do you work with?",
+          "a": "I collaborate mostly with US and LATAM teams and can overlap 4–6 hours with US time zones for standups and reviews."
+        }
+      }
+    },
+    "projects": {
+      "title": "My Experience",
+      "subtitle": "From enterprise-scale systems to custom solutions - delivering value across different contexts",
+      "tabs": {
+        "corporate": "Corporate Experience",
+        "independent": "Independent Projects"
+      },
+      "corporate": {
+        "badge": "Enterprise-Proven Track Record",
+        "title": "Trusted by Industry Leaders",
+        "subtitle": "8+ years building mission-critical systems for Fortune 500 companies",
+        "cta_nda": "Enterprise NDA"
+      },
+      "independent": {
+        "badge": "Full-Stack Independence",
+        "title": "End-to-End Project Delivery",
+        "subtitle": "Custom solutions with complete ownership - from concept to deployment",
+        "actions": {
+          "demo": "Live Demo",
+          "code": "Code",
+          "live": "Demo"
+        }
+      },
+      "cta": {
+        "title": "Ready for Your Project?",
+        "subtitle": "Whether you need enterprise-scale systems or custom solutions, I bring the right experience",
+        "btn": "Let's discuss your needs"
+      },
+      "companies": {
+        "nbc": {
+          "description": "High-performance Backend-for-Frontend using Go and GraphQL, handling millions of daily requests for NBC's streaming infrastructure.",
+          "impact": "Optimized API performance for millions of users"
+        },
+        "windriver": {
+          "description": "Restructured monolithic services into 6 specialized microservices with concurrent processing, improving system efficiency and maintainability.",
+          "impact": "70% performance boost, 30% bug reduction"
+        },
+        "kyndryl": {
+          "description": "Developed scalable APIs for cloud resource discovery and management. Led Go training for 80+ professionals across global teams.",
+          "impact": "Trained 80+ developers, established Go standards"
+        },
+        "malcolm": {
+          "description": "A clean, responsive site that presents Malcolm Ugalde—an MBA(c) in Finance and investment advisor with over five years of experience—offering tailored, 1:1 financial guidance."
+        },
+        "soygioco": {
+          "description": "A vibrant, mobile-first platform built with Nuxt 3 and Vuetify, crafted to connect Costa Rican art enthusiasts with accessible watercolor and acrylic workshops."
+        },
+        "portfolio": {
+          "description": "A polished portfolio built with Nuxt 3, TypeScript, and Vuetify—showcasing professional strengths in Go and Vue.js. This mobile-first, responsive site includes a hero section, services, project highlights, performance metrics, tech stack, recommendations, and a contact form."
+        }
+      }
+    },
+    "metrics": {
+      "title": "Professional Experience",
+      "items": {
+        "years": { "label": "8+ Years Experience" },
+        "boost": { "label": "70% Performance Boost" },
+        "workshops": { "label": "Technical workshops" }
+      }
+    },
+    "recommendations": {
+      "title": "Recommendations",
+      "role": "Colleague",
+      "items": {
+        "lenin": { "quote": "Working with Juan Miguel has been an exceptional experience. His charisma, collaborative spirit, and deep technical expertise made him an invaluable part of our team." },
+        "kenneth": { "quote": "Juan is an exceptional team player who consistently showcases his high level of expertise by implementing best practices in code and reviews." }
+      }
+    },
+    "tech": {
+      "title": "Tech Stack"
+    },
+    "contact": {
+      "title": "Let's work together",
+      "description": "I am currently working full-time and <strong>not available for full-time employment offers</strong>. However, I am open to discussing small website projects or consulting opportunities.",
+      "cta": "Get in touch",
+      "status": {
+        "label": "Limited Availability",
+        "text": "I typically respond within 24 hours"
+      }
+    }
+  },
+  "landing": {
+    "hero": {
+      "badge": "Exclusive for Financial Advisors",
+      "title": "Your website should inspire the same trust as you do",
+      "subtitle": "I help Advisors and Wealth Managers attract high-value clients with an authoritative digital presence.",
+      "subtitle_bold": "No generic templates. No technical hassles.",
+      "cta_primary": "View Proposal",
+      "cta_secondary": "Why me?"
+    },
+    "benefits": {
+      "title": "In Finance, Image is Trust",
+      "description": "A potential client takes 0.05 seconds to judge your credibility by your website. If your site looks old, slow, or \"cheap\", they assume your advice is too.",
+      "list": {
+        "slow": "Slow websites lose impatient prospects.",
+        "generic": "Generic designs don't differentiate your brand.",
+        "scheduling": "Lack of a clear scheduling system."
+      },
+      "card": {
+        "title": "\"High Trust\" Design",
+        "description": "I create sober, elegant, and modern digital assets that position your brand at the level of large firms, but with your personal touch."
+      }
+    },
+    "mockups": {
+      "title": "Designed to capture Clients, not just Visits",
+      "card1": {
+        "title": "Automated Scheduling",
+        "description": "Your prospects qualify and schedule directly on your calendar. Wake up with appointments, not cold emails."
+      },
+      "card2": {
+        "title": "Institutional Speed",
+        "description": "Cutting-edge technology (Nuxt/Vue) that loads instantly. Conveys solidity and technological efficiency."
+      }
+    },
+    "pricing": {
+      "badge": "All Inclusive",
+      "title": "The Advisory Launchpad",
+      "subtitle": "Your digital firm, ready in 10 days",
+      "one_time_payment": "One-time payment for development.",
+      "maintenance": "+ $20 USD/mo",
+      "maintenance_note": "(Maintenance, Hosting, and Support)",
+      "features": {
+        "design": "Premium Institutional Design",
+        "pages": "Home + Services + \"About Me\"",
+        "integration": "Calendly/WhatsApp Integration",
+        "copy": "Copywriting for Investors",
+        "speed": "Instant Speed",
+        "hosting": "Secure Hosting (SSL)",
+        "support": "Continuous Technical Support",
+        "external": "Domain and external tools not included"
+      },
+      "cta": "Schedule Initial Consultation",
+      "cta_whatsapp": "Chat on WhatsApp",
+      "note": "Ideal for Independent Advisors"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Quick answers about my process, timelines, and how we can work together.",
+      "cta": "Schedule a call",
+      "items": {
+        "time": {
+          "q": "How long does development take?",
+          "a": "Typically 10 business days for the first version, then iterating until you are satisfied with the result."
+        },
+        "texts": {
+          "q": "Do I need to have the texts ready?",
+          "a": "Don't worry. I include a structure and copywriting guide. We work together to extract your value proposition and I give it a commercial form."
+        },
+        "changes": {
+          "q": "What happens if I want to make changes later?",
+          "a": "If you need structural changes, design changes, or new sections after delivery, they will be quoted separately. The monthly maintenance ($20 USD) covers technical support so the site is always online and secure, but does not include development of new features."
+        },
+        "hosting": {
+          "q": "Does it include hosting and domain?",
+          "a": "The service includes hosting on high-speed servers. The domain (yourcompany.com) and any third-party paid tools (like Calendly Premium, Email Marketing, etc.) must be purchased by you; I advise you on the process, but payment is your responsibility."
+        }
+      }
+    },
+    "meta": {
+      "title": "Web Design for Financial Advisors | Authority and Trust",
+      "description": "I develop premium websites for financial advisors and wealth managers. Project trust and attract high-value clients."
+    }
+  }
+}
