@@ -10,36 +10,36 @@
   },
   "home": {
     "hero": {
-      "title": "Full-stack Go & Nuxt developer for fast, reliable products",
-      "subtitle": "I design Go backends, Nuxt frontends, and performance-first APIs for teams that need quality shipped quickly.",
+      "title": "Expert Golang Developer & Landing Page Specialist",
+      "subtitle": "Professional Golang developer specializing in high-performance APIs and conversion-optimized landing pages. I build scalable Go backends and engaging Nuxt/Vue frontends that drive results.",
       "cta": "Let's work together",
-      "alt": "Portrait of Juan Miguel Arias Mejias, full-stack developer"
+      "alt": "Juan Miguel Arias Mejias - Golang Developer and Landing Page Specialist"
     },
     "services": {
       "title": "Services",
       "items": {
-        "web": { "title": "Web Development", "desc": "Responsive websites" },
-        "api": { "title": "API Design", "desc": "Scalable REST" },
-        "ads": { "title": "Ads", "desc": "Meta Ads" }
+        "web": { "title": "Landing Page Development", "desc": "High-converting landing pages with Nuxt/Vue for lead generation and product launches" },
+        "api": { "title": "Golang API Development", "desc": "Scalable REST and GraphQL APIs built with Go for enterprise performance" },
+        "ads": { "title": "Marketing Integration", "desc": "Meta Ads tracking and analytics integration" }
       }
     },
     "meta": {
-      "title": "Full-stack Go & Nuxt Developer",
-      "description": "Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams."
+      "title": "Golang Developer & Landing Page Development Expert | Juan Miguel Arias",
+      "description": "Expert Golang developer with 8+ years building high-performance APIs and conversion-optimized landing pages. Specializing in Go backends, microservices, and Nuxt/Vue landing page development for SaaS and enterprise clients."
     },
     "faq": {
       "items": {
         "stack": {
-          "q": "What tech stack do you use?",
-          "a": "Go for high-performance backend services and APIs; Nuxt/Vue for frontend; Postgres/Mongo for data; deployed on Vercel."
+          "q": "What technologies do you use for Golang development and landing pages?",
+          "a": "I use Golang (Go) for high-performance backend services, REST APIs, GraphQL, and microservices. For landing page development, I use Nuxt 3, Vue.js, TypeScript, and Vuetify to create fast, conversion-optimized pages. Database: PostgreSQL/MongoDB. Deployment: Vercel, AWS, Google Cloud."
         },
         "time": {
-          "q": "How long does a typical website project take?",
-          "a": "A marketing/portfolio site takes 1–2 weeks. If we include custom integrations or headless CMS, budget 2–4 weeks depending on scope."
+          "q": "How long does landing page development take?",
+          "a": "A high-converting landing page typically takes 1-2 weeks including design, development, and optimization. Complex landing pages with custom Golang API integrations or advanced analytics take 2-4 weeks depending on requirements."
         },
         "backend": {
-          "q": "Do you handle both backend and frontend?",
-          "a": "Yes. I design and build the backend (Go APIs, auth, performance) and the frontend (Nuxt/Vue, UI/UX)"
+          "q": "Do you provide both Golang backend and landing page development?",
+          "a": "Yes. I'm a full-stack Golang developer handling both backend (Go APIs, microservices, authentication, database design) and frontend (Nuxt/Vue landing pages, UI/UX, conversion optimization). Perfect for complete solutions."
         },
         "fractional": {
           "q": "Can you join as a fractional engineer?",

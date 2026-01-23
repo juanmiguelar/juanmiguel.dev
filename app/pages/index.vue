@@ -77,8 +77,14 @@ useHead({
             '@type': 'WebSite',
             '@id': `${siteUrl}#website`,
             url: siteUrl,
-            name: 'Juan Miguel Arias Mejias - Full-stack Developer',
+            name: 'Juan Miguel Arias Mejias - Golang Developer & Landing Page Specialist',
+            alternateName: 'Juan Miguel Arias - Go Developer',
             inLanguage: locale.value,
+            about: {
+              '@type': 'Thing',
+              name: 'Golang Development and Landing Page Services'
+            },
+            keywords: 'golang developer, go developer, landing page development, golang api development, microservices, nuxt developer',
             potentialAction: {
               '@type': 'SearchAction',
               target: `${siteUrl}/?q={search_term_string}`,
@@ -91,7 +97,24 @@ useHead({
             name: 'Juan Miguel Arias Mejias',
             url: siteUrl,
             image: `${siteUrl}/img/juanmiguel.jpeg`,
-            jobTitle: 'Full-stack Developer',
+            jobTitle: 'Golang Developer & Landing Page Specialist',
+            description: 'Expert Golang developer specializing in high-performance API development and conversion-optimized landing page development',
+            knowsAbout: [
+              'Golang Development',
+              'Go Programming',
+              'Landing Page Development',
+              'Nuxt.js',
+              'Vue.js',
+              'API Development',
+              'Microservices Architecture',
+              'GraphQL',
+              'REST API',
+              'Web Performance Optimization',
+              'TypeScript',
+              'PostgreSQL',
+              'MongoDB',
+              'Cloud Architecture'
+            ],
             sameAs: [
               'https://www.linkedin.com/in/juan-miguel-arias/',
               'https://github.com/juanmiguelar'
@@ -104,16 +127,46 @@ useHead({
           {
             '@type': 'ProfessionalService',
             '@id': `${siteUrl}#service`,
-            name: 'Full-stack Go & Nuxt development services',
+            name: 'Golang Development & Landing Page Services',
             provider: { '@id': `${siteUrl}#person` },
             areaServed: [
               { '@type': 'Country', name: 'United States' },
-              { '@type': 'Country', name: 'Costa Rica' }
+              { '@type': 'Country', name: 'Costa Rica' },
+              { '@type': 'Place', name: 'Worldwide' }
             ],
-            serviceType: ['API design', 'Web development', 'Performance optimization'],
+            serviceType: [
+              'Golang Development',
+              'Go API Development',
+              'Landing Page Development',
+              'Web Development',
+              'Microservices Development',
+              'GraphQL API Development',
+              'REST API Development',
+              'Performance Optimization',
+              'Frontend Development',
+              'Backend Development'
+            ],
             url: siteUrl,
             image: ogImage,
-            description: pageDescription.value
+            description: pageDescription.value,
+            offers: [
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Golang API Development',
+                  description: 'High-performance Go backend development, REST and GraphQL APIs, microservices architecture'
+                }
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Landing Page Development',
+                  description: 'Conversion-optimized landing pages built with Nuxt/Vue for maximum performance and user engagement'
+                }
+              }
+            ]
           },
           {
             '@type': 'Project',

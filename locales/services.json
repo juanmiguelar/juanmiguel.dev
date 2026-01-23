@@ -1,0 +1,168 @@
+{
+  "golang": {
+    "meta": {
+      "title": "Professional Golang Developer | Go API & Microservices Development",
+      "description": "Hire an expert Golang developer with 8+ years experience building high-performance APIs, microservices, and backend systems. Specializing in Go, gRPC, GraphQL, and cloud-native development."
+    },
+    "hero": {
+      "title": "Professional Golang Development Services",
+      "subtitle": "Expert Golang developer with 8+ years building high-performance, scalable backend systems. Specializing in Go APIs, microservices, and enterprise-grade applications."
+    },
+    "intro": {
+      "title": "What is Golang Development?",
+      "p1": "Golang (Go) is a powerful programming language developed by Google, designed for building fast, reliable, and efficient software. As an experienced Golang developer, I leverage Go's concurrency features, simplicity, and performance to create backend systems that scale effortlessly.",
+      "p2": "Whether you need a Go API developer for REST or GraphQL services, a microservices architect, or someone to optimize your existing Go codebase, I provide full-stack Golang development services tailored to your business needs."
+    },
+    "services": {
+      "title": "Golang Development Services",
+      "api": {
+        "title": "Golang API Development",
+        "desc": "Build high-performance REST and GraphQL APIs with Go. Optimized for speed, security, and scalability. Perfect for SaaS platforms and enterprise applications."
+      },
+      "microservices": {
+        "title": "Microservices Architecture",
+        "desc": "Design and implement microservices using Golang. Containerized with Docker, orchestrated with Kubernetes, and built for cloud-native environments."
+      },
+      "optimization": {
+        "title": "Performance Optimization",
+        "desc": "Optimize existing Go applications for better performance. Profiling, refactoring, and implementing best practices to reduce latency and increase throughput."
+      }
+    },
+    "why": {
+      "title": "Why Hire Me as Your Golang Developer?",
+      "experience": "8+ Years Experience: Proven track record with Fortune 500 companies including NBCUniversal, Kyndryl, and Wind River.",
+      "code": "Production-Ready Code: Write clean, maintainable Go code following industry best practices.",
+      "performance": "Performance-Focused: Achieved 70% performance improvements in enterprise systems.",
+      "fullstack": "Full-Stack Expertise: Can handle both Golang backend and Nuxt/Vue frontend development."
+    },
+    "tech": {
+      "title": "Golang Tech Stack"
+    },
+    "faq": {
+      "title": "Golang Development FAQs",
+      "q1": {
+        "q": "Why choose Golang for backend development?",
+        "a": "Golang offers exceptional performance, built-in concurrency, fast compilation, and excellent standard library. It's ideal for building scalable APIs, microservices, and cloud-native applications that need to handle high traffic."
+      },
+      "q2": {
+        "q": "How long does it take to develop a Go API?",
+        "a": "A standard REST API takes 2-3 weeks. Complex GraphQL APIs or microservices architectures may take 4-8 weeks depending on requirements, integrations, and infrastructure setup."
+      },
+      "q3": {
+        "q": "Do you provide ongoing Golang support?",
+        "a": "Yes, I offer maintenance, bug fixes, performance optimization, and feature additions for existing Golang applications. Available for both hourly consulting and retainer agreements."
+      }
+    },
+    "cta": {
+      "title": "Ready to Build with Golang?",
+      "subtitle": "Let's discuss your project and how I can help you build a high-performance Go application.",
+      "button": "Get Started"
+    }
+  },
+  "landingPage": {
+    "meta": {
+      "title": "Landing Page Development | High-Converting Nuxt/Vue Landing Pages",
+      "description": "Professional landing page development services. I build fast, conversion-optimized landing pages with Nuxt/Vue for SaaS, products, and lead generation. Get 95+ PageSpeed scores."
+    },
+    "hero": {
+      "title": "Landing Page Development That Converts",
+      "subtitle": "Professional landing page developer specializing in high-converting, lightning-fast pages built with Nuxt/Vue. Turn visitors into customers with optimized landing page design."
+    },
+    "intro": {
+      "title": "What is Landing Page Development?",
+      "p1": "Landing page development is the process of creating focused, conversion-optimized web pages designed to drive specific actions—whether that's capturing leads, promoting a product, or driving sign-ups. As a specialized landing page developer, I build pages that combine compelling design with technical excellence.",
+      "p2": "Using modern frameworks like Nuxt.js and Vue.js, I create landing pages that load instantly, rank well in search engines, and convert visitors at industry-leading rates. Every landing page is mobile-first, accessibility-compliant, and optimized for Core Web Vitals."
+    },
+    "services": {
+      "title": "Landing Page Development Services",
+      "saas": {
+        "title": "SaaS Landing Pages",
+        "desc": "Custom landing pages for SaaS products focused on conversion optimization. Includes hero sections, feature highlights, pricing tables, and sign-up forms."
+      },
+      "leadgen": {
+        "title": "Lead Generation Pages",
+        "desc": "High-converting landing pages designed to capture qualified leads. Optimized forms, compelling CTAs, and integrated with your CRM or email marketing tools."
+      },
+      "product": {
+        "title": "Product Launch Pages",
+        "desc": "Eye-catching landing pages for product launches. Countdown timers, waitlist sign-ups, early bird offers, and social proof elements to maximize buzz."
+      }
+    },
+    "why": {
+      "title": "Why Choose My Landing Page Development?",
+      "performance": {
+        "title": "Lightning Fast Performance",
+        "desc": "Every landing page scores 95+ on Google PageSpeed. Fast loading times mean better conversion rates and higher search rankings."
+      },
+      "conversion": {
+        "title": "Conversion-Optimized",
+        "desc": "Strategic placement of CTAs, persuasive copywriting structure, social proof integration, and A/B testing recommendations to maximize conversions."
+      },
+      "mobile": {
+        "title": "Mobile-First Design",
+        "desc": "70% of traffic comes from mobile. Every landing page is designed and optimized for mobile users first, then enhanced for desktop."
+      },
+      "seo": {
+        "title": "SEO-Ready",
+        "desc": "Built with SEO best practices: semantic HTML, structured data, optimized meta tags, and perfect Core Web Vitals scores for better search visibility."
+      }
+    },
+    "features": {
+      "title": "What's Included in Every Landing Page",
+      "responsive": "Responsive design (mobile, tablet, desktop)",
+      "forms": "Contact/sign-up form integration",
+      "analytics": "Analytics integration (GA4, Facebook Pixel)",
+      "seo": "SEO optimization & meta tags",
+      "vitals": "Core Web Vitals optimization",
+      "social": "Social media integration",
+      "images": "Image optimization (WebP, lazy loading)",
+      "ssl": "SSL certificate & secure hosting"
+    },
+    "tech": {
+      "title": "Landing Page Tech Stack"
+    },
+    "process": {
+      "title": "Landing Page Development Process",
+      "step1": {
+        "title": "Discovery",
+        "desc": "Understand your goals, target audience, and conversion objectives"
+      },
+      "step2": {
+        "title": "Design",
+        "desc": "Create wireframes and mockups optimized for conversions"
+      },
+      "step3": {
+        "title": "Development",
+        "desc": "Build with Nuxt/Vue, optimize for speed and SEO"
+      },
+      "step4": {
+        "title": "Launch",
+        "desc": "Deploy, test, and optimize for maximum performance"
+      }
+    },
+    "faq": {
+      "title": "Landing Page Development FAQs",
+      "q1": {
+        "q": "How much does landing page development cost?",
+        "a": "Landing page development typically ranges from $1,500-$5,000 depending on complexity, custom features, and integrations. Contact me for a detailed quote based on your needs."
+      },
+      "q2": {
+        "q": "How long does it take to build a landing page?",
+        "a": "Standard landing pages take 1-2 weeks from design to launch. Complex pages with custom animations, integrations, or advanced features may take 2-4 weeks."
+      },
+      "q3": {
+        "q": "Can you integrate my landing page with my CRM/email marketing?",
+        "a": "Yes! I integrate landing pages with popular tools like HubSpot, Mailchimp, ConvertKit, Salesforce, and custom APIs. Form submissions can be sent directly to your existing systems."
+      },
+      "q4": {
+        "q": "Will my landing page be mobile-friendly?",
+        "a": "Absolutely. Every landing page is built mobile-first and tested across all devices and screen sizes to ensure perfect rendering and optimal conversion rates."
+      }
+    },
+    "cta": {
+      "title": "Ready to Build a High-Converting Landing Page?",
+      "subtitle": "Let's create a landing page that drives results for your business.",
+      "button": "Get Your Free Quote"
+    }
+  }
+}

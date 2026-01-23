@@ -10,22 +10,22 @@
   },
   "home": {
     "hero": {
-      "title": "Desarrollador Full-stack Go & Nuxt para productos rápidos y confiables",
-      "subtitle": "Diseño backends en Go, frontends en Nuxt y APIs de alto rendimiento para equipos que necesitan calidad entregada rápidamente.",
+      "title": "Desarrollador Golang Experto y Especialista en Landing Pages",
+      "subtitle": "Desarrollador Golang profesional especializado en APIs de alto rendimiento y landing pages optimizadas para conversión. Construyo backends escalables en Go y frontends atractivos en Nuxt/Vue que generan resultados.",
       "cta": "Trabajemos juntos",
-      "alt": "Retrato de Juan Miguel Arias Mejias, desarrollador full-stack"
+      "alt": "Juan Miguel Arias Mejias - Desarrollador Golang y Especialista en Landing Pages"
     },
     "services": {
       "title": "Servicios",
       "items": {
-        "web": { "title": "Desarrollo Web", "desc": "Sitios web responsivos" },
-        "api": { "title": "Diseño de APIs", "desc": "REST Escalable" },
-        "ads": { "title": "Publicidad", "desc": "Meta Ads" }
+        "web": { "title": "Desarrollo de Landing Pages", "desc": "Landing pages de alta conversión con Nuxt/Vue para generación de leads y lanzamientos de productos" },
+        "api": { "title": "Desarrollo de APIs en Golang", "desc": "APIs REST y GraphQL escalables construidas con Go para rendimiento empresarial" },
+        "ads": { "title": "Integración de Marketing", "desc": "Integración de tracking de Meta Ads y analytics" }
       }
     },
     "meta": {
-      "title": "Desarrollador Full-stack Go & Nuxt",
-      "description": "Desarrollador full-stack Go y Nuxt entregando APIs rápidas y web apps pulidas. Diseño arquitecturas, construyo servicios seguros y envío UIs atractivas para equipos SaaS."
+      "title": "Desarrollador Golang y Experto en Desarrollo de Landing Pages | Juan Miguel Arias",
+      "description": "Desarrollador Golang experto con 8+ años construyendo APIs de alto rendimiento y landing pages optimizadas para conversión. Especializado en backends Go, microservicios y desarrollo de landing pages con Nuxt/Vue para clientes SaaS y empresariales."
     },
     "faq": {
       "items": {
