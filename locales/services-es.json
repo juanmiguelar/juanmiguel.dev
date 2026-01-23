@@ -1,0 +1,168 @@
+{
+  "golang": {
+    "meta": {
+      "title": "Desarrollador Golang Profesional | Desarrollo de APIs y Microservicios Go",
+      "description": "Contrata a un desarrollador Golang experto con más de 8 años de experiencia construyendo APIs de alto rendimiento, microservicios y sistemas backend. Especializado en Go, gRPC, GraphQL y desarrollo cloud-native."
+    },
+    "hero": {
+      "title": "Servicios Profesionales de Desarrollo Golang",
+      "subtitle": "Desarrollador Golang experto con más de 8 años construyendo sistemas backend escalables y de alto rendimiento. Especializado en APIs Go, microservicios y aplicaciones empresariales."
+    },
+    "intro": {
+      "title": "¿Qué es el Desarrollo Golang?",
+      "p1": "Golang (Go) es un poderoso lenguaje de programación desarrollado por Google, diseñado para construir software rápido, confiable y eficiente. Como desarrollador Golang experimentado, aprovecho las características de concurrencia, simplicidad y rendimiento de Go para crear sistemas backend que escalan sin esfuerzo.",
+      "p2": "Ya sea que necesites un desarrollador de API Go para servicios REST o GraphQL, un arquitecto de microservicios, o alguien para optimizar tu código Go existente, proporciono servicios completos de desarrollo Golang adaptados a las necesidades de tu negocio."
+    },
+    "services": {
+      "title": "Servicios de Desarrollo Golang",
+      "api": {
+        "title": "Desarrollo de APIs en Golang",
+        "desc": "Construcción de APIs REST y GraphQL de alto rendimiento con Go. Optimizadas para velocidad, seguridad y escalabilidad. Perfectas para plataformas SaaS y aplicaciones empresariales."
+      },
+      "microservices": {
+        "title": "Arquitectura de Microservicios",
+        "desc": "Diseño e implementación de microservicios usando Golang. Containerizados con Docker, orquestados con Kubernetes y construidos para entornos cloud-native."
+      },
+      "optimization": {
+        "title": "Optimización de Rendimiento",
+        "desc": "Optimización de aplicaciones Go existentes para mejor rendimiento. Perfilado, refactorización e implementación de mejores prácticas para reducir latencia y aumentar throughput."
+      }
+    },
+    "why": {
+      "title": "¿Por qué Contratarme como tu Desarrollador Golang?",
+      "experience": "Más de 8 Años de Experiencia: Trayectoria comprobada con compañías Fortune 500 incluyendo NBCUniversal, Kyndryl y Wind River.",
+      "code": "Código Listo para Producción: Escribo código Go limpio y mantenible siguiendo las mejores prácticas de la industria.",
+      "performance": "Enfocado en Rendimiento: Logré mejoras de rendimiento del 70% en sistemas empresariales.",
+      "fullstack": "Experiencia Full-Stack: Puedo manejar tanto desarrollo backend en Golang como desarrollo frontend en Nuxt/Vue."
+    },
+    "tech": {
+      "title": "Stack Tecnológico Golang"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes sobre Desarrollo Golang",
+      "q1": {
+        "q": "¿Por qué elegir Golang para desarrollo backend?",
+        "a": "Golang ofrece rendimiento excepcional, concurrencia integrada, compilación rápida y una excelente biblioteca estándar. Es ideal para construir APIs escalables, microservicios y aplicaciones cloud-native que necesitan manejar alto tráfico."
+      },
+      "q2": {
+        "q": "¿Cuánto tiempo toma desarrollar una API en Go?",
+        "a": "Una API REST estándar toma 2-3 semanas. APIs GraphQL complejas o arquitecturas de microservicios pueden tomar 4-8 semanas dependiendo de los requisitos, integraciones y configuración de infraestructura."
+      },
+      "q3": {
+        "q": "¿Proporcionas soporte continuo para Golang?",
+        "a": "Sí, ofrezco mantenimiento, corrección de errores, optimización de rendimiento y adición de funcionalidades para aplicaciones Golang existentes. Disponible tanto por consultoría por hora como por contratos de retención."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Construir con Golang?",
+      "subtitle": "Hablemos sobre tu proyecto y cómo puedo ayudarte a construir una aplicación Go de alto rendimiento.",
+      "button": "Comenzar"
+    }
+  },
+  "landingPage": {
+    "meta": {
+      "title": "Desarrollo de Landing Pages | Landing Pages Nuxt/Vue de Alta Conversión",
+      "description": "Servicios profesionales de desarrollo de landing pages. Construyo landing pages rápidas y optimizadas para conversión con Nuxt/Vue para SaaS, productos y generación de leads. Obtén puntajes de PageSpeed de 95+."
+    },
+    "hero": {
+      "title": "Desarrollo de Landing Pages que Convierten",
+      "subtitle": "Desarrollador profesional de landing pages especializado en páginas de alta conversión y velocidad relámpago construidas con Nuxt/Vue. Convierte visitantes en clientes con diseño de landing pages optimizado."
+    },
+    "intro": {
+      "title": "¿Qué es el Desarrollo de Landing Pages?",
+      "p1": "El desarrollo de landing pages es el proceso de crear páginas web enfocadas y optimizadas para conversión, diseñadas para impulsar acciones específicas—ya sea capturar leads, promocionar un producto o generar registros. Como desarrollador especializado en landing pages, construyo páginas que combinan diseño atractivo con excelencia técnica.",
+      "p2": "Usando frameworks modernos como Nuxt.js y Vue.js, creo landing pages que cargan instantáneamente, se posicionan bien en motores de búsqueda y convierten visitantes a tasas líderes en la industria. Cada landing page es mobile-first, cumple con accesibilidad y está optimizada para Core Web Vitals."
+    },
+    "services": {
+      "title": "Servicios de Desarrollo de Landing Pages",
+      "saas": {
+        "title": "Landing Pages para SaaS",
+        "desc": "Landing pages personalizadas para productos SaaS enfocadas en optimización de conversión. Incluye secciones hero, destacados de características, tablas de precios y formularios de registro."
+      },
+      "leadgen": {
+        "title": "Páginas de Generación de Leads",
+        "desc": "Landing pages de alta conversión diseñadas para capturar leads calificados. Formularios optimizados, CTAs convincentes e integradas con tu CRM o herramientas de email marketing."
+      },
+      "product": {
+        "title": "Páginas de Lanzamiento de Productos",
+        "desc": "Landing pages llamativas para lanzamientos de productos. Temporizadores de cuenta regresiva, registros en lista de espera, ofertas anticipadas y elementos de prueba social para maximizar el impacto."
+      }
+    },
+    "why": {
+      "title": "¿Por qué Elegir mi Desarrollo de Landing Pages?",
+      "performance": {
+        "title": "Rendimiento Ultrarrápido",
+        "desc": "Cada landing page obtiene 95+ en Google PageSpeed. Tiempos de carga rápidos significan mejores tasas de conversión y rankings de búsqueda más altos."
+      },
+      "conversion": {
+        "title": "Optimizado para Conversión",
+        "desc": "Ubicación estratégica de CTAs, estructura de copywriting persuasivo, integración de prueba social y recomendaciones de pruebas A/B para maximizar conversiones."
+      },
+      "mobile": {
+        "title": "Diseño Mobile-First",
+        "desc": "El 70% del tráfico viene de móviles. Cada landing page está diseñada y optimizada primero para usuarios móviles, luego mejorada para escritorio."
+      },
+      "seo": {
+        "title": "Lista para SEO",
+        "desc": "Construida con mejores prácticas SEO: HTML semántico, datos estructurados, meta tags optimizados y puntajes perfectos de Core Web Vitals para mejor visibilidad en búsquedas."
+      }
+    },
+    "features": {
+      "title": "Qué está Incluido en Cada Landing Page",
+      "responsive": "Diseño responsive (móvil, tablet, escritorio)",
+      "forms": "Integración de formularios de contacto/registro",
+      "analytics": "Integración de analytics (GA4, Facebook Pixel)",
+      "seo": "Optimización SEO y meta tags",
+      "vitals": "Optimización de Core Web Vitals",
+      "social": "Integración de redes sociales",
+      "images": "Optimización de imágenes (WebP, lazy loading)",
+      "ssl": "Certificado SSL y hosting seguro"
+    },
+    "tech": {
+      "title": "Stack Tecnológico para Landing Pages"
+    },
+    "process": {
+      "title": "Proceso de Desarrollo de Landing Pages",
+      "step1": {
+        "title": "Descubrimiento",
+        "desc": "Entender tus objetivos, público objetivo y objetivos de conversión"
+      },
+      "step2": {
+        "title": "Diseño",
+        "desc": "Crear wireframes y maquetas optimizadas para conversiones"
+      },
+      "step3": {
+        "title": "Desarrollo",
+        "desc": "Construir con Nuxt/Vue, optimizar para velocidad y SEO"
+      },
+      "step4": {
+        "title": "Lanzamiento",
+        "desc": "Desplegar, probar y optimizar para máximo rendimiento"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes sobre Desarrollo de Landing Pages",
+      "q1": {
+        "q": "¿Cuánto cuesta el desarrollo de una landing page?",
+        "a": "El desarrollo de landing pages típicamente varía de $1,500-$5,000 dependiendo de la complejidad, características personalizadas e integraciones. Contáctame para una cotización detallada basada en tus necesidades."
+      },
+      "q2": {
+        "q": "¿Cuánto tiempo toma construir una landing page?",
+        "a": "Las landing pages estándar toman 1-2 semanas desde el diseño hasta el lanzamiento. Páginas complejas con animaciones personalizadas, integraciones o características avanzadas pueden tomar 2-4 semanas."
+      },
+      "q3": {
+        "q": "¿Puedes integrar mi landing page con mi CRM/email marketing?",
+        "a": "¡Sí! Integro landing pages con herramientas populares como HubSpot, Mailchimp, ConvertKit, Salesforce y APIs personalizadas. Los envíos de formularios pueden ser enviados directamente a tus sistemas existentes."
+      },
+      "q4": {
+        "q": "¿Mi landing page será mobile-friendly?",
+        "a": "Absolutamente. Cada landing page está construida con enfoque mobile-first y probada en todos los dispositivos y tamaños de pantalla para asegurar renderizado perfecto y tasas de conversión óptimas."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Construir una Landing Page de Alta Conversión?",
+      "subtitle": "Creemos una landing page que genere resultados para tu negocio.",
+      "button": "Obtén tu Cotización Gratis"
+    }
+  }
+}

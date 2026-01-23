@@ -44,8 +44,8 @@ export default defineNuxtConfig({
 
   site: {
     url: siteUrl,
-    name: 'Juan Miguel Arias Mejias | Full-stack Go & Nuxt Developer',
-    description: 'Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams.',
+    name: 'Juan Miguel Arias Mejias | Golang Developer & Landing Page Specialist',
+    description: 'Expert Golang developer with 8+ years building high-performance APIs and conversion-optimized landing pages. Specializing in Go backends, microservices, and Nuxt/Vue landing page development.',
     defaultLocale: 'en',
     indexable: isProd,
     image: `${siteUrl}/img/juanmiguelweb.png`
@@ -117,7 +117,9 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Full-stack Go & Nuxt developer delivering fast APIs and polished web apps. I design architectures, build secure services, and ship engaging UI for SaaS teams.' },
+        { name: 'description', content: 'Expert Golang developer with 8+ years building high-performance APIs and conversion-optimized landing pages. Specializing in Go backends, microservices, and Nuxt/Vue landing page development.' },
+        { name: 'keywords', content: 'golang developer, go developer, landing page development, golang api, go backend developer, nuxt developer, vue developer, microservices, graphql, rest api, web performance, freelance golang developer, hire golang developer' },
+        { name: 'author', content: 'Juan Miguel Arias Mejias' },
         { name: 'msapplication-TileColor', content: '#da532c' },
         { name: 'theme-color', content: '#ffffff' }
       ],
