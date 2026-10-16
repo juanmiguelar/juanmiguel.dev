@@ -57,7 +57,7 @@ export default {
           'Start with examples a person can explain without reading the function. What inputs are valid? What happens at the boundary? What should fail? Give those expectations to the assistant, review the resulting assertions, and keep the requirements as the reference when code and tests disagree.',
           'AI is useful for suggesting additional cases and writing repetitive test scaffolding. Reviewing the expected outputs remains engineering work. Asking another model to review the code can add a perspective, but it does not replace an independently defined rule.'
         ] },
-        { id: 'go-example', heading: 'A small Go test can expose a big ambiguity', paragraphs: [
+        { id: 'go-example', links: [{ slug: 'go-api-performance-diagnostics', label: 'Verify performance changes with a reproducible Go benchmark' }], heading: 'A small Go test can expose a big ambiguity', paragraphs: [
           'Consider a retry policy. Does a maximum of three attempts mean three calls in total, or three retries after the first call? Both interpretations can produce tidy code. Before implementation, choose a contract: maxAttempts includes the initial call, and attempt is the zero-based index of the call that just finished.',
           'Under that contract, attempts zero and one allow another call, while attempt two does not. This example also chooses to return false for negative attempts or non-positive limits. That is an explicit policy for this helper, not a universal rule for retry systems. A public configuration API might reject invalid values with an error instead.'
         ], code: { language: 'go', value: retryExample }, checklist: [
@@ -95,7 +95,7 @@ export default {
           'Comienza con ejemplos que una persona pueda explicar sin leer la función. ¿Qué entradas son válidas? ¿Qué sucede en el límite? ¿Qué debe fallar? Entrega esas expectativas al asistente y revisa las aserciones. Cuando el código y las pruebas discrepen, vuelve a los requisitos.',
           'La IA sirve para proponer casos adicionales y escribir código repetitivo de pruebas. Revisar los resultados esperados sigue siendo trabajo de ingeniería. Otro modelo puede aportar una perspectiva, pero no sustituye una regla definida de forma independiente.'
         ] },
-        { id: 'go-example', heading: 'Una prueba pequeña en Go puede revelar una gran ambigüedad', paragraphs: [
+        { id: 'go-example', links: [{ slug: 'go-api-performance-diagnostics', label: 'Verificar cambios de rendimiento con un benchmark Go reproducible' }], heading: 'Una prueba pequeña en Go puede revelar una gran ambigüedad', paragraphs: [
           'Considera una política de reintentos. ¿Un máximo de tres intentos significa tres llamadas en total o tres reintentos después de la llamada inicial? Ambas interpretaciones pueden producir código ordenado. Antes de implementar, define el contrato: maxAttempts incluye la llamada inicial y attempt es el índice, comenzando en cero, de la llamada que acaba de finalizar.',
           'Con ese contrato, los intentos cero y uno permiten otra llamada; el intento dos no. El ejemplo también decide devolver false para intentos negativos o límites no positivos. Es una política explícita de esta función, no una regla universal. Una API pública de configuración podría rechazar esos valores con un error.'
         ], code: { language: 'go', value: retryExample }, checklist: [

@@ -11,6 +11,7 @@
   <ContactForm />
 </template>
 <script setup lang="ts">
+import { professionalIdentity } from '~/utils/professionalIdentity'
 import HeroSection from '~/components/HeroSection.vue'
 import ServicesSection from '~/components/ServicesSection.vue'
 import ProjectsSection from '~/components/ProjectsSection.vue'
@@ -87,10 +88,7 @@ useHead(() => ({
           description: pageDescription.value
         },
         {
-          '@type': 'Person',
-          '@id': `${siteUrl}#person`,
-          name: 'Juan Miguel Arias Mejias',
-          url: siteUrl,
+          ...professionalIdentity(siteUrl),
           image: `${siteUrl}/img/juanmiguel.jpeg`,
           jobTitle: 'Senior Software Engineer',
           description: pageDescription.value,

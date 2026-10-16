@@ -3,7 +3,7 @@
     <nav class="breadcrumbs" :aria-label="$t('blog.breadcrumbs')"><NuxtLink :to="localePath('/')">{{ $t('nav.home') }}</NuxtLink><span aria-hidden="true">/</span><NuxtLink :to="localePath('/blog')">{{ $t('nav.blog') }}</NuxtLink></nav>
     <article>
       <header class="article-header"><p class="eyebrow">{{ translation.category }}</p><h1>{{ translation.title }}</h1><p class="article-description">{{ translation.description }}</p>
-        <div class="byline"><span>Juan Miguel Arias Mejias</span><time :datetime="post.publishedOn">{{ formatBlogDate(post.publishedOn, locale) }}</time><span>{{ $t('blog.readingTime', { minutes: readingMinutes(translation) }) }}</span></div>
+        <div class="byline"><NuxtLink :to="localePath('/') + '#background'">Juan Miguel Arias Mejias</NuxtLink><time :datetime="post.publishedOn">{{ formatBlogDate(post.publishedOn, locale) }}</time><span>{{ $t('blog.readingTime', { minutes: readingMinutes(translation) }) }}</span></div>
         <p v-if="post.updatedOn" class="updated">{{ $t('blog.updated') }} <time :datetime="post.updatedOn">{{ formatBlogDate(post.updatedOn, locale) }}</time></p>
       </header>
       <div class="article-layout">
@@ -18,6 +18,7 @@
   </v-container>
 </template>
 <script setup lang="ts">
+import { professionalIdentity } from '~/utils/professionalIdentity'
 import { publishedPosts, postTranslation, readingMinutes, formatBlogDate } from '~/content/blog'
 definePageMeta({ key: route => route.path })
 const route = useRoute()
@@ -54,8 +55,9 @@ useHead(() => ({
         headline: translation.value.title, description: translation.value.description, image,
         datePublished: `${post.publishedOn}T00:00:00-06:00`, dateModified: `${post.updatedOn || post.publishedOn}T00:00:00-06:00`,
         inLanguage: locale.value, keywords: post.tags.join(', '),
-        author: { '@type': 'Person', name: 'Juan Miguel Arias Mejias', url: siteUrl },
-        publisher: { '@type': 'Person', name: 'Juan Miguel Arias Mejias', url: siteUrl },
+        citation: post.references.map(reference => ({ '@type': 'CreativeWork', name: reference.title, url: new URL(reference.url, siteUrl).href })),
+        author: professionalIdentity(siteUrl),
+        publisher: professionalIdentity(siteUrl),
         isPartOf: { '@type': 'Blog', '@id': `${siteUrl}${localePath('/blog')}#blog` }
       },
       { '@type': 'BreadcrumbList', itemListElement: [

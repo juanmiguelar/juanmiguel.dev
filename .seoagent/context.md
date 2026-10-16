@@ -11,7 +11,7 @@
 
 - The homepage focuses on Go and self-service Kubernetes platforms; source: https://juanmiguel.dev/ and .seoagent/audit/evidence.md.
 - The site has English and Spanish routes; source: nuxt.config.ts and .seoagent/audit/live-details.json.
-- The blog has three articles with two language versions each; source: app/content/blog/index.ts and .seoagent/audit/evidence.md.
+- The blog has four articles with two language versions each; source: app/content/blog/index.ts (repository count; deployment pending).
 - Contact copy states limited consulting availability and no full-time employment availability; source: locales/en.json.
 
 # Writing Instructions

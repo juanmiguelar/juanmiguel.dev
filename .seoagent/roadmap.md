@@ -29,3 +29,14 @@ Evidence for implementation: audit/implementation.md and audit/source-validation
 - [x] Validate production output and mobile service layout.
 
 Evidence: strategy/golang-freelance.md approved implementation section. Deploy and measure before claiming SEO impact.
+
+## GEO implementation — 2026-10-16
+
+- [x] Publish a bilingual Go diagnostics guide in repository content, with an independent educational example and source references.
+- [x] Connect guide, existing technical writing and localized consulting destination.
+- [x] Unify professional identity and citations in page schemas and link bylines to professional background.
+- [x] Regenerate and validate 18-page output and sitemap, including mobile article layout.
+- [ ] Run Go example tests/benchmarks in an environment with Go installed.
+- [ ] Deploy, verify public guide/download, connect measurement platforms and establish citation/referral baselines.
+
+Evidence: strategy/geo.md implementation section and audit/geo-source-validation.json.

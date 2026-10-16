@@ -8,6 +8,7 @@
   </section>
 </template>
 <script setup lang="ts">
+import { professionalIdentity } from '~/utils/professionalIdentity'
 import { publishedPosts, postTranslation } from '~/content/blog'
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -25,7 +26,7 @@ useHead(() => ({
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Blog', '@id': `${canonical.value}#blog`, url: canonical.value,
     name: t('blog.title'), description: t('blog.description'), inLanguage: locale.value,
-    author: { '@type': 'Person', name: 'Juan Miguel Arias Mejias', url: siteUrl },
+    author: professionalIdentity(siteUrl),
     blogPost: publishedPosts.map(post => ({ '@type': 'BlogPosting', headline: postTranslation(post, locale.value).title, url: `${siteUrl}${localePath(`/blog/${post.slug}`)}`, datePublished: post.publishedOn }))
   }) }]
 }))

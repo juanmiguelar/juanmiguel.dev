@@ -9,3 +9,7 @@
 [2026-10-16] Regenerated sitemap through npm run build and restarted localhost:3006 preview. SOURCE RENDER XML validation passed: 16 unique existing pages (8 EN, 8 ES), two language sitemap files, www URLs, en/es/x-default alternates and article-only authored lastmod. No source-generator changes required; production deployment not performed.
 
 [2026-10-16] Addressed supplied desktop PageSpeed report: SVG icon subset replaces full font, hero fetch priority, queued deferred Pixel loader and descriptive article links. Production build, output checks and targeted tracking test passed. No new Lighthouse score claimed; see audit/pagespeed-improvements.md.
+
+[2026-10-16] Saved GEO proposal focused on consistent professional identity, verifiable engineering evidence, useful Go content, earned references and AI referral/citation measurement. Strategy only; no ranking/citation guarantees or extra AI files. See strategy/geo.md.
+
+[2026-10-16] Implemented authorized on-site GEO work: bilingual Go diagnostics guide, downloadable independent benchmark/test example, contextual/service links and shared Person/citation schemas. Build, 18-page output and mobile checks passed. Go unavailable for executing the sample; production deployment and external measurement pending.

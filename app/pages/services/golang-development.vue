@@ -17,6 +17,7 @@
   </v-container>
 </template>
 <script setup lang="ts">
+import { professionalIdentity } from '~/utils/professionalIdentity'
 import { publishedPosts, postTranslation } from '~/content/blog'
 import servicesEn from '../../../locales/services.json'
 import servicesEs from '../../../locales/services-es.json'
@@ -70,12 +71,7 @@ useHead(() => ({
           locale.value === 'es'
             ? 'Consultoría freelance en Go'
             : 'Freelance Go Development',
-        provider: {
-          '@type': 'Person',
-          name: 'Juan Miguel Arias Mejias',
-          url: siteUrl,
-          jobTitle: locale.value === 'es' ? 'Desarrollador Golang' : 'Golang Developer'
-        },
+        provider: professionalIdentity(siteUrl),
         url: currentUrl.value,
         serviceType: 'Go backend and Kubernetes platform consulting',
         areaServed: 'Worldwide',

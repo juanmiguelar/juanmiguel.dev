@@ -1,10 +1,11 @@
+import goPerformance from './go-api-performance'
 import go127 from './go-1-27'
 import unitTestsAI from './unit-tests-ai'
 import reconciliation from './kubernetes-reconciliation'
 import type { BlogLocale, BlogPost, BlogTranslation } from './types'
 
 // Add articles here. Drafts are excluded from all public lists and article routes.
-const posts: BlogPost[] = [go127, unitTestsAI, reconciliation]
+const posts: BlogPost[] = [goPerformance, go127, unitTestsAI, reconciliation]
 export const publishedPosts = posts
   .filter(post => post.status === 'published')
   .sort((a, b) => b.publishedOn.localeCompare(a.publishedOn))
