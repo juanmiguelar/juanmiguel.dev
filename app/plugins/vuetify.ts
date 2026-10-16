@@ -1,25 +1,26 @@
 import { defineNuxtPlugin } from '#app'
 import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
 import 'vuetify/styles'
 
 export default defineNuxtPlugin(nuxtApp => {
+  const savedTheme = useCookie<'light' | 'dark' | null>('portfolio-theme')
   const vuetify = createVuetify({
-    components,
-    directives,
+    ssr: true,
     theme: {
       defaultTheme: 'light',
       themes: {
         light: {
           dark: false,
           colors: {
-            primary: '#0F172A', // Deep Navy / Slate 900
-            secondary: '#D4AF37', // Metallic Gold
-            accent: '#C4A484', // Bronze
-            background: '#FFFFFF',
-            surface: '#FFFFFF',
-            'surface-variant': '#F1F5F9', // Light Slate Gray
+            primary: '#765B20',
+            secondary: '#765B20',
+            accent: '#765B20',
+            background: '#FAFBFC',
+            surface: '#FAFBFC',
+            'on-surface': '#17212D',
+            'on-background': '#17212D',
+            'on-primary': '#FAFBFC',
+            'surface-variant': '#EFF1F4',
             error: '#B00020',
             info: '#2196F3',
             success: '#4CAF50',
@@ -29,11 +30,14 @@ export default defineNuxtPlugin(nuxtApp => {
         dark: {
           dark: true,
           colors: {
-            primary: '#D4AF37', // Gold (pop against dark)
-            secondary: '#94A3B8', // Slate 400
-            background: '#0F172A', // Deep Navy
-            surface: '#1E293B', // Slate 800
-            'surface-variant': '#1E293B', // Consistent with surface
+            primary: '#DCC78E',
+            secondary: '#DCC78E',
+            background: '#111923',
+            surface: '#17212D',
+            'on-surface': '#EDF1F5',
+            'on-background': '#EDF1F5',
+            'on-primary': '#17212D',
+            'surface-variant': '#202D3B',
             error: '#CF6679',
             info: '#2196F3',
             success: '#4CAF50',
@@ -44,4 +48,8 @@ export default defineNuxtPlugin(nuxtApp => {
     }
   })
   nuxtApp.vueApp.use(vuetify)
+  // Prerendered HTML uses light mode. Apply preferences only after hydration.
+  onNuxtReady(() => {
+    vuetify.theme.global.name.value = savedTheme.value || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+  })
 })

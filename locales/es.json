@@ -6,130 +6,179 @@
     "projects": "Proyectos",
     "recommendations": "Recomendaciones",
     "contact": "Contacto",
-    "toggle_theme": "Cambiar tema"
+    "toggle_theme": "Cambiar tema",
+    "toggle_navigation": "Abrir navegación",
+    "switch_language": "Cambiar a inglés",
+    "skip": "Saltar al contenido",
+    "blog": "Juan's Blog"
   },
   "home": {
     "hero": {
-      "title": "Desarrollador Golang Experto y Especialista en Landing Pages",
-      "subtitle": "Desarrollador Golang profesional especializado en APIs de alto rendimiento y landing pages optimizadas para conversión. Construyo backends escalables en Go y frontends atractivos en Nuxt/Vue que generan resultados.",
-      "cta": "Trabajemos juntos",
-      "alt": "Juan Miguel Arias Mejias - Desarrollador Golang y Especialista en Landing Pages"
+      "title": "Go y plataformas confiables.",
+      "subtitle": "Desarrollo servicios confiables y plataformas de Kubernetes de autoservicio, desde la arquitectura hasta producción.",
+      "cta": "Explorar mi trabajo",
+      "alt": "Juan Miguel Arias Mejias, ingeniero sénior de Golang y plataformas",
+      "eyebrow": "Ingeniero de software sénior"
     },
     "services": {
-      "title": "Servicios",
+      "title": "Ingeniería de plataformas de principio a fin",
       "items": {
-        "web": { "title": "Desarrollo de Landing Pages", "desc": "Landing pages de alta conversión con Nuxt/Vue para generación de leads y lanzamientos de productos" },
-        "api": { "title": "Desarrollo de APIs en Golang", "desc": "APIs REST y GraphQL escalables construidas con Go para rendimiento empresarial" },
-        "ads": { "title": "Integración de Marketing", "desc": "Integración de tracking de Meta Ads y analytics" }
-      }
+        "api": {
+          "title": "Desarrollo backend en Go",
+          "desc": "APIs REST y GraphQL, procesamiento concurrente y pruebas automatizadas para servicios confiables en producción."
+        },
+        "platform": {
+          "title": "Ingeniería de plataformas",
+          "desc": "Controladores y CRDs de Kubernetes que convierten un YAML declarativo en entornos listos para usar. Con Go, GKE, Helm y Argo CD.",
+          "detail": "Aprovisionamiento de autoservicio · GitOps · Acceso de mínimo privilegio"
+        },
+        "delivery": {
+          "title": "Entrega segura y calidad",
+          "desc": "Pipelines de GitHub Actions, autenticación cloud sin credenciales estáticas y validación automatizada con pruebas unitarias y E2E."
+        }
+      },
+      "intro": "Desde servicios en Go y automatización de Kubernetes hasta entregas seguras y repetibles."
     },
     "meta": {
-      "title": "Desarrollador Golang y Experto en Desarrollo de Landing Pages | Juan Miguel Arias",
-      "description": "Desarrollador Golang experto con 8+ años construyendo APIs de alto rendimiento y landing pages optimizadas para conversión. Especializado en backends Go, microservicios y desarrollo de landing pages con Nuxt/Vue para clientes SaaS y empresariales."
+      "title": "Ingeniero sénior de Golang y plataformas | Juan Miguel Arias",
+      "description": "Ingeniero de software sénior especializado en Go, controladores de Kubernetes y plataformas de autoservicio. Experiencia en Gorilla Logic, Wind River y Kyndryl."
     },
     "faq": {
       "items": {
         "stack": {
-          "q": "¿Qué stack tecnológico usas?",
-          "a": "Go para servicios backend y APIs de alto rendimiento; Nuxt/Vue para frontend; Postgres/Mongo para datos; desplegado en Vercel."
+          "q": "¿Con qué tecnologías de plataformas trabajas?",
+          "a": "Go, Kubernetes, GKE y GCP son la base de mi trabajo. Desarrollo controladores y CRDs con Kubebuilder, gestiono entregas con Helm y Argo CD, y automatizo la validación con GitHub Actions y Kind."
         },
         "time": {
-          "q": "¿Cuánto tarda un proyecto web típico?",
-          "a": "Un sitio de marketing/portafolio toma 1–2 semanas. Si incluimos integraciones personalizadas o CMS headless, presupuesta 2–4 semanas dependiendo del alcance."
+          "q": "¿Qué problemas de plataformas resuelves?",
+          "a": "Mi experiencia incluye aprovisionamiento de entornos, namespaces y despliegue de aplicaciones de autoservicio, controles de acceso multi-tenant y CI/CD seguro. Llevo capacidades desde la arquitectura hasta producción."
         },
         "backend": {
-          "q": "¿Manejas tanto backend como frontend?",
-          "a": "Sí. Diseño y construyo el backend (APIs Go, auth, rendimiento) y el frontend (Nuxt/Vue, UI/UX)"
+          "q": "¿Cómo se integra el desarrollo backend en tu trabajo?",
+          "a": "Desarrollo servicios en Go y APIs REST y GraphQL junto con las capacidades de plataforma. Mi trabajo incluye procesamiento concurrente, revisión de dataloaders y pruebas automatizadas para mejorar la confiabilidad y mantenibilidad."
         },
         "fractional": {
-          "q": "¿Puedes unirte como ingeniero fraccional?",
-          "a": "Actualmente trabajo a tiempo completo, por lo que mi disponibilidad para roles fraccionales es limitada. Sin embargo, estoy abierto a discutir oportunidades de consultoría específicas."
+          "q": "¿Estás disponible para consultoría de plataformas?",
+          "a": "Actualmente trabajo a tiempo completo, por lo que mi disponibilidad es limitada. Estoy abierto a conversar sobre consultorías puntuales de ingeniería de plataformas y backend en Go."
         },
         "timezone": {
-          "q": "¿Con qué zonas horarias trabajas?",
-          "a": "Colaboro mayormente con equipos de EE.UU. y LATAM, y puedo solapar 4–6 horas con zonas horarias de EE.UU. para standups y revisiones."
+          "q": "¿Cómo colaboras con los equipos de ingeniería?",
+          "a": "Trabajo con equipos de ingeniería, QA, producto y plataformas, con documentación técnica, revisiones de arquitectura e intercambio de conocimientos. Mi español es nativo y mi inglés es de nivel B2+."
         }
-      }
+      },
+      "title": "Trabajemos en tu plataforma",
+      "description": "Mi enfoque para plataformas, sistemas backend y colaboración técnica."
     },
     "projects": {
-      "title": "Mi Experiencia",
-      "subtitle": "Desde sistemas empresariales hasta soluciones personalizadas - entregando valor en diferentes contextos",
-      "tabs": {
-        "corporate": "Experiencia Corporativa",
-        "independent": "Proyectos Independientes"
-      },
+      "title": "Experiencia en producción",
+      "subtitle": "Automatización de plataformas, confiabilidad backend e ingeniería práctica en tres equipos.",
       "corporate": {
         "badge": "Trayectoria Empresarial Probada",
         "title": "Confiado por Líderes de la Industria",
         "subtitle": "8+ años construyendo sistemas de misión crítica para compañías Fortune 500",
         "cta_nda": "NDA Empresarial"
       },
-      "independent": {
-        "badge": "Independencia Full-Stack",
-        "title": "Entrega de Proyectos de Punta a Punta",
-        "subtitle": "Soluciones personalizadas con propiedad completa - desde el concepto hasta el despliegue",
-        "actions": {
-          "demo": "Demo en Vivo",
-          "code": "Código",
-          "live": "Demo"
-        }
-      },
-      "cta": {
-        "title": "¿Listo para tu Proyecto?",
-        "subtitle": "Ya sea que necesites sistemas empresariales o soluciones personalizadas, traigo la experiencia correcta",
-        "btn": "Discutamos tus necesidades"
-      },
       "companies": {
-        "nbc": {
-          "description": "Backend-for-Frontend de alto rendimiento usando Go y GraphQL, manejando millones de solicitudes diarias para la infraestructura de streaming de NBC.",
-          "impact": "Rendimiento de API optimizado para millones de usuarios"
+        "gorillaLogic": {
+          "title": "Ingeniería de plataformas y backend",
+          "description": "Desarrollé una plataforma de aprovisionamiento en Go para Kubernetes que permite crear namespaces, RBAC y aplicaciones de Argo CD desde un solo YAML.",
+          "impact": "Cobertura de pruebas automatizadas: de 5% a 60%",
+          "highlights": [
+            "Diseñé CRDs y lógica de reconciliación en clústeres de GKE.",
+            "Implementé despliegues con Helm y Argo CD, CRDs versionados y RBAC de mínimo privilegio.",
+            "Creé pipelines con GitHub Actions, Kind, pruebas E2E y Workload Identity Federation.",
+            "Revisé cerca de 60 dataloaders de GraphQL para mejorar el batching y reducir consultas redundantes."
+          ]
         },
         "windriver": {
-          "description": "Reestructuración de servicios monolíticos en 6 microservicios especializados con procesamiento concurrente, mejorando la eficiencia y mantenibilidad del sistema.",
-          "impact": "70% mejora de rendimiento, 30% reducción de bugs"
+          "description": "Reestructuré dos servicios en seis microservicios especializados, mejorando la modularidad y reduciendo los errores reportados un 30%.",
+          "impact": "70% de mejora en la eficiencia de procesamiento",
+          "title": "Microservicios en la nube y concurrencia",
+          "highlights": [
+            "Reemplacé procesos secuenciales por flujos concurrentes en Go.",
+            "Refactoricé más de 400 pruebas unitarias para ejecución independiente y concurrente.",
+            "Impartí tres talleres de Go sobre buenas prácticas y código mantenible."
+          ]
         },
         "kyndryl": {
-          "description": "Desarrollo de APIs escalables para descubrimiento y gestión de recursos en la nube. Lideré capacitación de Go para más de 80 profesionales en equipos globales.",
-          "impact": "Entrené a 80+ desarrolladores, establecí estándares de Go"
-        },
-        "malcolm": {
-          "description": "Un sitio limpio y responsivo que presenta a Malcolm Ugalde—un MBA(c) en Finanzas y asesor de inversión con más de cinco años de experiencia—ofreciendo orientación financiera 1:1 personalizada."
-        },
-        "soygioco": {
-          "description": "Una plataforma vibrante y móvil, construida con Nuxt 3 y Vuetify, diseñada para conectar entusiastas del arte en Costa Rica con talleres accesibles de acuarela y acrílico."
-        },
-        "portfolio": {
-          "description": "Un portafolio pulido construido con Nuxt 3, TypeScript y Vuetify—mostrando fortalezas profesionales en Go y Vue.js. Este sitio móvil incluye una sección hero, servicios, proyectos destacados, métricas de rendimiento y stack tecnológico."
+          "description": "Desarrollé APIs en Go para descubrimiento y gestión de recursos en microservicios orientados a la nube.",
+          "impact": "Más de 80 profesionales capacitados en pruebas unitarias de Go",
+          "title": "APIs cloud y capacitación técnica",
+          "highlights": [
+            "Desarrollé APIs para mantener actualizados el descubrimiento y acceso a recursos cloud.",
+            "Lideré capacitación en pruebas unitarias de Go para equipos de DevOps, automatización y gestión."
+          ]
         }
-      }
+      },
+      "present": "Actualidad",
+      "roleSenior": "Ingeniero de software sénior",
+      "roleCloud": "Ingeniero de software sénior en la nube",
+      "roleBackend": "Desarrollador de software backend",
+      "details": "Detalles de ingeniería"
     },
     "metrics": {
-      "title": "Experiencia Profesional",
+      "title": "Resultados de ingeniería",
       "items": {
-        "years": { "label": "8+ Años de Experiencia" },
-        "boost": { "label": "70% Mejora de Rendimiento" },
-        "workshops": { "label": "Talleres Técnicos" }
+        "years": {
+          "label": "8+ Años de Experiencia"
+        },
+        "boost": {
+          "label": "Eficiencia de procesamiento en Wind River"
+        },
+        "workshops": {
+          "label": "Talleres Técnicos"
+        },
+        "coverage": {
+          "label": "Cobertura de pruebas en Gorilla Logic"
+        },
+        "training": {
+          "label": "Profesionales capacitados en Kyndryl"
+        }
       }
     },
     "recommendations": {
       "title": "Recomendaciones",
       "role": "Colega",
       "items": {
-        "lenin": { "quote": "Trabajar con Juan Miguel ha sido una experiencia excepcional. Su carisma, espíritu colaborativo y profunda experiencia técnica lo convirtieron en una parte invaluable de nuestro equipo." },
-        "kenneth": { "quote": "Juan es un jugador de equipo excepcional que consistentemente muestra su alto nivel de experiencia implementando mejores prácticas en código y revisiones." }
+        "lenin": {
+          "quote": "Trabajar con Juan Miguel ha sido una experiencia excepcional. Su carisma, espíritu colaborativo y profunda experiencia técnica lo convirtieron en una parte invaluable de nuestro equipo."
+        },
+        "kenneth": {
+          "quote": "Juan es un jugador de equipo excepcional que consistentemente muestra su alto nivel de experiencia implementando mejores prácticas en código y revisiones."
+        }
       }
     },
     "tech": {
-      "title": "Stack Tecnológico"
+      "title": "Herramientas con las que trabajo",
+      "intro": "Go como base, con herramientas cloud-native y una sólida disciplina de pruebas.",
+      "backend": "Ingeniería backend",
+      "platform": "Plataforma y entrega",
+      "quality": "Pruebas y calidad",
+      "ai": "Desarrollo asistido por IA"
     },
     "contact": {
-      "title": "Trabajemos juntos",
-      "description": "Actualmente trabajo a tiempo completo y <strong>no estoy disponible para ofertas de empleo</strong>. Sin embargo, estoy abierto a discutir pequeños proyectos web u oportunidades de consultoría.",
-      "cta": "Contactar",
+      "title": "Conversemos sobre tu plataforma",
+      "description": "Trabajo a tiempo completo y <strong>no estoy disponible para ofertas de empleo</strong>. Estoy abierto a conversar sobre consultorías puntuales de ingeniería de plataformas y backend en Go.",
+      "cta": "Escríbeme sobre tu plataforma",
       "status": {
         "label": "Disponibilidad Limitada",
         "text": "Típicamente respondo en 24 horas"
       }
+    },
+    "credentials": {
+      "title": "Una base en ingeniería",
+      "education": "Educación",
+      "degree": "Bachillerato en Computación",
+      "university": "Universidad de Costa Rica · 2019",
+      "certifications": "Certificaciones",
+      "kcna": "Kubernetes and Cloud Native Associate",
+      "kcnaIssuer": "CNCF · Julio 2026",
+      "istqb": "ISTQB Certified Tester, Foundation Level",
+      "istqbIssuer": "ISTQB · Agosto 2018",
+      "itil": "ITIL Foundation",
+      "itilIssuer": "PeopleCert · Julio 2018",
+      "languages": "Idiomas",
+      "languageDetail": "Español nativo · Inglés B2+"
     }
   },
   "landing": {
@@ -213,5 +262,24 @@
       "title": "Diseño Web para Asesores Financieros | Autoridad y Confianza",
       "description": "Desarrollo sitios web premium para asesores financieros y wealth managers. Proyecta confianza y capta clientes de alto valor."
     }
+  },
+  "blog": {
+    "title": "Juan's Blog",
+    "metaTitle": "Juan's Blog",
+    "eyebrow": "Artículos de ingeniería",
+    "description": "Artículos prácticos sobre Go, controladores de Kubernetes, plataformas de autoservicio, GitOps y entregas confiables.",
+    "homeTitle": "Juan's Blog",
+    "readArticle": "Leer artículo",
+    "readingTime": "{minutes} min de lectura",
+    "viewAll": "Explorar el blog",
+    "onThisPage": "En este artículo",
+    "references": "Referencias y lecturas adicionales",
+    "backToBlog": "Volver al blog",
+    "exploreExperience": "Explorar mi experiencia en ingeniería",
+    "breadcrumbs": "Ruta de navegación",
+    "updated": "Actualizado",
+    "emptyTitle": "Próximamente, nuevos artículos",
+    "emptyDescription": "Los próximos artículos tratarán sobre ingeniería de plataformas, Go y Kubernetes.",
+    "authorBio": "Juan Miguel Arias Mejias es ingeniero de software sénior especializado en Go, Kubernetes y plataformas de autoservicio para desarrolladores."
   }
 }

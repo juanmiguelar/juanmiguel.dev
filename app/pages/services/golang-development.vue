@@ -94,7 +94,6 @@
                 <v-chip>Redis</v-chip>
                 <v-chip>Docker</v-chip>
                 <v-chip>Kubernetes</v-chip>
-                <v-chip>AWS</v-chip>
                 <v-chip>Google Cloud</v-chip>
               </v-chip-group>
             </v-col>

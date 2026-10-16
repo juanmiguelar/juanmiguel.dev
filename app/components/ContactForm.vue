@@ -25,6 +25,7 @@
           <v-btn
             href="https://www.linkedin.com/in/juan-miguel-arias/"
             target="_blank"
+            rel="noopener noreferrer"
             variant="outlined"
             size="large"
             class="mx-2 mb-2"
@@ -38,6 +39,7 @@
           <v-btn
             href="https://github.com/juanmiguelar"
             target="_blank"
+            rel="noopener noreferrer"
             variant="outlined"
             size="large"
             class="mx-2 mb-2"
@@ -52,7 +54,7 @@
         <!-- Availability Status -->
         <div class="availability-status mt-8">
           <v-chip
-            color="warning"
+            color="primary"
             variant="flat"
             size="large"
             class="mb-2"
@@ -70,7 +72,7 @@
 </template>
 
 <script setup lang="ts">
-const mailtoLink = 'mailto:juanmiguelar09@gmail.com?subject=Project Inquiry&body=Hi Juan Miguel,%0D%0A%0D%0AI\'d like to discuss a potential project with you.%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards,'
+const mailtoLink = 'mailto:juanmiguelar09@gmail.com?subject=Platform Engineering Inquiry&body=Hi Juan Miguel,%0D%0A%0D%0AI\'d like to discuss platform engineering consulting with you.%0D%0A%0D%0APlatform details:%0D%0A%0D%0ABest regards,'
 
 const pixel = usePixel()
 
@@ -87,42 +89,9 @@ const trackSocial = (platform: string) => {
 }
 </script>
 
-<style scoped lang="scss">
-.contact-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, rgba(25, 118, 210, 0.1) 100%);
-  
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  
-  .availability-status {
-    .v-chip {
-      font-weight: 500;
-    }
-  }
-}
-
-// Dark mode adjustments
-.v-theme--dark .contact-section {
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(33, 150, 243, 0.15) 100%);
-}
-
-@media (max-width: 768px) {
-  .contact-section {
-    padding: 60px 0;
-    
-    .contact-links {
-      flex-direction: column;
-      align-items: center;
-      
-      .v-btn {
-        width: 200px;
-      }
-    }
-  }
-}
+<style scoped>
+.contact-section { padding-block: 72px; border-top: 1px solid rgba(var(--v-theme-on-surface), .14); background: rgb(var(--v-theme-surface-variant)); }
+.contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.availability-status .v-chip { font-weight: 500; }
+@media (max-width: 600px) { .contact-section { padding-block: 48px; } }
 </style>

@@ -1,7 +1,8 @@
 <template>
   <v-app>
+    <a href="#main-content" class="skip-link">{{ $t('nav.skip') }}</a>
     <NavigationBar />
-    <v-main>
+    <v-main id="main-content" tabindex="-1">
       <slot />
     </v-main>
     <AppFooter />

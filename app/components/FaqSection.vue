@@ -1,9 +1,9 @@
 <template>
   <section id="faq" class="section faq-section">
     <v-container>
-      <div class="text-center mb-8">
-        <h2 class="text-h4 text-md-h3 font-weight-bold mb-3">{{ title }}</h2>
-        <p class="text-body-1 text-medium-emphasis">
+      <div class="section-heading">
+        <h2 >{{ title }}</h2>
+        <p >
           {{ description }}
         </p>
       </div>
@@ -23,7 +23,7 @@
         </v-expansion-panel>
       </v-expansion-panels>
 
-      <div class="text-center mt-10">
+      <div v-if="showCta" class="text-center mt-10">
         <v-btn color="primary" size="large" :href="ctaLink">
           <v-icon start>mdi-email</v-icon>
           {{ ctaText }}
@@ -44,8 +44,10 @@ const props = withDefaults(defineProps<{
   title?: string
   description?: string
   ctaText?: string
+  showCta?: boolean
   ctaLink?: string
 }>(), {
+  showCta: true,
   title: 'FAQ',
   description: 'Quick answers about my process, timelines, and how we can work together.',
   ctaText: 'Book a call',
@@ -53,15 +55,10 @@ const props = withDefaults(defineProps<{
 })
 </script>
 
-<style scoped lang="scss">
-.faq-section {
-  background: linear-gradient(135deg, rgba(25, 118, 210, 0.02) 0%, rgba(25, 118, 210, 0.08) 100%);
-  padding: 80px 0;
-}
-
-@media (max-width: 768px) {
-  .faq-section {
-    padding: 60px 0;
-  }
-}
+<style scoped>
+.faq-section { background: transparent; }
+:deep(.v-expansion-panel) { background: transparent; border-bottom: 1px solid rgba(var(--v-theme-on-surface), .14); }
+:deep(.v-expansion-panel__shadow) { display: none; }
+:deep(.v-expansion-panel-title) { padding: 24px 4px; font-size: 1rem; line-height: 1.5; }
+:deep(.v-expansion-panel-text__wrapper) { padding: 0 32px 24px; line-height: 1.8; color: rgba(var(--v-theme-on-surface), .75); max-width: 80ch; }
 </style>

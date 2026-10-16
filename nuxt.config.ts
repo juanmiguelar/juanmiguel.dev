@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
+import { publishedPosts } from './app/content/blog/index'
 
 const siteUrl = 'https://juanmiguel.dev'
 const isProd = process.env.NODE_ENV === 'production'
+const blogRoutes = ['/blog', ...publishedPosts.map(post => `/blog/${post.slug}`)]
 
 export default defineNuxtConfig({
   ssr: true,
@@ -44,8 +46,8 @@ export default defineNuxtConfig({
 
   site: {
     url: siteUrl,
-    name: 'Juan Miguel Arias Mejias | Golang Developer & Landing Page Specialist',
-    description: 'Expert Golang developer with 8+ years building high-performance APIs and conversion-optimized landing pages. Specializing in Go backends, microservices, and Nuxt/Vue landing page development.',
+    name: 'Juan Miguel Arias Mejias | Senior Golang & Platform Engineer',
+    description: 'Senior software engineer building Go services, Kubernetes controllers and self-service platforms with GKE, Argo CD and secure CI/CD.',
     defaultLocale: 'en',
     indexable: isProd,
     image: `${siteUrl}/img/juanmiguelweb.png`
@@ -90,7 +92,7 @@ export default defineNuxtConfig({
   sitemap: {
     autoLastmod: true,
     urls: async () => {
-      const staticRoutes = ['/']
+      const staticRoutes = ['/', ...blogRoutes]
       return staticRoutes
     }
   },
@@ -117,7 +119,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Expert Golang developer with 8+ years building high-performance APIs and conversion-optimized landing pages. Specializing in Go backends, microservices, and Nuxt/Vue landing page development.' },
+        { name: 'description', content: 'Senior software engineer building Go services, Kubernetes controllers and self-service platforms with GKE, Argo CD and secure CI/CD.' },
         { name: 'keywords', content: 'golang developer, go developer, landing page development, golang api, go backend developer, nuxt developer, vue developer, microservices, graphql, rest api, web performance, freelance golang developer, hire golang developer' },
         { name: 'author', content: 'Juan Miguel Arias Mejias' },
         { name: 'msapplication-TileColor', content: '#da532c' },
@@ -137,7 +139,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/sitemap.xml', '/robots.txt', '/'],
+      routes: ['/sitemap.xml', '/robots.txt', '/', ...blogRoutes, ...blogRoutes.map(route => `/es${route}`)],
       ignore: ['/_vercel/image', '/_ipx']
     },
     compressPublicAssets: true
