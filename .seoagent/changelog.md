@@ -7,3 +7,5 @@
 [2026-10-16] Implemented approved first phase of freelance Go positioning: bilingual service page, two grounded employment examples, scope/process/availability FAQ, corrected Service schema and article-to-service links. Build, 16-page output checks and browser/mobile checks passed. Deployment and measurement pending.
 
 [2026-10-16] Regenerated sitemap through npm run build and restarted localhost:3006 preview. SOURCE RENDER XML validation passed: 16 unique existing pages (8 EN, 8 ES), two language sitemap files, www URLs, en/es/x-default alternates and article-only authored lastmod. No source-generator changes required; production deployment not performed.
+
+[2026-10-16] Addressed supplied desktop PageSpeed report: SVG icon subset replaces full font, hero fetch priority, queued deferred Pixel loader and descriptive article links. Production build, output checks and targeted tracking test passed. No new Lighthouse score claimed; see audit/pagespeed-improvements.md.

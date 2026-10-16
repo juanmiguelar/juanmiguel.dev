@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@mdi/font": "^7.3.67",
+    "@mdi/js": "^7.4.47",
     "@nuxt/image": "latest",
     "@nuxtjs/robots": "latest",
     "@nuxtjs/seo": "latest",

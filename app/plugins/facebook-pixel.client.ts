@@ -1,51 +1,57 @@
+type PixelQueue = ((...args: unknown[]) => void) & {
+  callMethod?: (...args: unknown[]) => void
+  queue: unknown[][]
+  push?: PixelQueue
+  loaded: boolean
+  version: string
+}
 
 declare global {
   interface Window {
-    fbq: any;
-    _fbq: any;
+    fbq?: PixelQueue
+    _fbq?: PixelQueue
   }
 }
 
-export default defineNuxtPlugin((nuxtApp) => {
-  const config = useRuntimeConfig()
-  const pixelId = config.public.facebookPixelId as string | undefined
+export default defineNuxtPlugin(() => {
+  const pixelId = useRuntimeConfig().public.facebookPixelId
+  if (!pixelId) return
 
-  if (!pixelId) {
-    return
+  // Queue events immediately, but give rendering and hydration priority over analytics.
+  if (!window.fbq) {
+    const pixel = ((...args: unknown[]) => {
+      if (pixel.callMethod) pixel.callMethod(...args)
+      else pixel.queue.push(args)
+    }) as PixelQueue
+    pixel.queue = []
+    pixel.push = pixel
+    pixel.loaded = true
+    pixel.version = '2.0'
+    window.fbq = window._fbq = pixel
+    pixel('init', pixelId)
+    pixel('track', 'PageView')
   }
 
-  useHead({
-    script: [
-      {
-        innerHTML: `
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '${pixelId}');
-          fbq('track', 'PageView');
-        `,
-        type: 'text/javascript'
-      }
-    ],
-    noscript: [
-      {
-        innerHTML: `<img height="1" width="1" style="display:none"
-          src="https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1"
-        />`
-      }
-    ]
+  const loadPixel = () => {
+    if (document.getElementById('facebook-pixel-script')) return
+    const script = document.createElement('script')
+    script.id = 'facebook-pixel-script'
+    script.async = true
+    script.src = 'https://connect.facebook.net/en_US/fbevents.js'
+    document.head.appendChild(script)
+  }
+  const schedulePixel = () => {
+    if ('requestIdleCallback' in window) window.requestIdleCallback(loadPixel, { timeout: 3000 })
+    else setTimeout(loadPixel, 1000)
+  }
+  onNuxtReady(() => {
+    if (document.readyState === 'complete') schedulePixel()
+    else window.addEventListener('load', schedulePixel, { once: true })
   })
 
-  const router = useRouter()
-  router.afterEach(() => {
-    // fbq should be available on window after the script loads
-    if (window.fbq) {
-      window.fbq('track', 'PageView')
+  useRouter().afterEach((to, from, failure) => {
+    if (!failure && from.matched.length && to.fullPath !== from.fullPath) {
+      window.fbq?.('track', 'PageView')
     }
   })
 })

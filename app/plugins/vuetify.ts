@@ -1,11 +1,28 @@
 import { defineNuxtPlugin } from '#app'
 import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
+import { defineComponent, h } from 'vue'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
+import { portfolioIcons } from '~/utils/icons'
 
 export default defineNuxtPlugin(nuxtApp => {
   const savedTheme = useCookie<'light' | 'dark' | null>('portfolio-theme')
   const vuetify = createVuetify({
     ssr: true,
+    icons: {
+      defaultSet: 'mdi',
+      aliases,
+      sets: {
+        mdi: {
+          component: defineComponent({
+            props: ['icon', 'tag'],
+            setup(props, { attrs }) {
+              return () => h(mdi.component, { ...attrs, tag: props.tag, icon: portfolioIcons[String(props.icon)] })
+            }
+          })
+        }
+      }
+    },
     theme: {
       defaultTheme: 'light',
       themes: {

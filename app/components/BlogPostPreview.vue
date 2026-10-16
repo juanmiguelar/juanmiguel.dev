@@ -4,7 +4,7 @@
     <h3 v-if="compact"><NuxtLink :to="localePath(`/blog/${post.slug}`)">{{ translation.title }}</NuxtLink></h3>
     <h2 v-else><NuxtLink :to="localePath(`/blog/${post.slug}`)">{{ translation.title }}</NuxtLink></h2>
     <p>{{ translation.description }}</p>
-    <div class="post-footer"><span>{{ $t('blog.readingTime', { minutes: readingMinutes(translation) }) }}</span><NuxtLink :to="localePath(`/blog/${post.slug}`)">{{ $t('blog.readArticle') }}<v-icon icon="mdi-arrow-right" size="18" /></NuxtLink></div>
+    <div class="post-footer"><span>{{ $t('blog.readingTime', { minutes: readingMinutes(translation) }) }}</span><NuxtLink :to="localePath(`/blog/${post.slug}`)" :aria-label="`${$t('blog.readArticle')}: ${translation.title}`">{{ $t('blog.readArticle') }}<v-icon icon="mdi-arrow-right" size="18" /></NuxtLink></div>
   </article>
 </template>
 <script setup lang="ts">

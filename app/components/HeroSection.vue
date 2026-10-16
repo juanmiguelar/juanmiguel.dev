@@ -8,7 +8,7 @@
         <v-btn color="primary" size="large" href="#projects" append-icon="mdi-arrow-down">{{ $t('home.hero.cta') }}</v-btn>
       </div>
       <div class="hero-portrait">
-        <NuxtImg src="/img/juanmiguel.jpeg" :alt="$t('home.hero.alt')" width="440" height="480" format="webp" sizes="sm:90vw md:40vw lg:440px" preload loading="eager" itemprop="image" />
+        <NuxtImg src="/img/juanmiguel.jpeg" :alt="$t('home.hero.alt')" width="440" height="480" format="webp" sizes="sm:90vw md:40vw lg:440px" preload fetchpriority="high" loading="eager" itemprop="image" />
       </div>
       <meta itemprop="name" content="Juan Miguel Arias Mejias" />
       <meta itemprop="url" :content="siteUrl" />
