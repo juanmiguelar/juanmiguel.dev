@@ -1,0 +1,20 @@
+{
+  "scope": "SOURCE RENDER; not deployed live evidence",
+  "pages": 16,
+  "valid_service_page_contact_links_including_navigation": 16,
+  "repaired_ctas": 8,
+  "contextual_article_links": 6,
+  "sitemap_urls": 16,
+  "checks": [
+    "self canonicals and www hostname",
+    "one H1 per page",
+    "descriptions <=160 and titles <=60 characters",
+    "absolute Open Graph images",
+    "localized contact targets exist",
+    "related article targets exist",
+    "authored article sitemap dates only",
+    "www sitemap language alternates",
+    "no homepage landing-page links"
+  ],
+  "status": "passed"
+}

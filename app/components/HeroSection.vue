@@ -17,7 +17,7 @@
 </template>
 <script setup lang="ts">
 const { public: publicRuntime } = useRuntimeConfig()
-const siteUrl = publicRuntime.siteUrl || 'https://juanmiguel.dev'
+const siteUrl = publicRuntime.siteUrl || 'https://www.juanmiguel.dev'
 </script>
 <style scoped>
 .hero { padding-block: clamp(40px, 6vw, 80px); }

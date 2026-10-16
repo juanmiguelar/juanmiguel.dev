@@ -12,7 +12,7 @@
         <div class="supporting-services">
           <article v-for="service in services" :key="service.key">
             <v-icon :icon="service.icon" size="28" color="primary" />
-            <div><h3>{{ $t(`home.services.items.${service.key}.title`) }}</h3><p>{{ $t(`home.services.items.${service.key}.desc`) }}</p></div>
+            <div><h3>{{ $t(`home.services.items.${service.key}.title`) }}</h3><p>{{ $t(`home.services.items.${service.key}.desc`) }}</p><NuxtLink v-if="service.key === 'api'" :to="localePath('/services/golang-development')">{{ locale === 'es' ? 'Desarrollo de APIs en Go' : 'Go API development' }}</NuxtLink></div>
           </article>
         </div>
       </div>
@@ -20,6 +20,8 @@
   </section>
 </template>
 <script setup lang="ts">
+const localePath = useLocalePath()
+const { locale } = useI18n()
 interface Service { key: string; icon: string }
 const services: Service[] = [{ key: 'api', icon: 'mdi-code-braces' }, { key: 'delivery', icon: 'mdi-source-branch' }]
 </script>

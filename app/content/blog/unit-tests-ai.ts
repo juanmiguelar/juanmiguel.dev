@@ -42,6 +42,7 @@ export default {
   tags: ['Unit testing', 'AI-assisted development', 'Go', 'Software quality'],
   translations: {
     en: {
+      seoTitle: 'Unit tests in the AI era',
       title: 'Why unit tests matter more in the age of AI',
       description: 'AI can help write code and tests. Learn how independent expectations, boundary cases, and fast Go tests keep that speed grounded in reliable behavior.',
       category: 'Software quality',
@@ -68,7 +69,7 @@ export default {
           'Coverage can show which statements ran during a test. It cannot tell you whether the expected outcome is correct or whether you covered the important business cases. A test that executes a function without checking its result may increase coverage while providing little protection.',
           'Use coverage to guide investigation, then inspect the assertions. For this retry helper, the boundary between the last allowed retry and the first forbidden retry matters more than adding several extra cases that all follow the same successful path. A deliberate local mutation is one way to check that an assertion notices the behavior you care about.'
         ] },
-        { id: 'platform-boundaries', heading: 'Keep unit tests within their boundary', paragraphs: [
+        { id: 'platform-boundaries', links: [{ slug: 'kubernetes-controllers-idempotent-reconciliation', label: 'Testing Kubernetes reconciliation' }], heading: 'Keep unit tests within their boundary', paragraphs: [
           'For a Go service or Kubernetes controller, unit tests are a good place to exercise configuration validation, policy decisions, and transformations of input data. Prefer deterministic tests that avoid unnecessary network calls or dependence on wall-clock timing.',
           'They do not prove that RBAC allows a real operation, an API server enforces a schema, or a complete provisioning workflow succeeds. Those questions need integration or end-to-end checks at the relevant boundary. Mocking every dependency can make a test pass while hiding a broken assumption about the real system.'
         ] },
@@ -79,6 +80,7 @@ export default {
       ]
     },
     es: {
+      seoTitle: 'Pruebas unitarias en la era de IA',
       title: 'Por qué las pruebas unitarias importan más en la era de la IA',
       description: 'La IA puede ayudar a escribir código y pruebas. Las expectativas independientes, los casos límite y las pruebas en Go permiten validar ese trabajo.',
       category: 'Calidad de software',
@@ -105,7 +107,7 @@ export default {
           'La cobertura puede mostrar qué sentencias se ejecutaron durante una prueba. No puede determinar si el resultado esperado es correcto o si probaste los casos importantes del negocio. Ejecutar una función sin comprobar su resultado puede aumentar la cobertura y aportar poca protección.',
           'Usa la cobertura para orientar la investigación y luego revisa las aserciones. En esta función importa más el límite entre el último reintento permitido y el primero prohibido que agregar varios casos del mismo camino exitoso. Una mutación local deliberada permite comprobar que una aserción detecta el cambio de comportamiento relevante.'
         ] },
-        { id: 'platform-boundaries', heading: 'Respetar el alcance de las pruebas unitarias', paragraphs: [
+        { id: 'platform-boundaries', links: [{ slug: 'kubernetes-controllers-idempotent-reconciliation', label: 'Pruebas de reconciliación en Kubernetes' }], heading: 'Respetar el alcance de las pruebas unitarias', paragraphs: [
           'En un servicio en Go o un controlador de Kubernetes, las pruebas unitarias sirven para comprobar validación de configuración, decisiones de políticas y transformaciones de datos. Conviene que sean deterministas y eviten llamadas de red o dependencias del reloj cuando no sean necesarias.',
           'No demuestran que RBAC permita una operación real, que un API server aplique un esquema o que funcione un flujo completo de aprovisionamiento. Esas preguntas requieren pruebas de integración o de extremo a extremo en el límite correspondiente. Simular todas las dependencias puede ocultar una suposición incorrecta sobre el sistema real.'
         ] },

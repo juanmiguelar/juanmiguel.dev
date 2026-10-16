@@ -1,8 +1,8 @@
 {
   "golang": {
     "meta": {
-      "title": "Desarrollador Golang Profesional | Desarrollo de APIs y Microservicios Go",
-      "description": "Contrata a un desarrollador Golang experto con más de 8 años de experiencia construyendo APIs de alto rendimiento, microservicios y sistemas backend. Especializado en Go, gRPC, GraphQL y desarrollo cloud-native."
+      "title": "Desarrollador Golang freelance",
+      "description": "Desarrollo freelance en Go para APIs, controladores de Kubernetes y sistemas backend. Colabora con Juan Miguel Arias en proyectos de alcance definido."
     },
     "hero": {
       "title": "Servicios Profesionales de Desarrollo Golang",
@@ -57,12 +57,104 @@
       "title": "¿Listo para Construir con Golang?",
       "subtitle": "Hablemos sobre tu proyecto y cómo puedo ayudarte a construir una aplicación Go de alto rendimiento.",
       "button": "Comenzar"
+    },
+    "consulting": {
+      "meta": {
+        "title": "Desarrollador Golang freelance",
+        "description": "Desarrollo freelance en Go para APIs, controladores de Kubernetes y sistemas backend. Colabora con Juan Miguel Arias en proyectos de alcance definido."
+      },
+      "hero": {
+        "eyebrow": "Consultoría independiente en Go y plataformas",
+        "title": "Desarrollador Go freelance para APIs y plataformas Kubernetes",
+        "subtitle": "Ayudo a equipos de ingeniería a desarrollar servicios Go, automatizar flujos en Kubernetes y mejorar la fiabilidad del backend. Mi disponibilidad de consultoría es limitada por mi empleo a tiempo completo.",
+        "primary": "Cuéntame sobre tu proyecto Go",
+        "secondary": "Ver experiencia relevante"
+      },
+      "intro": {
+        "title": "Apoyo de ingeniería para un problema concreto",
+        "p1": "Podemos trabajar en una funcionalidad backend, un flujo de plataforma o un servicio que necesita atención. Definimos el alcance considerando tu código actual, las restricciones de entrega y el equipo que mantendrá el sistema.",
+        "p2": "Mi experiencia incluye APIs en Go, controladores de Kubernetes, GraphQL, pruebas automatizadas y pipelines de entrega. Comenzamos por entender tu sistema y acordar qué resultado necesitas."
+      },
+      "offerTitle": "En qué podemos trabajar",
+      "offers": [
+        {
+          "title": "APIs y servicios backend en Go",
+          "description": "Desarrollar o ampliar servicios REST, GraphQL y gRPC con interfaces claras, manejo de errores y pruebas automatizadas.",
+          "deliverable": "Alcance típico: una funcionalidad backend con pruebas y documentación de entrega."
+        },
+        {
+          "title": "Automatización de plataformas Kubernetes",
+          "description": "Desarrollar controladores Go y CRDs para aprovisionamiento repetible, con reconciliación, estados observables y permisos mínimos.",
+          "deliverable": "Alcance típico: un controlador o flujo de plataforma integrado con tu proceso de entrega."
+        },
+        {
+          "title": "Fiabilidad y mantenibilidad",
+          "description": "Revisar concurrencia, límites entre servicios y aislamiento de pruebas. Identificar cuellos de botella y acordar los cambios antes de refactorizar.",
+          "deliverable": "Alcance típico: hallazgos priorizados y mejoras verificadas frente a una referencia inicial."
+        }
+      ],
+      "proofTitle": "Experiencia de ingeniería relevante",
+      "proofIntro": "Ejemplos de mi portafolio actual. Corresponden a empleos anteriores, no a proyectos de clientes independientes.",
+      "caseLabel": "Contexto",
+      "workLabel": "Mi contribución",
+      "cases": [
+        {
+          "company": "Gorilla Logic",
+          "title": "Aprovisionamiento nativo de Kubernetes en Go",
+          "context": "Los equipos necesitaban un mecanismo repetible para aprovisionar recursos de plataforma en clústeres GKE.",
+          "work": "Desarrollé una plataforma que crea namespaces, RBAC y Applications de Argo CD desde una definición YAML, con CRDs y reconciliación de controladores. Apoyé las entregas con Helm, GitHub Actions, Kind y pruebas automatizadas de extremo a extremo."
+        },
+        {
+          "company": "Wind River",
+          "title": "Límites entre servicios Go y procesamiento concurrente",
+          "context": "El backend incluía servicios acoplados, procesamiento secuencial y pruebas que necesitaban mayor aislamiento.",
+          "work": "Reestructuré dos servicios en seis microservicios, incorporé flujos concurrentes en Go y refactoricé más de 400 pruebas unitarias para ejecución independiente y concurrente."
+        }
+      ],
+      "processTitle": "Cómo trabajamos con un alcance definido",
+      "steps": [
+        {
+          "title": "Comparte el problema",
+          "description": "Describe el sistema, los síntomas actuales, el resultado esperado y las restricciones de acceso o tiempo."
+        },
+        {
+          "title": "Acordamos el alcance",
+          "description": "Confirmamos el encaje, la disponibilidad, los entregables y los criterios de aceptación antes de comprometernos a implementar."
+        },
+        {
+          "title": "Implementación y entrega",
+          "description": "Revisamos los cambios con tu equipo, verificamos el comportamiento acordado y documentamos las decisiones para mantener el sistema."
+        }
+      ],
+      "faqTitle": "Antes de trabajar juntos",
+      "faqs": [
+        {
+          "q": "¿Tienes disponibilidad a tiempo completo?",
+          "a": "No. Tengo un empleo a tiempo completo, por lo que mi disponibilidad de consultoría es limitada. Podemos conversar sobre proyectos concretos de backend Go e ingeniería de plataformas."
+        },
+        {
+          "q": "¿Puedes trabajar con un proyecto Go existente?",
+          "a": "Sí. Podemos comenzar con una funcionalidad definida, una revisión o una mejora acotada. El alcance depende del código, los accesos y las restricciones de tu equipo."
+        },
+        {
+          "q": "¿Cuánto cuesta una colaboración?",
+          "a": "Primero debemos acordar el alcance y la disponibilidad. Comparte el problema, el resultado esperado y el plazo para evaluar si podemos trabajar juntos."
+        },
+        {
+          "q": "¿Puedes colaborar en inglés y español?",
+          "a": "Sí. Mi idioma nativo es el español y tengo un nivel B2+ de inglés. Trabajo con documentación técnica, revisiones de arquitectura e intercambio de conocimientos."
+        }
+      ],
+      "readingTitle": "Mi enfoque de ingeniería",
+      "readingIntro": "Artículos técnicos sobre los sistemas y las prácticas de calidad que aplico.",
+      "ctaTitle": "¿Necesitas resolver un problema en Go o plataformas?",
+      "ctaDescription": "Comparte el contexto, el resultado que necesitas y el plazo. Te confirmaré si el alcance encaja con mi disponibilidad de consultoría."
     }
   },
   "landingPage": {
     "meta": {
-      "title": "Desarrollo de Landing Pages | Landing Pages Nuxt/Vue de Alta Conversión",
-      "description": "Servicios profesionales de desarrollo de landing pages. Construyo landing pages rápidas y optimizadas para conversión con Nuxt/Vue para SaaS, productos y generación de leads. Obtén puntajes de PageSpeed de 95+."
+      "title": "Desarrollo de landing pages",
+      "description": "Landing pages con Nuxt y Vue, diseño adaptable, interfaces accesibles y carga rápida."
     },
     "hero": {
       "title": "Desarrollo de Landing Pages que Convierten",

@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://juanmiguel.dev/services/golang-development",
+    "status": 200,
+    "contact_id_present": false,
+    "local_contact_links": [
+      "#contact",
+      "#contact"
+    ]
+  },
+  {
+    "url": "https://juanmiguel.dev/services/landing-page-development",
+    "status": 200,
+    "contact_id_present": false,
+    "local_contact_links": [
+      "#contact",
+      "#contact"
+    ]
+  },
+  {
+    "url": "https://juanmiguel.dev/es/services/golang-development",
+    "status": 200,
+    "contact_id_present": false,
+    "local_contact_links": [
+      "#contact",
+      "#contact"
+    ]
+  },
+  {
+    "url": "https://juanmiguel.dev/es/services/landing-page-development",
+    "status": 200,
+    "contact_id_present": false,
+    "local_contact_links": [
+      "#contact",
+      "#contact"
+    ]
+  }
+]

@@ -259,7 +259,7 @@
       }
     },
     "meta": {
-      "title": "Diseño Web para Asesores Financieros | Autoridad y Confianza",
+      "title": "Webs para asesores financieros",
       "description": "Desarrollo sitios web premium para asesores financieros y wealth managers. Proyecta confianza y capta clientes de alto valor."
     }
   },
@@ -280,6 +280,9 @@
     "updated": "Actualizado",
     "emptyTitle": "Próximamente, nuevos artículos",
     "emptyDescription": "Los próximos artículos tratarán sobre ingeniería de plataformas, Go y Kubernetes.",
-    "authorBio": "Juan Miguel Arias Mejias es ingeniero de software sénior especializado en Go, Kubernetes y plataformas de autoservicio para desarrolladores."
+    "authorBio": "Juan Miguel Arias Mejias es ingeniero de software sénior especializado en Go, Kubernetes y plataformas de autoservicio para desarrolladores.",
+    "consultingTitle": "¿Necesitas apoyo con tu backend Go?",
+    "consultingDescription": "Colaboro con equipos de ingeniería en proyectos concretos de Go y plataformas Kubernetes, con disponibilidad limitada.",
+    "consultingLink": "Ver servicios de consultoría Go"
   }
 }

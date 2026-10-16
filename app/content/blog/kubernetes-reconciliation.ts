@@ -7,6 +7,7 @@ export default {
   tags: ['Kubernetes', 'Go', 'Platform engineering'],
   translations: {
     en: {
+      seoTitle: 'Kubernetes reconciliation',
       title: 'Kubernetes controllers: designing idempotent reconciliation',
       description: 'A practical starting point for self-service platforms: define desired state, reconcile safely, expose useful status, and test recovery.',
       category: 'Platform engineering',
@@ -40,7 +41,7 @@ export default {
           ]
         },
         {
-          id: 'testing', heading: 'Test recovery, not only creation',
+          id: 'testing', links: [{ slug: 'why-unit-tests-matter-in-the-age-of-ai', label: 'Writing independent test expectations' }], heading: 'Test recovery, not only creation',
           paragraphs: ['For a provisioning controller, I would start a review with the following scenarios. These are design checks, not a substitute for integration tests against the APIs your controller actually uses.'],
           checklist: [
             'Reconcile an unchanged request twice and check that resources are not duplicated.',
@@ -53,6 +54,7 @@ export default {
       ]
     },
     es: {
+      seoTitle: 'Reconciliación en Kubernetes',
       title: 'Controladores de Kubernetes: reconciliación idempotente',
       description: 'Una base práctica para plataformas de autoservicio: definir el estado deseado, reconciliar con seguridad, comunicar el estado y probar la recuperación.',
       category: 'Ingeniería de plataformas',
@@ -86,7 +88,7 @@ export default {
           ]
         },
         {
-          id: 'testing', heading: 'Probar la recuperación, no solo la creación',
+          id: 'testing', links: [{ slug: 'why-unit-tests-matter-in-the-age-of-ai', label: 'Definir expectativas de pruebas independientes' }], heading: 'Probar la recuperación, no solo la creación',
           paragraphs: ['Para revisar un controlador de aprovisionamiento, comenzaría con estos escenarios. Son comprobaciones de diseño y no sustituyen las pruebas de integración con las APIs que usa el controlador.'],
           checklist: [
             'Reconciliar dos veces la misma solicitud y comprobar que no se duplican recursos.',

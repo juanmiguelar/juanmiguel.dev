@@ -9,7 +9,7 @@
             <p class="text-h6 mb-6">
               {{ st('landingPage.hero.subtitle') }}
             </p>
-            <v-btn color="primary" size="large" href="#contact">{{ $t('nav.contact') }}</v-btn>
+            <v-btn color="primary" size="large" :to="localePath('/') + '#contact'">{{ $t('nav.contact') }}</v-btn>
           </v-col>
         </v-row>
       </section>
@@ -250,7 +250,7 @@
           <p class="text-h6 mb-6 text-white">
             {{ st('landingPage.cta.subtitle') }}
           </p>
-          <v-btn color="white" size="large" href="#contact">{{ st('landingPage.cta.button') }}</v-btn>
+          <v-btn color="white" size="large" :to="localePath('/') + '#contact'">{{ st('landingPage.cta.button') }}</v-btn>
         </v-container>
       </section>
     </v-container>
@@ -262,8 +262,9 @@ import servicesEn from '../../../locales/services.json'
 import servicesEs from '../../../locales/services-es.json'
 
 const { public: publicRuntime } = useRuntimeConfig()
-const siteUrl = publicRuntime.siteUrl || 'https://juanmiguel.dev'
+const siteUrl = publicRuntime.siteUrl || 'https://www.juanmiguel.dev'
 const { locale } = useI18n()
+const localePath = useLocalePath()
 const { t: st } = useServiceTranslations()
 
 const currentUrl = computed(() => locale.value === 'es' ? `${siteUrl}/es/services/landing-page-development` : `${siteUrl}/services/landing-page-development`)
@@ -278,10 +279,14 @@ useSeoMeta({
   ogDescription: pageDesc,
   ogType: 'website',
   ogUrl: currentUrl,
+  ogImage: `${siteUrl}/img/juanmiguelweb.png`,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDesc,
+  twitterImage: `${siteUrl}/img/juanmiguelweb.png`,
   twitterCard: 'summary_large_image',
 })
 
-useHead({
+useHead(() => ({
   htmlAttrs: {
     lang: locale.value
   },
@@ -312,7 +317,7 @@ useHead({
       })
     }
   ]
-})
+}))
 </script>
 
 <style scoped>

@@ -2,7 +2,7 @@
 import vuetify from 'vite-plugin-vuetify'
 import { publishedPosts } from './app/content/blog/index'
 
-const siteUrl = 'https://juanmiguel.dev'
+const siteUrl = 'https://www.juanmiguel.dev'
 const isProd = process.env.NODE_ENV === 'production'
 const blogRoutes = ['/blog', ...publishedPosts.map(post => `/blog/${post.slug}`)]
 
@@ -90,10 +90,12 @@ export default defineNuxtConfig({
   },
   
   sitemap: {
-    autoLastmod: true,
+    autoLastmod: false,
     urls: async () => {
-      const staticRoutes = ['/', ...blogRoutes]
-      return staticRoutes
+      return ['/', '/blog', ...publishedPosts.map(post => ({
+        loc: `/blog/${post.slug}`,
+        lastmod: post.updatedOn || post.publishedOn
+      }))]
     }
   },
   
@@ -115,7 +117,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'Juan Miguel Arias Mejias',
-      titleTemplate: '%s | Juan Miguel Arias Mejias',
+      titleTemplate: '%s | Juan Miguel Arias',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -126,7 +128,6 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#ffffff' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://juanmiguel.dev' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' },

@@ -9,9 +9,9 @@
       <div class="article-layout">
         <aside class="article-toc"><nav :aria-label="$t('blog.onThisPage')"><h2>{{ $t('blog.onThisPage') }}</h2><ol><li v-for="section in translation.sections" :key="section.id"><a :href="`#${section.id}`">{{ section.heading }}</a></li></ol></nav></aside>
         <div class="article-body">
-          <section v-for="section in translation.sections" :id="section.id" :key="section.id"><h2>{{ section.heading }}</h2><p v-for="paragraph in section.paragraphs" :key="paragraph">{{ paragraph }}</p><pre v-if="section.code" class="article-code" tabindex="0" :aria-label="section.code.language"><code>{{ section.code.value }}</code></pre><ul v-if="section.checklist"><li v-for="item in section.checklist" :key="item">{{ item }}</li></ul></section>
+          <section v-for="section in translation.sections" :id="section.id" :key="section.id"><h2>{{ section.heading }}</h2><p v-for="paragraph in section.paragraphs" :key="paragraph">{{ paragraph }}</p><p v-for="link in section.links" :key="link.slug"><NuxtLink :to="localePath(`/blog/${link.slug}`)">{{ link.label }}</NuxtLink></p><pre v-if="section.code" class="article-code" tabindex="0" :aria-label="section.code.language"><code>{{ section.code.value }}</code></pre><ul v-if="section.checklist"><li v-for="item in section.checklist" :key="item">{{ item }}</li></ul></section>
           <section class="references"><h2>{{ $t('blog.references') }}</h2><ul><li v-for="reference in post.references" :key="reference.url"><a :href="reference.url" rel="noopener noreferrer">{{ reference.title }}</a></li></ul></section>
-          <footer class="article-footer"><p>{{ $t('blog.authorBio') }}</p><NuxtLink :to="localePath('/blog')">{{ $t('blog.backToBlog') }}</NuxtLink><NuxtLink :to="localePath('/#projects')">{{ $t('blog.exploreExperience') }}</NuxtLink></footer>
+          <section class="consulting-note"><h2>{{ $t('blog.consultingTitle') }}</h2><p>{{ $t('blog.consultingDescription') }}</p><NuxtLink :to="localePath('/services/golang-development')">{{ $t('blog.consultingLink') }}</NuxtLink></section><footer class="article-footer"><p>{{ $t('blog.authorBio') }}</p><NuxtLink :to="localePath('/blog')">{{ $t('blog.backToBlog') }}</NuxtLink><NuxtLink :to="localePath('/#projects')">{{ $t('blog.exploreExperience') }}</NuxtLink></footer>
         </div>
       </div>
     </article>
@@ -32,7 +32,7 @@ const canonical = computed(() => `${siteUrl}${localePath(path)}`)
 const image = `${siteUrl}/img/juanmiguelweb.png`
 useSeoMeta({
   keywords: () => post.tags.join(', '),
-  title: () => translation.value.title, description: () => translation.value.description,
+  title: () => translation.value.seoTitle || translation.value.title, description: () => translation.value.description,
   ogTitle: () => translation.value.title, ogDescription: () => translation.value.description,
   ogType: 'article', ogUrl: canonical, ogImage: image,
   articlePublishedTime: `${post.publishedOn}T00:00:00-06:00`,

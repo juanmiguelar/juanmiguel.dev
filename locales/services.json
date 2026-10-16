@@ -1,8 +1,8 @@
 {
   "golang": {
     "meta": {
-      "title": "Professional Golang Developer | Go API & Microservices Development",
-      "description": "Hire an expert Golang developer with 8+ years experience building high-performance APIs, microservices, and backend systems. Specializing in Go, gRPC, GraphQL, and cloud-native development."
+      "title": "Freelance Golang Developer",
+      "description": "Freelance Go development for APIs, Kubernetes controllers and backend systems. Work with Juan Miguel Arias on focused engineering engagements."
     },
     "hero": {
       "title": "Professional Golang Development Services",
@@ -57,12 +57,104 @@
       "title": "Ready to Build with Golang?",
       "subtitle": "Let's discuss your project and how I can help you build a high-performance Go application.",
       "button": "Get Started"
+    },
+    "consulting": {
+      "meta": {
+        "title": "Freelance Golang Developer",
+        "description": "Freelance Go development for APIs, Kubernetes controllers and backend systems. Work with Juan Miguel Arias on focused engineering engagements."
+      },
+      "hero": {
+        "eyebrow": "Independent Go & platform consulting",
+        "title": "Freelance Go developer for APIs and Kubernetes platforms",
+        "subtitle": "I help engineering teams build Go services, automate Kubernetes workflows and improve backend reliability. Available for focused consulting alongside my full-time role.",
+        "primary": "Discuss your Go project",
+        "secondary": "See relevant experience"
+      },
+      "intro": {
+        "title": "Engineering support for a defined problem",
+        "p1": "Bring a backend feature, a platform workflow or a service that needs attention. We can define a focused scope around your existing codebase, delivery constraints and the people who will maintain it.",
+        "p2": "My experience spans Go APIs, Kubernetes controllers, GraphQL, automated testing and delivery pipelines. The work starts with understanding your system and agreeing on what a useful outcome looks like."
+      },
+      "offerTitle": "What we can work on",
+      "offers": [
+        {
+          "title": "Go APIs & backend services",
+          "description": "Build or extend REST, GraphQL and gRPC services, with clear interfaces, error handling and automated tests.",
+          "deliverable": "Typical scope: a backend capability with tests and handover notes."
+        },
+        {
+          "title": "Kubernetes platform automation",
+          "description": "Develop Go controllers and CRDs for repeatable provisioning workflows, with reconciliation, status reporting and least-privilege access.",
+          "deliverable": "Typical scope: a controller or platform workflow integrated with your delivery process."
+        },
+        {
+          "title": "Reliability & maintainability",
+          "description": "Review concurrency, service boundaries and test isolation. Identify bottlenecks and agree on the changes worth making before refactoring.",
+          "deliverable": "Typical scope: prioritized findings and agreed improvements verified against a baseline."
+        }
+      ],
+      "proofTitle": "Relevant engineering experience",
+      "proofIntro": "Examples from my existing portfolio. These describe previous employment, not independent client engagements.",
+      "caseLabel": "Context",
+      "workLabel": "My contribution",
+      "cases": [
+        {
+          "company": "Gorilla Logic",
+          "title": "Kubernetes-native provisioning in Go",
+          "context": "Teams needed a repeatable way to provision platform resources across GKE workload clusters.",
+          "work": "Built a platform that creates namespaces, RBAC and Argo CD Applications from one YAML definition, using custom CRDs and controller reconciliation. Supported releases with Helm, GitHub Actions, Kind and automated end-to-end tests."
+        },
+        {
+          "company": "Wind River",
+          "title": "Go service boundaries and concurrent processing",
+          "context": "Backend work involved tightly coupled services, sequential processing and tests that needed stronger isolation.",
+          "work": "Restructured two services into six focused microservices, introduced concurrent Go workflows and refactored more than 400 unit tests for independent, concurrent execution."
+        }
+      ],
+      "processTitle": "How a focused engagement works",
+      "steps": [
+        {
+          "title": "Share the problem",
+          "description": "Describe the system, current symptoms, desired outcome and any timeline or access constraints."
+        },
+        {
+          "title": "Agree on scope",
+          "description": "We confirm fit, availability, deliverables and acceptance criteria before committing to implementation."
+        },
+        {
+          "title": "Build and hand over",
+          "description": "Review changes with your team, verify the agreed behavior and document the decisions needed to maintain the work."
+        }
+      ],
+      "faqTitle": "Before we work together",
+      "faqs": [
+        {
+          "q": "Are you available full-time?",
+          "a": "No. I work full-time, so consulting availability is limited. I am open to discussing focused Go backend and platform engineering engagements."
+        },
+        {
+          "q": "Can you work with an existing Go codebase?",
+          "a": "Yes. We can start with a defined feature, a review or an isolated improvement. Scope depends on the codebase, access and your team’s constraints."
+        },
+        {
+          "q": "What does an engagement cost?",
+          "a": "Scope and availability need to be agreed first. Send the problem, expected outcome and timeline so we can discuss whether the engagement is a fit."
+        },
+        {
+          "q": "Can you collaborate in English and Spanish?",
+          "a": "Yes. I speak native Spanish and English at B2+ level, and work with technical documentation, architecture reviews and knowledge sharing."
+        }
+      ],
+      "readingTitle": "How I approach the engineering",
+      "readingIntro": "Technical articles on the systems and quality practices behind this work.",
+      "ctaTitle": "Have a Go or platform problem to solve?",
+      "ctaDescription": "Share the context, the outcome you need and your timeline. I will confirm whether the scope fits my consulting availability."
     }
   },
   "landingPage": {
     "meta": {
-      "title": "Landing Page Development | High-Converting Nuxt/Vue Landing Pages",
-      "description": "Professional landing page development services. I build fast, conversion-optimized landing pages with Nuxt/Vue for SaaS, products, and lead generation. Get 95+ PageSpeed scores."
+      "title": "Landing Page Development",
+      "description": "Custom landing pages built with Nuxt and Vue, responsive design, accessible interfaces and fast loading."
     },
     "hero": {
       "title": "Landing Page Development That Converts",

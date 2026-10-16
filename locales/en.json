@@ -259,7 +259,7 @@
       }
     },
     "meta": {
-      "title": "Web Design for Financial Advisors | Authority and Trust",
+      "title": "Websites for financial advisors",
       "description": "I develop premium websites for financial advisors and wealth managers. Project trust and attract high-value clients."
     }
   },
@@ -280,6 +280,9 @@
     "updated": "Updated",
     "emptyTitle": "Articles are on the way",
     "emptyDescription": "Future articles will cover platform engineering, Go, and Kubernetes.",
-    "authorBio": "Juan Miguel Arias Mejias is a senior software engineer working with Go, Kubernetes, and self-service developer platforms."
+    "authorBio": "Juan Miguel Arias Mejias is a senior software engineer working with Go, Kubernetes, and self-service developer platforms.",
+    "consultingTitle": "Need help with your Go backend?",
+    "consultingDescription": "I work with engineering teams on focused Go and Kubernetes platform engagements, with limited consulting availability.",
+    "consultingLink": "Explore Go consulting services"
   }
 }

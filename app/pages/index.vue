@@ -22,7 +22,7 @@ import ContactForm from '~/components/ContactForm.vue'
 import CredentialsSection from '~/components/CredentialsSection.vue'
 
 const { public: publicRuntime } = useRuntimeConfig()
-const siteUrl = publicRuntime.siteUrl || 'https://juanmiguel.dev'
+const siteUrl = publicRuntime.siteUrl || 'https://www.juanmiguel.dev'
 const { t, locale } = useI18n()
 
 const localePath = useLocalePath()

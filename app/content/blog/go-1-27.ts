@@ -7,6 +7,7 @@ export default {
   tags: ['Go 1.27', 'Golang', 'Release notes', 'Platform engineering'],
   translations: {
     en: {
+      seoTitle: 'Go 1.27 improvements and fixes',
       title: 'Go 1.27: key improvements and fixes',
       description: 'A concise overview of Go 1.27 language, JSON, runtime and tooling improvements, plus the fixes in Go 1.27.1 and 1.27.2.',
       category: 'Go releases',
@@ -37,7 +38,7 @@ export default {
           'Go 1.27.2 includes security fixes affecting the go command, crypto/tls, html/template, net/http, net/textproto and os. It also fixes issues in the compiler, linker, runtime, coverage tooling, go fix, vet, compression, JSON and other packages.',
           'These are maintenance updates, not additional language releases. The release history identifies affected areas; consult its linked issue milestones for the individual fixes. I would make the patch version an explicit part of a toolchain upgrade review instead of recording only “Go 1.27”.'
         ] },
-        { id: 'upgrade-checklist', heading: 'A practical upgrade checklist', paragraphs: [
+        { id: 'upgrade-checklist', links: [{ slug: 'why-unit-tests-matter-in-the-age-of-ai', label: 'Unit tests for AI-assisted changes' }], heading: 'A practical upgrade checklist', paragraphs: [
           'For a service upgrade, I would start with the following checks. These are engineering recommendations, not claims that a particular workload will become faster or that an upgrade is risk-free.'
         ], checklist: [
           'Choose an exact patched toolchain version and align local development, CI and build images.',
@@ -50,6 +51,7 @@ export default {
       ]
     },
     es: {
+      seoTitle: 'Go 1.27: mejoras y correcciones',
       title: 'Go 1.27: principales mejoras y correcciones',
       description: 'Un resumen de las mejoras de lenguaje, JSON, runtime y herramientas de Go 1.27, junto con las correcciones de Go 1.27.1 y 1.27.2.',
       category: 'Versiones de Go',
@@ -80,7 +82,7 @@ export default {
           'Go 1.27.2 incluye correcciones de seguridad en el comando go, crypto/tls, html/template, net/http, net/textproto y os. También corrige problemas del compilador, linker, runtime, herramientas de cobertura, go fix, vet, compresión, JSON y otros paquetes.',
           'Son actualizaciones de mantenimiento, no nuevas versiones del lenguaje. El historial identifica las áreas afectadas; sus enlaces a los milestones detallan cada corrección. Recomiendo registrar explícitamente la versión del parche al revisar una actualización, en lugar de indicar solamente “Go 1.27”.'
         ] },
-        { id: 'upgrade-checklist', heading: 'Una lista práctica para actualizar', paragraphs: [
+        { id: 'upgrade-checklist', links: [{ slug: 'why-unit-tests-matter-in-the-age-of-ai', label: 'Pruebas unitarias para cambios asistidos por IA' }], heading: 'Una lista práctica para actualizar', paragraphs: [
           'Para actualizar un servicio, comenzaría con estas comprobaciones. Son recomendaciones de ingeniería, no promesas de rendimiento ni garantías de una actualización sin riesgos.'
         ], checklist: [
           'Elegir una versión exacta con parches y alinear desarrollo local, CI e imágenes de compilación.',

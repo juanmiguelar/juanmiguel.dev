@@ -1,149 +1,32 @@
 <template>
-  <div class="golang-service-page">
-    <v-container>
-      <!-- Hero Section -->
-      <section class="service-hero py-16">
-        <v-row>
-          <v-col cols="12" md="8" class="mx-auto text-center">
-            <h1 class="text-h2 mb-4">{{ st('golang.hero.title') }}</h1>
-            <p class="text-h6 mb-6">{{ st('golang.hero.subtitle') }}</p>
-            <v-btn color="primary" size="large" href="#contact">{{ $t('nav.contact') }}</v-btn>
-          </v-col>
-        </v-row>
-      </section>
-
-      <!-- What is Golang Development -->
-      <section class="py-12">
-        <v-row>
-          <v-col cols="12" md="10" class="mx-auto">
-            <h2 class="text-h3 mb-6">{{ st('golang.intro.title') }}</h2>
-            <p class="text-body-1 mb-4" v-html="st('golang.intro.p1')"></p>
-            <p class="text-body-1 mb-4" v-html="st('golang.intro.p2')"></p>
-          </v-col>
-        </v-row>
-      </section>
-
-      <!-- Services Offered -->
-      <section class="py-12 bg-grey-lighten-4">
-        <v-container>
-          <h2 class="text-h3 text-center mb-8">{{ st('golang.services.title') }}</h2>
-          <v-row>
-            <v-col cols="12" md="4">
-              <v-card elevation="2" class="pa-6 h-100">
-                <h3 class="text-h5 mb-3">{{ st('golang.services.api.title') }}</h3>
-                <p class="text-body-2">{{ st('golang.services.api.desc') }}</p>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="4">
-              <v-card elevation="2" class="pa-6 h-100">
-                <h3 class="text-h5 mb-3">{{ st('golang.services.microservices.title') }}</h3>
-                <p class="text-body-2">{{ st('golang.services.microservices.desc') }}</p>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="4">
-              <v-card elevation="2" class="pa-6 h-100">
-                <h3 class="text-h5 mb-3">{{ st('golang.services.optimization.title') }}</h3>
-                <p class="text-body-2">{{ st('golang.services.optimization.desc') }}</p>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
-      <!-- Why Choose Me -->
-      <section class="py-12">
-        <v-row>
-          <v-col cols="12" md="10" class="mx-auto">
-            <h2 class="text-h3 mb-6">{{ st('golang.why.title') }}</h2>
-            <v-list>
-              <v-list-item>
-                <template #prepend><v-icon>mdi-check-circle</v-icon></template>
-                <v-list-item-title v-html="st('golang.why.experience')"></v-list-item-title>
-              </v-list-item>
-              <v-list-item>
-                <template #prepend><v-icon>mdi-check-circle</v-icon></template>
-                <v-list-item-title v-html="st('golang.why.code')"></v-list-item-title>
-              </v-list-item>
-              <v-list-item>
-                <template #prepend><v-icon>mdi-check-circle</v-icon></template>
-                <v-list-item-title v-html="st('golang.why.performance')"></v-list-item-title>
-              </v-list-item>
-              <v-list-item>
-                <template #prepend><v-icon>mdi-check-circle</v-icon></template>
-                <v-list-item-title v-html="st('golang.why.fullstack')"></v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-col>
-        </v-row>
-      </section>
-
-      <!-- Technologies -->
-      <section class="py-12 bg-grey-lighten-4">
-        <v-container>
-          <h2 class="text-h3 text-center mb-6">{{ st('golang.tech.title') }}</h2>
-          <v-row justify="center">
-            <v-col cols="12" md="8">
-              <v-chip-group column>
-                <v-chip>Go / Golang</v-chip>
-                <v-chip>Gin Framework</v-chip>
-                <v-chip>Echo Framework</v-chip>
-                <v-chip>gRPC</v-chip>
-                <v-chip>GraphQL</v-chip>
-                <v-chip>PostgreSQL</v-chip>
-                <v-chip>MongoDB</v-chip>
-                <v-chip>Redis</v-chip>
-                <v-chip>Docker</v-chip>
-                <v-chip>Kubernetes</v-chip>
-                <v-chip>Google Cloud</v-chip>
-              </v-chip-group>
-            </v-col>
-          </v-row>
-        </v-container>
-      </section>
-
-      <!-- FAQ -->
-      <section class="py-12">
-        <v-row>
-          <v-col cols="12" md="10" class="mx-auto">
-            <h2 class="text-h3 mb-6">{{ st('golang.faq.title') }}</h2>
-            <v-expansion-panels>
-              <v-expansion-panel>
-                <v-expansion-panel-title>{{ st('golang.faq.q1.q') }}</v-expansion-panel-title>
-                <v-expansion-panel-text>{{ st('golang.faq.q1.a') }}</v-expansion-panel-text>
-              </v-expansion-panel>
-              <v-expansion-panel>
-                <v-expansion-panel-title>{{ st('golang.faq.q2.q') }}</v-expansion-panel-title>
-                <v-expansion-panel-text>{{ st('golang.faq.q2.a') }}</v-expansion-panel-text>
-              </v-expansion-panel>
-              <v-expansion-panel>
-                <v-expansion-panel-title>{{ st('golang.faq.q3.q') }}</v-expansion-panel-title>
-                <v-expansion-panel-text>{{ st('golang.faq.q3.a') }}</v-expansion-panel-text>
-              </v-expansion-panel>
-            </v-expansion-panels>
-          </v-col>
-        </v-row>
-      </section>
-
-      <!-- CTA -->
-      <section class="py-12 text-center bg-primary">
-        <v-container>
-          <h2 class="text-h3 mb-4 text-white">{{ st('golang.cta.title') }}</h2>
-          <p class="text-h6 mb-6 text-white">{{ st('golang.cta.subtitle') }}</p>
-          <v-btn color="white" size="large" href="#contact">{{ st('golang.cta.button') }}</v-btn>
-        </v-container>
-      </section>
-    </v-container>
-  </div>
+  <v-container class="consulting-page">
+    <nav class="breadcrumbs" :aria-label="t('blog.breadcrumbs')"><NuxtLink :to="localePath('/')">{{ t('nav.home') }}</NuxtLink><span aria-hidden="true">/</span><span>{{ copy.meta.title }}</span></nav>
+    <header class="consulting-hero">
+      <p class="eyebrow">{{ copy.hero.eyebrow }}</p>
+      <h1>{{ copy.hero.title }}</h1>
+      <p class="lead">{{ copy.hero.subtitle }}</p>
+      <div class="hero-actions"><v-btn color="primary" size="large" :to="localePath('/') + '#contact'">{{ copy.hero.primary }}</v-btn><a href="#experience">{{ copy.hero.secondary }}</a></div>
+    </header>
+    <section class="intro"><h2>{{ copy.intro.title }}</h2><p>{{ copy.intro.p1 }}</p><p>{{ copy.intro.p2 }}</p></section>
+    <section><h2>{{ copy.offerTitle }}</h2><div class="offer-list"><article v-for="(offer, index) in copy.offers" :key="offer.title"><span class="index" aria-hidden="true">0{{ index + 1 }}</span><div><h3>{{ offer.title }}</h3><p>{{ offer.description }}</p><p class="detail">{{ offer.deliverable }}</p></div></article></div></section>
+    <section id="experience"><h2>{{ copy.proofTitle }}</h2><p>{{ copy.proofIntro }}</p><article v-for="item in copy.cases" :key="item.company" class="case-study"><p class="eyebrow">{{ item.company }}</p><h3>{{ item.title }}</h3><dl><dt>{{ copy.caseLabel }}</dt><dd>{{ item.context }}</dd><dt>{{ copy.workLabel }}</dt><dd>{{ item.work }}</dd></dl></article></section>
+    <section><h2>{{ copy.processTitle }}</h2><ol class="process"><li v-for="step in copy.steps" :key="step.title"><h3>{{ step.title }}</h3><p>{{ step.description }}</p></li></ol></section>
+    <section><h2>{{ copy.faqTitle }}</h2><details v-for="faq in copy.faqs" :key="faq.q"><summary>{{ faq.q }}</summary><p>{{ faq.a }}</p></details></section>
+    <section><h2>{{ copy.readingTitle }}</h2><p>{{ copy.readingIntro }}</p><ul class="reading"><li v-for="article in articles" :key="article.slug"><NuxtLink :to="localePath(`/blog/${article.slug}`)">{{ article.title }}</NuxtLink></li></ul></section>
+    <section class="consulting-cta"><h2>{{ copy.ctaTitle }}</h2><p>{{ copy.ctaDescription }}</p><v-btn color="primary" size="large" :to="localePath('/') + '#contact'">{{ copy.hero.primary }}</v-btn></section>
+  </v-container>
 </template>
-
 <script setup lang="ts">
+import { publishedPosts, postTranslation } from '~/content/blog'
 import servicesEn from '../../../locales/services.json'
 import servicesEs from '../../../locales/services-es.json'
 
 const { public: publicRuntime } = useRuntimeConfig()
-const siteUrl = publicRuntime.siteUrl || 'https://juanmiguel.dev'
-const { locale } = useI18n()
-const { t: st } = useServiceTranslations()
+const siteUrl = publicRuntime.siteUrl || 'https://www.juanmiguel.dev'
+const { locale, t } = useI18n()
+const localePath = useLocalePath()
+const copy = computed(() => (locale.value === 'es' ? servicesEs : servicesEn).golang.consulting)
+const articles = computed(() => publishedPosts.map(post => ({ slug: post.slug, title: postTranslation(post, locale.value).title })))
 
 const currentUrl = computed(() =>
   locale.value === 'es'
@@ -165,10 +48,14 @@ useSeoMeta({
   ogDescription: pageDesc,
   ogType: 'website',
   ogUrl: currentUrl,
+  ogImage: `${siteUrl}/img/juanmiguelweb.png`,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDesc,
+  twitterImage: `${siteUrl}/img/juanmiguelweb.png`,
   twitterCard: 'summary_large_image'
 })
 
-useHead({
+useHead(() => ({
   htmlAttrs: {
     lang: locale.value
   },
@@ -181,41 +68,54 @@ useHead({
         '@type': 'Service',
         name:
           locale.value === 'es'
-            ? 'Servicios de Desarrollo Golang'
-            : 'Golang Development Services',
+            ? 'Consultoría freelance en Go'
+            : 'Freelance Go Development',
         provider: {
           '@type': 'Person',
           name: 'Juan Miguel Arias Mejias',
+          url: siteUrl,
           jobTitle: locale.value === 'es' ? 'Desarrollador Golang' : 'Golang Developer'
         },
-        serviceType: 'Golang Development',
+        url: currentUrl.value,
+        serviceType: 'Go backend and Kubernetes platform consulting',
         areaServed: 'Worldwide',
         inLanguage: locale.value,
-        description: pageDesc.value,
-        offers: {
-          '@type': 'Offer',
-          availability: 'https://schema.org/InStock',
-          description:
-            locale.value === 'es'
-              ? 'Servicios personalizados de desarrollo Golang para empresas y startups'
-              : 'Custom Golang development services for enterprise and startups'
-        }
+        description: pageDesc.value
+
       })
     }
   ]
-})
+}))
 </script>
 
 <style scoped>
-.service-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.service-hero h1,
-.service-hero p {
-  color: white;
-}
+.consulting-page { max-width: 1040px; padding-block: 32px 80px; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; font-size: .85rem; margin-bottom: 48px; }
+.consulting-hero { padding-block: 24px 64px; border-bottom: 1px solid rgba(var(--v-theme-on-surface), .15); }
+.eyebrow { color: rgb(var(--v-theme-primary)); font-size: .8rem; font-weight: 600; letter-spacing: .06em; margin-bottom: 16px; }
+h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.12; letter-spacing: -.04em; max-width: 22ch; font-weight: 600; }
+.lead { font-size: 1.15rem; max-width: 66ch; margin-block: 24px 32px; }
+p, dd { line-height: 1.8; color: rgba(var(--v-theme-on-surface), .8); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+section { margin-top: 64px; scroll-margin-top: 100px; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.025em; line-height: 1.25; margin-bottom: 24px; }
+h3 { font-size: 1.2rem; line-height: 1.4; margin-bottom: 12px; font-weight: 600; }
+.intro p + p { margin-top: 16px; }
+.offer-list article { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 24px; padding-block: 28px; border-bottom: 1px solid rgba(var(--v-theme-on-surface), .15); }
+.index { font-size: .85rem; color: rgb(var(--v-theme-primary)); padding-top: 4px; }
+p.detail { font-size: .9rem; margin-top: 12px; }
+.case-study { background: rgb(var(--v-theme-surface-variant)); border-radius: 12px; padding: 32px; margin-top: 24px; }
+dt { font-size: .85rem; font-weight: 600; margin-block: 20px 8px; }
+dd { margin: 0; }
+.process { padding-left: 24px; }
+.process li { padding-left: 12px; margin-bottom: 24px; }
+details { border-bottom: 1px solid rgba(var(--v-theme-on-surface), .15); padding-block: 20px; }
+summary { cursor: pointer; font-weight: 600; line-height: 1.5; }
+details p { margin-top: 16px; max-width: 75ch; }
+.reading { padding-left: 20px; margin-top: 20px; }
+.reading li { padding-block: 8px; }
+.consulting-cta { border-top: 1px solid rgba(var(--v-theme-on-surface), .15); padding-top: 40px; }
+.consulting-cta p { margin-bottom: 24px; max-width: 65ch; }
+a { color: rgb(var(--v-theme-primary)); text-underline-offset: 4px; }
+@media (max-width: 600px) { .consulting-page { padding-inline: 20px; } .breadcrumbs { margin-bottom: 24px; } section { margin-top: 48px; } .case-study { padding: 24px; } .hero-actions { align-items: flex-start; flex-direction: column; } .hero-actions :deep(.v-btn), .consulting-cta :deep(.v-btn) { max-width: 100%; height: auto; min-height: 48px; padding-block: 12px; } :deep(.v-btn__content) { white-space: normal; } }
 </style>

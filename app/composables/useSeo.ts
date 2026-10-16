@@ -9,7 +9,7 @@ export function useSeo() {
     const title = ensureLength(opts.title, 60)
     const description = ensureLength(opts.description, 160)
     const image = opts.image || '/img/juanmiguelweb.png'
-    const url = opts.url || 'https://juanmiguel.dev'
+    const url = opts.url || 'https://www.juanmiguel.dev'
     const siteName = opts.siteName || 'Juan Miguel - Portfolio'
 
     useHead({

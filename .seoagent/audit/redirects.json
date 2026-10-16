@@ -1,0 +1,32 @@
+[
+  {
+    "url": "http://juanmiguel.dev/",
+    "status": 308,
+    "location": "https://juanmiguel.dev/",
+    "x_robots_tag": null
+  },
+  {
+    "url": "https://juanmiguel.dev/",
+    "status": 307,
+    "location": "https://www.juanmiguel.dev/",
+    "x_robots_tag": null
+  },
+  {
+    "url": "https://www.juanmiguel.dev/",
+    "status": 200,
+    "location": null,
+    "x_robots_tag": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  },
+  {
+    "url": "https://juanmiguel.dev/blog/go-1-27-improvements-and-fixes",
+    "status": 307,
+    "location": "https://www.juanmiguel.dev/blog/go-1-27-improvements-and-fixes",
+    "x_robots_tag": null
+  },
+  {
+    "url": "https://www.juanmiguel.dev/blog/go-1-27-improvements-and-fixes",
+    "status": 200,
+    "location": null,
+    "x_robots_tag": null
+  }
+]

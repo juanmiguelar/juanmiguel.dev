@@ -168,7 +168,14 @@
 import { computed } from 'vue'
 import FaqSection from '~/components/FaqSection.vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const siteUrl = useRuntimeConfig().public.siteUrl
+const currentUrl = computed(() => `${siteUrl}${localePath('/servicios/landing-pages')}`)
+useHead(() => ({
+  htmlAttrs: { lang: locale.value },
+  link: [{ rel: 'canonical', href: currentUrl.value }]
+}))
 const pixel = usePixel()
 
 const trackSchedule = () => {
@@ -189,6 +196,15 @@ const trackWhatsapp = () => {
 useSeoMeta({
   title: computed(() => t('landing.meta.title')),
   description: computed(() => t('landing.meta.description')),
+  ogTitle: () => t('landing.meta.title'),
+  ogDescription: () => t('landing.meta.description'),
+  ogUrl: currentUrl,
+  ogType: 'website',
+  ogImage: `${siteUrl}/img/juanmiguelweb.png`,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('landing.meta.title'),
+  twitterDescription: () => t('landing.meta.description'),
+  twitterImage: `${siteUrl}/img/juanmiguelweb.png`,
 })
 
 const faqItems = computed(() => [
