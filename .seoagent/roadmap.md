@@ -40,3 +40,11 @@ Evidence: strategy/golang-freelance.md approved implementation section. Deploy a
 - [ ] Deploy, verify public guide/download, connect measurement platforms and establish citation/referral baselines.
 
 Evidence: strategy/geo.md implementation section and audit/geo-source-validation.json.
+
+## Platform engineering content — 2026-10-21
+
+- [x] SUB  platform-self-service-with-kubernetes-crds — "Kubernetes CRD platform self-service"
+- [x] SUB  designing-developer-friendly-kubernetes-crds — "developer-friendly Kubernetes CRDs"
+- [x] SUB  versioning-kubernetes-crd-apis-safely — "Kubernetes CRD API versioning"
+
+Evidence: `app/content/blog/` bilingual article sources. Repository content is ready; production deployment and search performance measurement remain pending.

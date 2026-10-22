@@ -13,3 +13,5 @@
 [2026-10-16] Saved GEO proposal focused on consistent professional identity, verifiable engineering evidence, useful Go content, earned references and AI referral/citation measurement. Strategy only; no ranking/citation guarantees or extra AI files. See strategy/geo.md.
 
 [2026-10-16] Implemented authorized on-site GEO work: bilingual Go diagnostics guide, downloadable independent benchmark/test example, contextual/service links and shared Person/citation schemas. Build, 18-page output and mobile checks passed. Go unavailable for executing the sample; production deployment and external measurement pending.
+
+[2026-10-21] Added three bilingual platform-engineering articles on Kubernetes CRD self-service, developer-friendly CRD API design, and safe CRD versioning. Registered their localized routes and linked the articles to each other and to controller reconciliation guidance. Source content is marked published for the repository; production deployment has not been performed. Technical guidance was grounded in official Kubernetes and Kubebuilder documentation.
