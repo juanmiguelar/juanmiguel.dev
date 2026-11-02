@@ -283,6 +283,21 @@
     "authorBio": "Juan Miguel Arias Mejias es ingeniero de software sénior especializado en Go, Kubernetes y plataformas de autoservicio para desarrolladores.",
     "consultingTitle": "¿Necesitas apoyo con tu backend Go?",
     "consultingDescription": "Colaboro con equipos de ingeniería en proyectos concretos de Go y plataformas Kubernetes, con disponibilidad limitada.",
-    "consultingLink": "Ver servicios de consultoría Go"
+    "consultingLink": "Ver servicios de consultoría Go",
+    "series": {
+      "eyebrow": "Serie de aprendizaje",
+      "title": "Fundamentos de Go: 50 lecciones prácticas",
+      "description": "Aprende Go paso a paso: sintaxis, colecciones, funciones, errores, pruebas, HTTP y concurrencia, con ejemplos y documentación oficial.",
+      "meta": "50 artículos · Español e inglés · Nivel inicial",
+      "start": "Comenzar con la lección 1",
+      "open": "Explorar la serie",
+      "overview": "Ruta de aprendizaje",
+      "modules": "Bloques de la serie",
+      "navigation": "Navegación de la serie Fundamentos de Go",
+      "lesson": "Lección {current} de {total}",
+      "backToSeries": "Ver toda la serie Fundamentos de Go",
+      "previous": "Lección anterior",
+      "next": "Siguiente lección"
+    }
   }
 }

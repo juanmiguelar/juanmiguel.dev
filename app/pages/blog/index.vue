@@ -2,6 +2,13 @@
   <section class="section blog-index">
     <v-container>
       <header class="blog-header"><p class="eyebrow">{{ $t('blog.eyebrow') }}</p><h1>{{ $t('blog.title') }}</h1><p class="intro">{{ $t('blog.description') }}</p></header>
+      <section class="series-feature" aria-labelledby="go-series-title">
+        <p class="eyebrow">{{ $t('blog.series.eyebrow') }}</p>
+        <h2 id="go-series-title"><NuxtLink :to="localePath(goBasicsPath)">{{ $t('blog.series.title') }}</NuxtLink></h2>
+        <p>{{ $t('blog.series.description') }}</p>
+        <p class="series-meta">{{ $t('blog.series.meta') }}</p>
+        <NuxtLink :to="localePath(goBasicsPath)">{{ $t('blog.series.open') }} <span aria-hidden="true">→</span></NuxtLink>
+      </section>
       <div v-if="publishedPosts.length" class="post-list"><BlogPostPreview v-for="post in publishedPosts" :key="post.slug" :post="post" /></div>
       <div v-else class="empty-blog" role="status"><h2>{{ $t('blog.emptyTitle') }}</h2><p>{{ $t('blog.emptyDescription') }}</p><NuxtLink :to="localePath('/')">{{ $t('nav.home') }}</NuxtLink></div>
     </v-container>
@@ -9,7 +16,7 @@
 </template>
 <script setup lang="ts">
 import { professionalIdentity } from '~/utils/professionalIdentity'
-import { publishedPosts, postTranslation } from '~/content/blog'
+import { publishedPosts, postTranslation, goBasicsPath } from '~/content/blog'
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { public: { siteUrl } } = useRuntimeConfig()
@@ -36,6 +43,11 @@ useHead(() => ({
 .blog-header { max-width: 760px; margin-bottom: 48px; }
 h1 { font-size: clamp(2.3rem, 4.5vw, 3.8rem); font-weight: 600; letter-spacing: -.05em; line-height: 1.1; text-wrap: balance; }
 .intro { max-width: 60ch; margin-top: 24px; font-size: 1.1rem; line-height: 1.75; color: rgba(var(--v-theme-on-surface), .75); }
+.series-feature { border: 1px solid rgba(var(--v-theme-on-surface), .2); padding: 24px; margin-bottom: 48px; max-width: 800px; }
+.series-feature h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.3; margin-bottom: 16px; font-weight: 600; }
+.series-feature p { line-height: 1.75; margin-bottom: 16px; }
+.series-feature .series-meta { font-size: .85rem; }
+.series-feature a:focus-visible { outline: 2px solid rgb(var(--v-theme-primary)); outline-offset: 4px; }
 .post-list { border-top: 1px solid rgba(var(--v-theme-on-surface), .15); }
 .post-list > :deep(article + article) { border-top: 1px solid rgba(var(--v-theme-on-surface), .15); }
 .empty-blog { padding-block: 32px; }

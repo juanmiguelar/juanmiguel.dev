@@ -48,3 +48,14 @@ Evidence: strategy/geo.md implementation section and audit/geo-source-validation
 - [x] SUB  versioning-kubernetes-crd-apis-safely — "Kubernetes CRD API versioning"
 
 Evidence: `app/content/blog/` bilingual article sources. Repository content is ready; production deployment and search performance measurement remain pending.
+
+## Go basics series — user-requested 2026-11-01
+
+- [x] Write 50 related Go basics articles with full EN/ES versions and official documentation references.
+- [x] Group source files under `app/content/blog/series/go-basics/`.
+- [x] Add localized series indexes linked from the blog, with ordered lessons and previous/next navigation.
+- [x] Validate the production build, article registry types, 100 rendered article pages, metadata, link graph and sitemaps.
+- [ ] Execute embedded Go examples with a Go toolchain; none is installed in this environment.
+- [ ] Deploy through the normal site release workflow and verify live URLs.
+
+Evidence: `strategy/clusters/go-basics.md` and `audit/go-basics-validation.json`. These checks concern repository/build output, not the live deployment.
