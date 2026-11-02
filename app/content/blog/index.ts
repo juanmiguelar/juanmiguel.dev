@@ -1,3 +1,4 @@
+import { goBasicsPosts } from './series/go-basics'
 import goPerformance from './go-api-performance'
 import go127 from './go-1-27'
 import unitTestsAI from './unit-tests-ai'
@@ -8,7 +9,7 @@ import crdVersioning from './versioning-kubernetes-crd-apis-safely'
 import type { BlogLocale, BlogPost, BlogTranslation } from './types'
 
 // Add articles here. Drafts are excluded from all public lists and article routes.
-const posts: BlogPost[] = [goPerformance, go127, unitTestsAI, reconciliation, crdSelfService, crdDesign, crdVersioning]
+const posts: BlogPost[] = [...goBasicsPosts, goPerformance, go127, unitTestsAI, reconciliation, crdSelfService, crdDesign, crdVersioning]
 export const publishedPosts = posts
   .filter(post => post.status === 'published')
   .sort((a, b) => b.publishedOn.localeCompare(a.publishedOn))
@@ -22,3 +23,5 @@ export const readingMinutes = (translation: BlogTranslation): number => {
 export const formatBlogDate = (date: string, locale: string): string => new Intl.DateTimeFormat(blogLocale(locale), {
   dateStyle: 'long', timeZone: 'UTC'
 }).format(new Date(`${date}T00:00:00Z`))
+
+export { goBasicsPosts, goBasicsPath, goBasicsModules } from './series/go-basics'

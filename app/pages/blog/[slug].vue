@@ -5,11 +5,13 @@
       <header class="article-header"><p class="eyebrow">{{ translation.category }}</p><h1>{{ translation.title }}</h1><p class="article-description">{{ translation.description }}</p>
         <div class="byline"><NuxtLink :to="localePath('/') + '#background'">Juan Miguel Arias Mejias</NuxtLink><time :datetime="post.publishedOn">{{ formatBlogDate(post.publishedOn, locale) }}</time><span>{{ $t('blog.readingTime', { minutes: readingMinutes(translation) }) }}</span></div>
         <p v-if="post.updatedOn" class="updated">{{ $t('blog.updated') }} <time :datetime="post.updatedOn">{{ formatBlogDate(post.updatedOn, locale) }}</time></p>
+        <p v-if="post.series?.slug === 'go-basics'" class="series-link"><NuxtLink :to="localePath(goBasicsPath)">{{ $t('blog.series.backToSeries') }}</NuxtLink> · {{ $t('blog.series.lesson', { current: post.series.order, total: goBasicsPosts.length }) }}</p>
       </header>
       <div class="article-layout">
         <aside class="article-toc"><nav :aria-label="$t('blog.onThisPage')"><h2>{{ $t('blog.onThisPage') }}</h2><ol><li v-for="section in translation.sections" :key="section.id"><a :href="`#${section.id}`">{{ section.heading }}</a></li></ol></nav></aside>
         <div class="article-body">
           <section v-for="section in translation.sections" :id="section.id" :key="section.id"><h2>{{ section.heading }}</h2><p v-for="paragraph in section.paragraphs" :key="paragraph">{{ paragraph }}</p><p v-for="link in section.links" :key="link.slug"><NuxtLink :to="localePath(`/blog/${link.slug}`)">{{ link.label }}</NuxtLink></p><pre v-if="section.code" class="article-code" tabindex="0" :aria-label="section.code.language"><code>{{ section.code.value }}</code></pre><ul v-if="section.checklist"><li v-for="item in section.checklist" :key="item">{{ item }}</li></ul></section>
+          <BlogSeriesNavigation v-if="post.series?.slug === 'go-basics'" :slug="post.slug" />
           <section class="references"><h2>{{ $t('blog.references') }}</h2><ul><li v-for="reference in post.references" :key="reference.url"><a :href="reference.url" rel="noopener noreferrer">{{ reference.title }}</a></li></ul></section>
           <section class="consulting-note"><h2>{{ $t('blog.consultingTitle') }}</h2><p>{{ $t('blog.consultingDescription') }}</p><NuxtLink :to="localePath('/services/golang-development')">{{ $t('blog.consultingLink') }}</NuxtLink></section><footer class="article-footer"><p>{{ $t('blog.authorBio') }}</p><NuxtLink :to="localePath('/blog')">{{ $t('blog.backToBlog') }}</NuxtLink><NuxtLink :to="localePath('/#projects')">{{ $t('blog.exploreExperience') }}</NuxtLink></footer>
         </div>
@@ -19,7 +21,7 @@
 </template>
 <script setup lang="ts">
 import { professionalIdentity } from '~/utils/professionalIdentity'
-import { publishedPosts, postTranslation, readingMinutes, formatBlogDate } from '~/content/blog'
+import { publishedPosts, postTranslation, readingMinutes, formatBlogDate, goBasicsPosts, goBasicsPath } from '~/content/blog'
 definePageMeta({ key: route => route.path })
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -75,6 +77,7 @@ useHead(() => ({
 .article-header { max-width: 850px; margin-bottom: 56px; }
 h1 { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -.045em; line-height: 1.15; font-weight: 600; text-wrap: balance; }
 .article-description { margin-top: 24px; font-size: 1.15rem; line-height: 1.7; color: rgba(var(--v-theme-on-surface), .76); max-width: 64ch; }
+.series-link { margin-top: 24px; font-size: .9rem; line-height: 1.6; }
 .byline { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 28px; font-size: .82rem; color: rgba(var(--v-theme-on-surface), .72); }
 .updated { margin-top: 12px; font-size: .82rem; }
 .article-layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 64px; align-items: start; }

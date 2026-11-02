@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
-import { publishedPosts } from './app/content/blog/index'
+import { publishedPosts, goBasicsPath } from './app/content/blog/index'
 
 const siteUrl = 'https://www.juanmiguel.dev'
 const isProd = process.env.NODE_ENV === 'production'
-const blogRoutes = ['/blog', ...publishedPosts.map(post => `/blog/${post.slug}`)]
+const blogRoutes = ['/blog', goBasicsPath, ...publishedPosts.map(post => `/blog/${post.slug}`)]
 
 export default defineNuxtConfig({
   ssr: true,
@@ -92,7 +92,7 @@ export default defineNuxtConfig({
   sitemap: {
     autoLastmod: false,
     urls: async () => {
-      return ['/', '/blog', ...publishedPosts.map(post => ({
+      return ['/', '/blog', goBasicsPath, ...publishedPosts.map(post => ({
         loc: `/blog/${post.slug}`,
         lastmod: post.updatedOn || post.publishedOn
       }))]

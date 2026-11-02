@@ -23,6 +23,7 @@ export interface BlogPost {
   publishedOn: string
   updatedOn?: string
   tags: string[]
+  series?: { slug: string; order: number }
   translations: Record<BlogLocale, BlogTranslation>
   references: { title: string; url: string }[]
 }

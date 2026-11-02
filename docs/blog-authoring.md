@@ -29,3 +29,22 @@ The initial controller article is starter editorial content based on official Ku
 ## Implementation verification
 
 Production build: passed, 21 routes prerendered. Nuxt link checker: zero errors and warnings. Generated English and Spanish blog pages were checked for a single h1, unique canonical, language alternates, and valid Blog/BlogPosting JSON-LD. Both blog indexes and article URLs appear in their localized sitemaps. Content metadata, section IDs, and reading times were checked. Browser review covered language switching, light/dark themes, mobile navigation and widths of 320, 768, 1024 and 1440 pixels without horizontal overflow. The final production preview had no browser console warnings or errors after enabling Vuetify SSR and applying theme preferences after hydration.
+
+## Go basics series
+
+The 50 bilingual lessons live together in `app/content/blog/series/go-basics/`.
+Its `README.md` is the editing inventory and `index.ts` defines the reading order
+and five topic groups. The main blog registry imports the series as one collection.
+Each lesson includes official Go documentation references, an example, a boundary
+or common mistake, a practice task and related lessons.
+
+The reader-facing indexes are `/blog/series/go-basics` and
+`/es/blog/series/go-basics`. The blog index links to this collection. Series articles
+include their lesson number, a return link and previous/next navigation. Language
+switching retains the article or collection route. Slugs stay flat at `/blog/{slug}`
+to preserve the existing article router and bilingual metadata behavior.
+
+To extend a series, keep `series.order`, the ordered registry and group boundaries
+consistent. Do not create a second copy of an article body in SEOAgent state.
+The current Go examples require execution in an environment with Go installed;
+the web production build validates rendering rather than compiling embedded Go.
