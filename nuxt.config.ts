@@ -35,8 +35,8 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     locales: [
-      { code: 'en', file: 'en.json', name: 'English' },
-      { code: 'es', file: 'es.json', name: 'Español' }
+      { code: 'en', language: 'en', file: 'en.json', name: 'English' },
+      { code: 'es', language: 'es', file: 'es.json', name: 'Español' }
     ],
     detectBrowserLanguage: false,
     compilation: {
@@ -115,7 +115,6 @@ export default defineNuxtConfig({
   
   app: {
     head: {
-      htmlAttrs: { lang: 'en' },
       title: 'Juan Miguel Arias Mejias',
       titleTemplate: '%s | Juan Miguel Arias',
       meta: [
